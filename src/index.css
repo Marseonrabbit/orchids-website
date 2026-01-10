@@ -10,48 +10,46 @@
     --card-foreground: 0 0% 0%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 0%;
-    --primary: 263 70% 23%; /* Dark Purple #2E1065 */
+    --primary: 261 73% 23%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 263 70% 50%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 261 73% 23%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 263 70% 50%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 261 73% 23%;
     --radius: 0.5rem;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background: 263 70% 5%; /* Very dark purple/black */
+      --background: 0 0% 0%;
       --foreground: 0 0% 100%;
-      --card: 263 70% 8%;
+      --card: 0 0% 3%;
       --card-foreground: 0 0% 100%;
-      --popover: 263 70% 8%;
+      --popover: 0 0% 3%;
       --popover-foreground: 0 0% 100%;
-      --primary: 263 70% 50%;
+      --primary: 261 73% 23%;
       --primary-foreground: 0 0% 100%;
-      --secondary: 263 70% 15%;
+      --secondary: 240 4% 16%;
       --secondary-foreground: 0 0% 100%;
-      --muted: 263 70% 15%;
-      --muted-foreground: 263 20% 70%;
-      --accent: 263 70% 50%;
+      --muted: 240 4% 16%;
+      --muted-foreground: 240 5% 65%;
+      --accent: 261 73% 23%;
       --accent-foreground: 0 0% 100%;
-      --destructive: 0 62.8% 30.6%;
+      --destructive: 0 63% 31%;
       --destructive-foreground: 0 0% 100%;
-      --border: 263 70% 15%;
-      --input: 263 70% 15%;
-      --ring: 263 70% 50%;
+      --border: 240 4% 16%;
+      --input: 240 4% 16%;
+      --ring: 261 73% 23%;
     }
   }
-}
 
-@layer base {
   body {
     @apply bg-background text-foreground overflow-x-hidden;
   }
@@ -63,7 +61,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--background));
+  @apply bg-background;
 }
 
 ::-webkit-scrollbar-thumb {

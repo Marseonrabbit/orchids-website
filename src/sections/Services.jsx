@@ -134,11 +134,11 @@ const Services = ({ lang }) => {
   }[lang];
 
   return (
-    <SectionWrapper id="services" className="bg-black py-40 relative overflow-hidden">
+    <SectionWrapper id="services" className="py-40 relative overflow-hidden">
       {/* Subdued Background Accents for performance */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30">
-        <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-primary/[0.01] rounded-full blur-[100px] will-change-transform" />
-        <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-darkPurple/[0.01] rounded-full blur-[100px] will-change-transform" />
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30 dark:opacity-10">
+        <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-primary/[0.05] rounded-full blur-[100px] will-change-transform" />
+        <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-darkPurple/[0.05] rounded-full blur-[100px] will-change-transform" />
       </div>
 
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 relative z-10">
@@ -148,7 +148,7 @@ const Services = ({ lang }) => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-[11px] font-black uppercase tracking-[0.8em] text-white/30 mb-12"
+              className="text-[11px] font-black uppercase tracking-[0.8em] text-muted-foreground mb-12"
             >
               {t.tag}
             </motion.div>
@@ -156,17 +156,17 @@ const Services = ({ lang }) => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                className="text-5xl md:text-[5.5rem] font-black tracking-tighter text-white leading-[0.9] uppercase"
+                className="text-5xl md:text-[5.5rem] font-black tracking-tighter text-foreground leading-[0.9] uppercase"
             >
               {t.title} <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white/90 via-white/40 to-white/10 font-light italic pr-4 lowercase">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-darkPurple to-primary dark:from-white/90 dark:via-white/40 dark:to-white/10 font-light italic pr-4 lowercase">
                 {t.subtitle}
               </span>
             </motion.h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-white/5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-border/50">
           {t.services.map((service, idx) => {
             const isHovered = hoveredId === service.id;
             
@@ -180,7 +180,7 @@ const Services = ({ lang }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.05, ease: "easeOut" }}
-                className={`group relative block bg-black p-12 lg:p-16 overflow-hidden min-h-[500px] border-b border-r border-white/5 ${idx % 3 === 0 ? 'border-l' : ''} transition-colors duration-700 hover:bg-white/[0.01]`}
+                className={`group relative block bg-background p-12 lg:p-16 overflow-hidden min-h-[500px] border-b border-r border-border/50 ${idx % 3 === 0 ? 'border-l' : ''} transition-colors duration-700 hover:bg-primary/[0.02] dark:hover:bg-white/[0.01]`}
               >
                   {/* Unified Hover Background */}
                   <motion.div 
@@ -190,20 +190,20 @@ const Services = ({ lang }) => {
                       scale: isHovered ? 1.05 : 0.95
                     }}
                     transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                    className={`absolute inset-0 bg-gradient-to-br ${service.color} blur-[40px] z-0 pointer-events-none will-change-[opacity,transform] transform-gpu`}
+                    className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-40 dark:opacity-100 blur-[40px] z-0 pointer-events-none will-change-[opacity,transform] transform-gpu`}
                   />
 
                 <div className="relative z-10 flex flex-col h-full justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-20">
-                      <span className="text-[10px] font-black text-white/10 tracking-[0.5em]">0{service.id}</span>
+                      <span className="text-[10px] font-black text-foreground/10 tracking-[0.5em]">0{service.id}</span>
                       <motion.div 
                         animate={{ 
                           scale: isHovered ? 1.15 : 1,
                           rotate: isHovered ? 5 : 0,
-                          backgroundColor: isHovered ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0)",
-                          color: isHovered ? "rgba(0, 0, 0, 1)" : "rgba(255, 255, 255, 1)",
-                          borderColor: isHovered ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.05)"
+                          backgroundColor: isHovered ? "hsl(var(--primary))" : "transparent",
+                          color: isHovered ? "white" : "hsl(var(--foreground))",
+                          borderColor: isHovered ? "hsl(var(--primary))" : "hsl(var(--foreground) / 0.1)"
                         }}
                         transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
                         className="w-12 h-12 border rounded-full flex items-center justify-center will-change-[transform,background-color] transform-gpu"
@@ -215,13 +215,13 @@ const Services = ({ lang }) => {
                     <motion.h4 
                       animate={{ x: isHovered ? 8 : 0 }}
                       transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                      className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tighter will-change-transform transform-gpu"
+                      className="text-4xl md:text-5xl font-bold text-foreground mb-8 tracking-tighter will-change-transform transform-gpu"
                     >
                       {service.title}
                     </motion.h4>
                     
                     <motion.p 
-                      animate={{ color: isHovered ? "rgba(255, 255, 255, 0.6)" : "rgba(255, 255, 255, 0.3)" }}
+                      animate={{ color: isHovered ? "hsl(var(--foreground) / 0.7)" : "hsl(var(--muted-foreground))" }}
                       className="mb-12 text-[13px] leading-loose max-w-[85%]"
                     >
                       {service.desc}
@@ -231,7 +231,7 @@ const Services = ({ lang }) => {
                       {service.tags.map(tag => (
                         <motion.span 
                           key={tag} 
-                          animate={{ color: isHovered ? "rgba(255, 255, 255, 0.5)" : "rgba(255, 255, 255, 0.2)" }}
+                          animate={{ color: isHovered ? "hsl(var(--foreground) / 0.5)" : "hsl(var(--muted-foreground) / 0.5)" }}
                           className="text-[9px] font-black uppercase tracking-[0.3em]"
                         >
                           {tag}
@@ -241,7 +241,7 @@ const Services = ({ lang }) => {
                   </div>
 
                     <motion.div 
-                      animate={{ color: isHovered ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.2)" }}
+                      animate={{ color: isHovered ? "hsl(var(--primary))" : "hsl(var(--foreground) / 0.3)" }}
                       className="flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.5em]"
                     >
                       <motion.span 
@@ -252,7 +252,7 @@ const Services = ({ lang }) => {
                         {t.explore}
                       </motion.span>
                       <motion.div 
-                        animate={{ backgroundColor: isHovered ? "rgba(255, 255, 255, 0.2)" : "rgba(255, 255, 255, 0.05)" }}
+                        animate={{ backgroundColor: isHovered ? "hsl(var(--primary) / 0.3)" : "hsl(var(--foreground) / 0.1)" }}
                         transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
                         className="h-[1px] flex-grow will-change-[background-color]" 
                       />

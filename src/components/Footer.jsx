@@ -25,23 +25,23 @@ const Footer = ({ lang }) => {
   }[lang];
 
   return (
-    <footer className="bg-dark text-white pt-24 pb-12 px-6 md:px-12 border-t border-white/5">
+    <footer className="bg-background text-foreground pt-24 pb-12 px-6 md:px-12 border-t border-border/50">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 items-start">
             <div className="flex flex-col gap-6">
               <div className="flex items-center">
                 <img 
                   src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/7ab42e8b-56b1-4c66-a956-f3cf6448c6c8/Picsart_26-01-09_10-46-39-372-resized-1768022457001.webp?width=8000&height=8000&resize=contain" 
                   alt="Skylumine Logo" 
-                  className="h-16 md:h-20 w-auto object-contain mix-blend-screen"
+                  className="h-16 md:h-20 w-auto object-contain dark:mix-blend-screen"
                 />
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed max-w-xs font-poppins mt-2">
+              <p className="text-muted-foreground text-sm leading-relaxed max-w-xs font-poppins mt-2">
               {t.about}
             </p>
           <div className="flex gap-4 mt-2">
             {[Instagram, Twitter, Linkedin, Facebook].map((Icon, i) => (
-              <a key={i} href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300">
-                <Icon className="w-4 h-4" />
+              <a key={i} href="#" className="w-10 h-10 rounded-full border border-border/50 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 group">
+                <Icon className="w-4 h-4 text-muted-foreground group-hover:text-white" />
               </a>
             ))}
           </div>
@@ -49,7 +49,7 @@ const Footer = ({ lang }) => {
 
         <div>
           <h4 className="text-sm font-bold uppercase tracking-[0.2em] mb-8 font-montserrat">{t.links}</h4>
-          <ul className="flex flex-col gap-4 text-sm text-gray-400 font-poppins">
+          <ul className="flex flex-col gap-4 text-sm text-muted-foreground font-poppins">
             {['Home', 'About', 'Services', 'Packages', 'Blog', 'Contact'].map((link) => (
               <li key={link}><a href={`#${link.toLowerCase()}`} className="hover:text-primary transition-colors">{link}</a></li>
             ))}
@@ -58,7 +58,7 @@ const Footer = ({ lang }) => {
 
         <div>
           <h4 className="text-sm font-bold uppercase tracking-[0.2em] mb-8 font-montserrat">{t.services}</h4>
-          <ul className="flex flex-col gap-4 text-sm text-gray-400 font-poppins">
+          <ul className="flex flex-col gap-4 text-sm text-muted-foreground font-poppins">
             <li><a href="/web-design-company" className="hover:text-primary transition-colors">Web Design</a></li>
             <li><a href="/seo-services" className="hover:text-primary transition-colors">SEO Optimization</a></li>
             <li><a href="/ppc-management-services" className="hover:text-primary transition-colors">PPC Management</a></li>
@@ -74,13 +74,13 @@ const Footer = ({ lang }) => {
               <input 
                 type="email" 
                 placeholder={t.placeholder}
-                className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 text-sm focus:outline-none focus:border-primary transition-colors font-poppins"
+                className="w-full bg-foreground/5 border border-border/50 rounded-full px-6 py-3 text-sm focus:outline-none focus:border-primary transition-colors font-poppins text-foreground"
               />
-              <button className="absolute right-1.5 top-1.5 px-6 py-1.5 bg-primary rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+              <button className="absolute right-1.5 top-1.5 px-6 py-1.5 bg-primary text-white dark:bg-white dark:text-black rounded-full text-[10px] font-bold uppercase tracking-widest transition-all">
                 {t.subscribe}
               </button>
             </div>
-            <div className="flex flex-col gap-4 mt-4 text-sm text-gray-400 font-poppins">
+            <div className="flex flex-col gap-4 mt-4 text-sm text-muted-foreground font-poppins">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary" />
                 <span>hello@skylumine.com</span>
@@ -98,12 +98,12 @@ const Footer = ({ lang }) => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 font-montserrat">
+      <div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground font-montserrat">
         <div>© 2026 SKYLUMINE. {t.rights}</div>
         <div className="flex gap-8">
-          <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-          <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+          <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
+          <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
+          <a href="#" className="hover:text-foreground transition-colors">Cookie Policy</a>
         </div>
       </div>
     </footer>

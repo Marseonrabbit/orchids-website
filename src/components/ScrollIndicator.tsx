@@ -61,8 +61,8 @@ const ScrollIndicator = () => {
           transition={{ duration: 0.3 }}
           className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] flex flex-col items-center gap-4 pointer-events-none"
         >
-          <div className="text-[9px] font-bold uppercase tracking-[0.3em] text-darkPurple">Scroll</div>
-          <div className="w-[1px] h-12 bg-gradient-to-b from-darkPurple via-white to-transparent" />
+            <div className="text-[9px] font-bold uppercase tracking-[0.3em] text-primary">Scroll</div>
+            <div className="w-[1px] h-12 bg-gradient-to-b from-primary via-primary/50 to-transparent" />
         </motion.div>
       )}
     </AnimatePresence>
