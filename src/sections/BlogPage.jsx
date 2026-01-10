@@ -35,7 +35,7 @@ const BlogPage = ({ lang, setLang }) => {
   }[lang];
 
   return (
-    <div className="min-h-screen bg-dark text-white font-poppins">
+    <div className="min-h-screen bg-background text-foreground font-poppins selection:bg-primary selection:text-primary-foreground">
       <Navbar lang={lang} setLang={setLang} />
       
       <main className="pt-32">
@@ -56,40 +56,40 @@ const BlogPage = ({ lang, setLang }) => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-16">
             <div className="flex gap-4 overflow-x-auto pb-4 md:pb-0 no-scrollbar">
               {t.categories.map((cat, i) => (
-                <button key={i} className={`px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest border transition-all ${i === 0 ? 'bg-primary border-primary' : 'border-white/10 hover:border-primary/50'}`}>
+                <button key={i} className={`px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest border transition-all ${i === 0 ? 'bg-primary border-primary text-primary-foreground' : 'border-border/10 hover:border-primary/50'}`}>
                   {cat}
                 </button>
               ))}
             </div>
             <div className="relative w-full md:w-80">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
-              <input type="text" placeholder={t.search} className="w-full bg-white/5 border border-white/10 rounded-full pl-12 pr-6 py-3 text-sm focus:outline-none focus:border-primary transition-all" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <input type="text" placeholder={t.search} className="w-full bg-foreground/5 border border-border/10 rounded-full pl-12 pr-6 py-3 text-sm focus:outline-none focus:border-primary transition-all text-foreground" />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
             {t.posts.map((post, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="group bg-white/[0.02] border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-primary/20 transition-all duration-500"
+                className="group bg-foreground/[0.02] border border-border/5 rounded-[2.5rem] overflow-hidden hover:border-primary/20 transition-all duration-500"
               >
-                <div className="aspect-video bg-white/5 relative overflow-hidden">
+                <div className="aspect-video bg-foreground/5 relative overflow-hidden">
                    <div className="absolute top-6 left-6 px-4 py-1.5 bg-primary/20 backdrop-blur-md rounded-full text-[9px] font-bold uppercase tracking-widest text-primary border border-primary/20">
                       {post.category}
                    </div>
                 </div>
                 <div className="p-10">
-                  <div className="flex gap-6 text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-6">
+                  <div className="flex gap-6 text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-6">
                     <div className="flex items-center gap-2"><Calendar className="w-3 h-3" /> {post.date}</div>
                     <div className="flex items-center gap-2"><User className="w-3 h-3" /> {post.author}</div>
                   </div>
                   <h3 className="text-3xl font-bold font-montserrat mb-8 group-hover:text-primary transition-colors leading-tight">
                     {post.title}
                   </h3>
-                  <button className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 group-hover:text-primary transition-all">
+                  <button className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground group-hover:text-primary transition-all">
                     {t.readMore} <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>

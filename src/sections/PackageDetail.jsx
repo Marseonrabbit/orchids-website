@@ -37,7 +37,7 @@ const PackageDetail = ({ lang, setLang }) => {
   const pkg = packageData[id] || packageData['seo-packages'];
 
   return (
-    <div className="min-h-screen bg-dark text-white font-poppins">
+    <div className="min-h-screen bg-background text-foreground font-poppins selection:bg-primary selection:text-primary-foreground">
       <Navbar lang={lang} setLang={setLang} />
       
       <main className="pt-32">
@@ -59,18 +59,18 @@ const PackageDetail = ({ lang, setLang }) => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className={`bg-white/[0.02] border border-white/5 p-10 rounded-[2.5rem] flex flex-col items-center text-center hover:border-primary/30 transition-all duration-500 ${i === 1 ? 'border-primary/20 bg-primary/[0.02]' : ''}`}
+                className={`bg-foreground/[0.02] border border-border/5 p-10 rounded-[2.5rem] flex flex-col items-center text-center hover:border-primary/30 transition-all duration-500 ${i === 1 ? 'border-primary/20 bg-primary/[0.02]' : ''}`}
               >
                 <h3 className="text-xl font-bold font-montserrat mb-2 uppercase tracking-widest">{tier.name}</h3>
                 <div className="text-4xl font-extrabold font-montserrat mb-8 text-primary">{tier.price}</div>
                 <ul className="space-y-4 mb-10 w-full text-left">
                   {tier.features.map((feat, j) => (
-                    <li key={j} className="flex items-center gap-3 text-sm text-gray-400">
+                    <li key={j} className="flex items-center gap-3 text-sm text-muted-foreground">
                       <Check className="w-4 h-4 text-primary" /> {feat}
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-4 rounded-full font-bold uppercase text-[10px] tracking-widest transition-all ${i === 1 ? 'bg-primary text-white shadow-[0_0_20px_rgba(168,85,247,0.3)]' : 'bg-white/5 border border-white/10 hover:bg-white hover:text-black'}`}>
+                <button className={`w-full py-4 rounded-full font-bold uppercase text-[10px] tracking-widest transition-all ${i === 1 ? 'bg-primary text-primary-foreground shadow-[0_0_20px_rgba(46,16,101,0.3)]' : 'bg-foreground/5 border border-border/10 hover:bg-foreground hover:text-background'}`}>
                   {lang === 'en' ? "Get Started" : "शुरू करें"}
                 </button>
               </motion.div>
