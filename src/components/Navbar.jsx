@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Globe, Menu, X } from 'lucide-react';
 
-const Navbar = () => {
+const Navbar = ({ lang, setLang }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -15,11 +15,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Packages', href: '#packages' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' },
+    { name: lang === 'en' ? 'About' : 'हमारे बारे में', href: '#about' },
+    { name: lang === 'en' ? 'Services' : 'सेवाएं', href: '#services' },
+    { name: lang === 'en' ? 'Packages' : 'पैकेज', href: '#packages' },
+    { name: lang === 'en' ? 'Blog' : 'ब्लॉग', href: '#blog' },
+    { name: lang === 'en' ? 'Contact' : 'संपर्क', href: '#contact' },
   ];
 
   return (
@@ -49,8 +49,16 @@ const Navbar = () => {
       </div>
 
         <div className="flex items-center gap-4 md:gap-6">
+          <button 
+            onClick={() => setLang(lang === 'en' ? 'hi' : 'en')}
+            className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border border-white/10 hover:border-darkPurple hover:bg-darkPurple/5 transition-all group"
+          >
+            <Globe className="w-3 h-3 group-hover:text-darkPurple transition-colors" />
+            <span className="group-hover:text-white transition-colors">{lang === 'en' ? 'Hindi' : 'English'}</span>
+          </button>
+  
           <a href="#contact" className="hidden sm:block px-8 py-2.5 bg-white text-black rounded-full hover:bg-darkPurple hover:text-white transition-all duration-500 uppercase text-[10px] font-bold tracking-[0.2em] shadow-[0_0_20px_rgba(46,16,101,0.5)] hover:shadow-[0_0_35px_rgba(46,16,101,0.8)]">
-            Let's Talk
+            {lang === 'en' ? "Let's Talk" : 'बात करें'}
           </a>
 
         <button 
@@ -79,6 +87,16 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+          <button 
+            onClick={() => {
+              setLang(lang === 'en' ? 'hi' : 'en');
+              setMobileMenuOpen(false);
+            }}
+            className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest px-6 py-3 rounded-full border border-white/10"
+          >
+            <Globe className="w-4 h-4" />
+            <span>{lang === 'en' ? 'Switch to Hindi' : 'अंग्रेजी में बदलें'}</span>
+          </button>
         </motion.div>
       )}
     </motion.nav>

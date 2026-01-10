@@ -1,13 +1,28 @@
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Twitter } from 'lucide-react';
 
-const Footer = () => {
+const Footer = ({ lang }) => {
   const t = {
-    about: "Skylumine is a future-forward digital production studio specializing in premium web experiences and strategic digital marketing.",
-    links: "Quick Links",
-    services: "Our Services",
-    contact: "Contact Info",
-    rights: "All rights reserved.",
-  };
+    en: {
+      about: "Skylumine is a future-forward digital production studio specializing in premium web experiences and strategic digital marketing.",
+      links: "Quick Links",
+      services: "Our Services",
+      contact: "Contact Info",
+      newsletter: "Subscribe to our Newsletter",
+      placeholder: "Your email address",
+      subscribe: "Subscribe",
+      rights: "All rights reserved.",
+    },
+    hi: {
+      about: "Skylumine एक भविष्य-उन्मुख डिजिटल प्रोडक्शन स्टूडियो है जो प्रीमियम वेब अनुभव और रणनीतिक डिजिटल मार्केटिंग में विशेषज्ञता रखता है।",
+      links: "त्वरित लिंक",
+      services: "हमारी सेवाएं",
+      contact: "संपर्क जानकारी",
+      newsletter: "हमारे न्यूज़लेटर की सदस्यता लें",
+      placeholder: "आपका ईमेल पता",
+      subscribe: "सदस्यता लें",
+      rights: "सर्वाधिकार सुरक्षित।",
+    }
+  }[lang];
 
   return (
     <footer className="bg-dark text-white pt-24 pb-12 px-6 md:px-12 border-t border-white/5">
@@ -53,19 +68,31 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="text-sm font-bold uppercase tracking-[0.2em] mb-8 font-montserrat">{t.contact}</h4>
-          <div className="flex flex-col gap-4 text-sm text-gray-400 font-poppins">
-            <div className="flex items-center gap-3">
-              <Mail className="w-4 h-4 text-primary" />
-              <span>hello@skylumine.com</span>
+          <h4 className="text-sm font-bold uppercase tracking-[0.2em] mb-8 font-montserrat">{t.newsletter}</h4>
+          <div className="flex flex-col gap-4">
+            <div className="relative">
+              <input 
+                type="email" 
+                placeholder={t.placeholder}
+                className="w-full bg-white/5 border border-white/10 rounded-full px-6 py-3 text-sm focus:outline-none focus:border-primary transition-colors font-poppins"
+              />
+              <button className="absolute right-1.5 top-1.5 px-6 py-1.5 bg-primary rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+                {t.subscribe}
+              </button>
             </div>
-            <div className="flex items-center gap-3">
-              <Phone className="w-4 h-4 text-primary" />
-              <span>+91 98765 43210</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MapPin className="w-4 h-4 text-primary" />
-              <span>Jaipur, Rajasthan, India</span>
+            <div className="flex flex-col gap-4 mt-4 text-sm text-gray-400 font-poppins">
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-primary" />
+                <span>hello@skylumine.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-primary" />
+                <span>+91 98765 43210</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span>Jaipur, Rajasthan, India</span>
+              </div>
             </div>
           </div>
         </div>
