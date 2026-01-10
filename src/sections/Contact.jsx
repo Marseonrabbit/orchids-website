@@ -2,33 +2,19 @@ import SectionWrapper from '../components/SectionWrapper';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
-const Contact = ({ lang }) => {
+const Contact = () => {
   const t = {
-    en: {
-      tag: "Get in Touch",
-      title: "Let's Build the",
-      subtitle: "Future Together",
-      name: "Your Name",
-      email: "Email Address",
-      subject: "Subject",
-      message: "Message",
-      send: "Send Message",
-      info: "Contact Information",
-      address: "54 A, 80 Feet Rd, Aayodhya Nagar, Jaipur, RJ 302015",
-    },
-    hi: {
-      tag: "संपर्क करें",
-      title: "आइए मिलकर",
-      subtitle: "भविष्य बनाएं",
-      name: "आपका नाम",
-      email: "ईमेल पता",
-      subject: "विषय",
-      message: "संदेश",
-      send: "संदेश भेजें",
-      info: "संपर्क जानकारी",
-      address: "54 ए, 80 फीट रोड, अयोध्या नगर, जयपुर, आरजे 302015",
-    }
-  }[lang];
+    tag: "Get in Touch",
+    title: "Let's Build the",
+    subtitle: "Future Together",
+    name: "Your Name",
+    email: "Email Address",
+    subject: "Subject",
+    message: "Message",
+    send: "Send Message",
+    info: "Contact Information",
+    address: "54 A, 80 Feet Rd, Aayodhya Nagar, Jaipur, RJ 302015",
+  };
 
   return (
     <SectionWrapper id="contact" className="bg-dark relative">

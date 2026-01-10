@@ -20,9 +20,9 @@ import PackageDetail from './sections/PackageDetail';
 
 const queryClient = new QueryClient();
 
-const Home = ({ lang, setLang }) => (
+const Home = () => (
     <div className="relative w-full min-h-screen text-white bg-black overflow-x-hidden selection:bg-primary selection:text-black font-poppins">
-    <Navbar lang={lang} setLang={setLang} />
+    <Navbar />
     <ScrollIndicator />
     
     {/* Optimized 2D Background */}
@@ -45,67 +45,63 @@ const Home = ({ lang, setLang }) => (
             transition={{ duration: 1, delay: 0.5 }}
             className="text-[10px] md:text-xs font-bold uppercase tracking-[0.5em] text-primary mb-8 font-montserrat"
           >
-            {lang === 'en' ? 'Future-Forward Digital Studio' : 'भविष्य-उन्मुख डिजिटल स्टूडियो'}
+            Future-Forward Digital Studio
           </motion.div>
           
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-center tracking-tighter leading-[0.9] mix-blend-difference font-montserrat">
-            {lang === 'en' ? 'BEYOND' : 'परे'}<br /> 
+            BEYOND<br /> 
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-darkPurple to-white">
-              {lang === 'en' ? 'VISIONS' : 'दृष्टिकोण'}
+              VISIONS
             </span>
           </h1>
           
           <p className="mt-12 text-sm md:text-base text-gray-400 max-w-lg text-center leading-relaxed font-light font-poppins px-4">
-             {lang === 'en' 
-               ? 'We craft premium digital experiences that combine high-end 3D visuals with strategic marketing excellence.' 
-               : 'हम प्रीमियम डिजिटल अनुभव तैयार करते हैं जो रणनीतिक विपणन उत्कृष्टता के साथ उच्च-स्तरीय 3D विज़ुअल्स को जोड़ते हैं।'}
+             We craft premium digital experiences that combine high-end 3D visuals with strategic marketing excellence.
           </p>
 
           <div className="mt-12 flex flex-col sm:flex-row gap-6">
             <a href="#services" className="px-10 py-4 bg-white text-black rounded-full font-bold uppercase text-[10px] tracking-[0.2em] shadow-[0_0_30px_rgba(46,16,101,0.6)] hover:bg-darkPurple hover:text-white transition-all duration-300">
-              {lang === 'en' ? 'Explore Services' : 'सेवाएं देखें'}
+              Explore Services
             </a>
             <a href="#about" className="px-10 py-4 border border-white/10 rounded-full font-bold uppercase text-[10px] tracking-[0.2em] hover:border-darkPurple hover:bg-darkPurple/10 transition-all duration-300">
-              {lang === 'en' ? 'Our Story' : 'हमारी कहानी'}
+              Our Story
             </a>
             </div>
           </div>
         </section>
 
-      <About lang={lang} />
-      <Services lang={lang} />
-      <Stats lang={lang} />
-      <Contact lang={lang} />
+      <About />
+      <Services />
+      <Stats />
+      <Contact />
     </main>
-    <Footer lang={lang} />
+    <Footer />
   </div>
 );
 
 const App = () => {
-  const [lang, setLang] = useState('en');
-  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster theme="dark" position="bottom-right" />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home lang={lang} setLang={setLang} />} />
-            <Route path="/about" element={<AboutPage lang={lang} setLang={setLang} />} />
-            <Route path="/career" element={<CareerPage lang={lang} setLang={setLang} />} />
-            <Route path="/blog" element={<BlogPage lang={lang} setLang={setLang} />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/career" element={<CareerPage />} />
+            <Route path="/blog" element={<BlogPage />} />
             
             {/* Packages */}
-            <Route path="/seo-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
-            <Route path="/ppc-package" element={<PackageDetail lang={lang} setLang={setLang} />} />
-            <Route path="/smm-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
-            <Route path="/smo-package" element={<PackageDetail lang={lang} setLang={setLang} />} />
-            <Route path="/digital-marketing-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
-            <Route path="/website-designing-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
-            <Route path="/business-hosting" element={<PackageDetail lang={lang} setLang={setLang} />} />
+            <Route path="/seo-packages" element={<PackageDetail />} />
+            <Route path="/ppc-package" element={<PackageDetail />} />
+            <Route path="/smm-packages" element={<PackageDetail />} />
+            <Route path="/smo-package" element={<PackageDetail />} />
+            <Route path="/digital-marketing-packages" element={<PackageDetail />} />
+            <Route path="/website-designing-packages" element={<PackageDetail />} />
+            <Route path="/business-hosting" element={<PackageDetail />} />
 
             {/* Services */}
-            <Route path="/:id" element={<ServiceDetail lang={lang} setLang={setLang} />} />
+            <Route path="/:id" element={<ServiceDetail />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

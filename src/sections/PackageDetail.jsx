@@ -7,7 +7,7 @@ import { Check, ArrowRight } from 'lucide-react';
 
 const packageData = {
   'seo-packages': {
-    title: { en: "SEO Packages", hi: "एसईओ पैकेज" },
+    title: "SEO Packages",
     tiers: [
       { name: "Starter", price: "$299/mo", features: ["10 Keywords", "On-Page SEO", "Weekly Reports"] },
       { name: "Professional", price: "$599/mo", features: ["30 Keywords", "Backlink Building", "Competitor Analysis", "Bi-Weekly Reports"] },
@@ -15,7 +15,7 @@ const packageData = {
     ]
   },
   'ppc-package': {
-    title: { en: "PPC Packages", hi: "पीपीसी पैकेज" },
+    title: "PPC Packages",
     tiers: [
       { name: "Basic", price: "$499/mo", features: ["Google Ads", "2 Campaigns", "Monthly Reports"] },
       { name: "Advanced", price: "$999/mo", features: ["Google & FB Ads", "5 Campaigns", "A/B Testing", "Weekly Reports"] },
@@ -23,7 +23,7 @@ const packageData = {
     ]
   },
   'smm-packages': {
-    title: { en: "SMM Packages", hi: "एसएमएम पैकेज" },
+    title: "SMM Packages",
     tiers: [
       { name: "Lite", price: "$199/mo", features: ["2 Platforms", "8 Posts/mo", "Basic Engagement"] },
       { name: "Standard", price: "$399/mo", features: ["4 Platforms", "15 Posts/mo", "Ad Management", "Community Growth"] },
@@ -32,13 +32,13 @@ const packageData = {
   }
 };
 
-const PackageDetail = ({ lang, setLang }) => {
+const PackageDetail = () => {
   const { id } = useParams();
   const pkg = packageData[id] || packageData['seo-packages'];
 
   return (
     <div className="min-h-screen bg-dark text-white font-poppins">
-      <Navbar lang={lang} setLang={setLang} />
+      <Navbar />
       
       <main className="pt-32">
         <SectionWrapper>
@@ -48,7 +48,7 @@ const PackageDetail = ({ lang, setLang }) => {
               animate={{ opacity: 1, y: 0 }}
               className="text-6xl md:text-8xl font-extrabold font-montserrat tracking-tighter mb-6"
             >
-              {pkg.title[lang]}
+              {pkg.title}
             </motion.h1>
           </div>
 
@@ -71,7 +71,7 @@ const PackageDetail = ({ lang, setLang }) => {
                   ))}
                 </ul>
                 <button className={`w-full py-4 rounded-full font-bold uppercase text-[10px] tracking-widest transition-all ${i === 1 ? 'bg-primary text-white shadow-[0_0_20px_rgba(168,85,247,0.3)]' : 'bg-white/5 border border-white/10 hover:bg-white hover:text-black'}`}>
-                  {lang === 'en' ? "Get Started" : "शुरू करें"}
+                  Get Started
                 </button>
               </motion.div>
             ))}
@@ -79,7 +79,7 @@ const PackageDetail = ({ lang, setLang }) => {
         </SectionWrapper>
       </main>
 
-      <Footer lang={lang} />
+      <Footer />
     </div>
   );
 };
