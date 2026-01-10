@@ -52,12 +52,8 @@ if (typeof window !== "undefined") {
   });
 }
 
-import { ThemeProvider } from './components/ThemeProvider'
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ThemeProvider defaultTheme="dark" storageKey="skylumine-theme">
-      <App />
-    </ThemeProvider>
+    <App />
   </StrictMode>,
 )
