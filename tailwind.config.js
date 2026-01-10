@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	darkMode: "media",
+	darkMode: ["class"],
 	content: [
 		"./index.html",
 		"./src/**/*.{js,ts,jsx,tsx}",
@@ -11,8 +11,8 @@ export default {
 				dark: '#000000',
 				darkPurple: '#2E1065',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: '#FFFFFF',
+					foreground: '#000000'
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

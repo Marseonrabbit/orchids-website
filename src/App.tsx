@@ -20,23 +20,23 @@ import PackageDetail from './sections/PackageDetail';
 
 const queryClient = new QueryClient();
 
-const Home = ({ lang, setLang }) => (
-    <div className="relative w-full min-h-screen text-foreground bg-background overflow-x-hidden selection:bg-primary selection:text-white font-poppins">
-    <Navbar lang={lang} setLang={setLang} />
+const Home = () => (
+    <div className="relative w-full min-h-screen text-white bg-black overflow-x-hidden selection:bg-primary selection:text-black font-poppins">
+    <Navbar />
     <ScrollIndicator />
     
     {/* Optimized 2D Background */}
     <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-darkPurple/[0.05] dark:bg-darkPurple/[0.01] rounded-full blur-[120px]" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/[0.05] dark:bg-primary/[0.01] rounded-full blur-[120px]" />
-      <div className="absolute top-[30%] right-[10%] w-[30%] h-[30%] bg-darkPurple/[0.05] dark:bg-darkPurple/[0.01] rounded-full blur-[100px]" />
+      <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-darkPurple/[0.01] rounded-full blur-[120px]" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/[0.01] rounded-full blur-[120px]" />
+      <div className="absolute top-[30%] right-[10%] w-[30%] h-[30%] bg-darkPurple/[0.01] rounded-full blur-[100px]" />
     </div>
 
     {/* Content Layer */}
     <main className="relative z-10 w-full flex flex-col">
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-foreground/5 to-background pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black pointer-events-none" />
         
         <div className="z-10 flex flex-col items-center flex-grow justify-center">
           <motion.div
@@ -45,67 +45,63 @@ const Home = ({ lang, setLang }) => (
             transition={{ duration: 1, delay: 0.5 }}
             className="text-[10px] md:text-xs font-bold uppercase tracking-[0.5em] text-primary mb-8 font-montserrat"
           >
-            {lang === 'en' ? 'Future-Forward Digital Studio' : 'भविष्य-उन्मुख डिजिटल स्टूडियो'}
+            Future-Forward Digital Studio
           </motion.div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-center tracking-tighter leading-[0.9] font-montserrat">
-            {lang === 'en' ? 'BEYOND' : 'परे'}<br /> 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-darkPurple to-primary dark:from-white dark:via-darkPurple dark:to-white">
-              {lang === 'en' ? 'VISIONS' : 'दृष्टिकोण'}
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-center tracking-tighter leading-[0.9] mix-blend-difference font-montserrat">
+            BEYOND<br /> 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-darkPurple to-white">
+              VISIONS
             </span>
           </h1>
           
-          <p className="mt-12 text-sm md:text-base text-muted-foreground max-w-lg text-center leading-relaxed font-light font-poppins px-4">
-             {lang === 'en' 
-               ? 'We craft premium digital experiences that combine high-end 3D visuals with strategic marketing excellence.' 
-               : 'हम प्रीमियम डिजिटल अनुभव तैयार करते हैं जो रणनीतिक विपणन उत्कृष्टता के साथ उच्च-स्तरीय 3D विज़ुअल्स को जोड़ते हैं।'}
+          <p className="mt-12 text-sm md:text-base text-gray-400 max-w-lg text-center leading-relaxed font-light font-poppins px-4">
+             We craft premium digital experiences that combine high-end 3D visuals with strategic marketing excellence.
           </p>
 
           <div className="mt-12 flex flex-col sm:flex-row gap-6">
-            <a href="#services" className="px-10 py-4 bg-primary text-white dark:bg-white dark:text-black rounded-full font-bold uppercase text-[10px] tracking-[0.2em] shadow-[0_0_30px_rgba(46,16,101,0.4)] hover:scale-105 transition-all duration-300">
-              {lang === 'en' ? 'Explore Services' : 'सेवाएं देखें'}
+            <a href="#services" className="px-10 py-4 bg-white text-black rounded-full font-bold uppercase text-[10px] tracking-[0.2em] shadow-[0_0_30px_rgba(46,16,101,0.6)] hover:bg-darkPurple hover:text-white transition-all duration-300">
+              Explore Services
             </a>
-            <a href="#about" className="px-10 py-4 border border-primary/20 dark:border-white/10 rounded-full font-bold uppercase text-[10px] tracking-[0.2em] hover:bg-primary/5 dark:hover:bg-white/5 transition-all duration-300">
-              {lang === 'en' ? 'Our Story' : 'हमारी कहानी'}
+            <a href="#about" className="px-10 py-4 border border-white/10 rounded-full font-bold uppercase text-[10px] tracking-[0.2em] hover:border-darkPurple hover:bg-darkPurple/10 transition-all duration-300">
+              Our Story
             </a>
             </div>
           </div>
         </section>
 
-      <About lang={lang} />
-      <Services lang={lang} />
-      <Stats lang={lang} />
-      <Contact lang={lang} />
+      <About />
+      <Services />
+      <Stats />
+      <Contact />
     </main>
-    <Footer lang={lang} />
+    <Footer />
   </div>
 );
 
 const App = () => {
-  const [lang, setLang] = useState('en');
-  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster theme="dark" position="bottom-right" />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home lang={lang} setLang={setLang} />} />
-            <Route path="/about" element={<AboutPage lang={lang} setLang={setLang} />} />
-            <Route path="/career" element={<CareerPage lang={lang} setLang={setLang} />} />
-            <Route path="/blog" element={<BlogPage lang={lang} setLang={setLang} />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/career" element={<CareerPage />} />
+            <Route path="/blog" element={<BlogPage />} />
             
             {/* Packages */}
-            <Route path="/seo-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
-            <Route path="/ppc-package" element={<PackageDetail lang={lang} setLang={setLang} />} />
-            <Route path="/smm-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
-            <Route path="/smo-package" element={<PackageDetail lang={lang} setLang={setLang} />} />
-            <Route path="/digital-marketing-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
-            <Route path="/website-designing-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
-            <Route path="/business-hosting" element={<PackageDetail lang={lang} setLang={setLang} />} />
+            <Route path="/seo-packages" element={<PackageDetail />} />
+            <Route path="/ppc-package" element={<PackageDetail />} />
+            <Route path="/smm-packages" element={<PackageDetail />} />
+            <Route path="/smo-package" element={<PackageDetail />} />
+            <Route path="/digital-marketing-packages" element={<PackageDetail />} />
+            <Route path="/website-designing-packages" element={<PackageDetail />} />
+            <Route path="/business-hosting" element={<PackageDetail />} />
 
             {/* Services */}
-            <Route path="/:id" element={<ServiceDetail lang={lang} setLang={setLang} />} />
+            <Route path="/:id" element={<ServiceDetail />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
