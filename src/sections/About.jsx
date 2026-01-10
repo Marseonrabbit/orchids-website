@@ -33,43 +33,43 @@ const About = ({ lang }) => {
           >
             {t.tag}
           </motion.div>
-              <h2 className="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-8 font-montserrat tracking-tighter">
-                {t.title} <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground via-primary to-foreground/50 italic font-playfair font-normal">
-                  {t.subtitle}
-                </span>
-              </h2>
-  
-          </div>
-          <div className="flex-1 space-y-8 font-poppins">
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg md:text-xl text-foreground font-light leading-relaxed"
-            >
-              {t.p1}
-            </motion.p>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-foreground/60 leading-relaxed text-sm md:text-base font-light"
-            >
-              {t.p2}
-            </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="pt-8"
-            >
-              <a href="#contact" className="group flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] text-foreground">
-                <span className="border-b border-foreground/20 pb-1 group-hover:border-primary group-hover:text-primary transition-all duration-300">
-                  {t.cta}
-                </span>
-                <div className="w-8 h-[1px] bg-foreground/20 group-hover:w-12 group-hover:bg-primary transition-all duration-300" />
-              </a>
+            <h2 className="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-8 font-montserrat tracking-tighter">
+              {t.title} <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-darkPurple to-gray-500 italic font-playfair font-normal">
+                {t.subtitle}
+              </span>
+            </h2>
+
+        </div>
+        <div className="flex-1 space-y-8 font-poppins">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-lg md:text-xl text-white font-light leading-relaxed"
+          >
+            {t.p1}
+          </motion.p>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-gray-400 leading-relaxed text-sm md:text-base font-light"
+          >
+            {t.p2}
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="pt-8"
+          >
+            <a href="#contact" className="group flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white">
+              <span className="border-b border-white/20 pb-1 group-hover:border-primary group-hover:text-primary transition-all duration-300">
+                {t.cta}
+              </span>
+              <div className="w-8 h-[1px] bg-white/20 group-hover:w-12 group-hover:bg-primary transition-all duration-300" />
+            </a>
           </motion.div>
         </div>
       </div>
