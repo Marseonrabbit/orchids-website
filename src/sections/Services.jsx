@@ -133,138 +133,138 @@ const Services = ({ lang }) => {
     }
   }[lang];
 
-  return (
-    <SectionWrapper id="services" className="bg-black py-40 relative overflow-hidden">
-      {/* Subdued Background Accents for performance */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30">
-        <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-primary/[0.01] rounded-full blur-[100px] will-change-transform" />
-        <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-darkPurple/[0.01] rounded-full blur-[100px] will-change-transform" />
-      </div>
-
-      <div className="max-w-[1800px] mx-auto px-6 md:px-12 relative z-10">
-        <div className="mb-40 flex flex-col lg:flex-row lg:items-end justify-between gap-16">
-          <div className="max-w-5xl">
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-[11px] font-black uppercase tracking-[0.8em] text-white/30 mb-12"
-            >
-              {t.tag}
-            </motion.div>
-            <motion.h2 
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                className="text-5xl md:text-[5.5rem] font-black tracking-tighter text-white leading-[0.9] uppercase"
-            >
-              {t.title} <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white/90 via-white/40 to-white/10 font-light italic pr-4 lowercase">
-                {t.subtitle}
-              </span>
-            </motion.h2>
-          </div>
+    return (
+      <SectionWrapper id="services" className="bg-background py-40 relative overflow-hidden">
+        {/* Subdued Background Accents for performance */}
+        <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30">
+          <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-primary/[0.05] rounded-full blur-[100px] will-change-transform" />
+          <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-primary/[0.05] rounded-full blur-[100px] will-change-transform" />
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-white/5">
-          {t.services.map((service, idx) => {
-            const isHovered = hoveredId === service.id;
-            
-            return (
-              <motion.a 
-                href={service.href}
-                key={service.id}
-                onMouseEnter={() => setHoveredId(service.id)}
-                onMouseLeave={() => setHoveredId(null)}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.05, ease: "easeOut" }}
-                className={`group relative block bg-black p-12 lg:p-16 overflow-hidden min-h-[500px] border-b border-r border-white/5 ${idx % 3 === 0 ? 'border-l' : ''} transition-colors duration-700 hover:bg-white/[0.01]`}
+  
+        <div className="max-w-[1800px] mx-auto px-6 md:px-12 relative z-10">
+          <div className="mb-40 flex flex-col lg:flex-row lg:items-end justify-between gap-16">
+            <div className="max-w-5xl">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="text-[11px] font-black uppercase tracking-[0.8em] text-foreground/30 mb-12"
               >
-                  {/* Unified Hover Background */}
-                  <motion.div 
-                    initial={false}
-                    animate={{ 
-                      opacity: isHovered ? 1 : 0,
-                      scale: isHovered ? 1.05 : 0.95
-                    }}
-                    transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                    className={`absolute inset-0 bg-gradient-to-br ${service.color} blur-[40px] z-0 pointer-events-none will-change-[opacity,transform] transform-gpu`}
-                  />
-
-                <div className="relative z-10 flex flex-col h-full justify-between">
-                  <div>
-                    <div className="flex items-center justify-between mb-20">
-                      <span className="text-[10px] font-black text-white/10 tracking-[0.5em]">0{service.id}</span>
-                      <motion.div 
-                        animate={{ 
-                          scale: isHovered ? 1.15 : 1,
-                          rotate: isHovered ? 5 : 0,
-                          backgroundColor: isHovered ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0)",
-                          color: isHovered ? "rgba(0, 0, 0, 1)" : "rgba(255, 255, 255, 1)",
-                          borderColor: isHovered ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.05)"
-                        }}
-                        transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                        className="w-12 h-12 border rounded-full flex items-center justify-center will-change-[transform,background-color] transform-gpu"
-                      >
-                        <service.icon className="w-5 h-5 stroke-[1.5px]" />
-                      </motion.div>
-                    </div>
-                    
-                    <motion.h4 
-                      animate={{ x: isHovered ? 8 : 0 }}
-                      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                      className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tighter will-change-transform transform-gpu"
-                    >
-                      {service.title}
-                    </motion.h4>
-                    
-                    <motion.p 
-                      animate={{ color: isHovered ? "rgba(255, 255, 255, 0.6)" : "rgba(255, 255, 255, 0.3)" }}
-                      className="mb-12 text-[13px] leading-loose max-w-[85%]"
-                    >
-                      {service.desc}
-                    </motion.p>
-                    
-                    <div className="flex gap-4 flex-wrap mb-10">
-                      {service.tags.map(tag => (
-                        <motion.span 
-                          key={tag} 
-                          animate={{ color: isHovered ? "rgba(255, 255, 255, 0.5)" : "rgba(255, 255, 255, 0.2)" }}
-                          className="text-[9px] font-black uppercase tracking-[0.3em]"
-                        >
-                          {tag}
-                        </motion.span>
-                      ))}
-                    </div>
-                  </div>
-
+                {t.tag}
+              </motion.div>
+              <motion.h2 
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="text-5xl md:text-[5.5rem] font-black tracking-tighter text-foreground leading-[0.9] uppercase"
+              >
+                {t.title} <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground/90 via-foreground/40 to-foreground/10 font-light italic pr-4 lowercase">
+                  {t.subtitle}
+                </span>
+              </motion.h2>
+            </div>
+          </div>
+  
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-foreground/5">
+            {t.services.map((service, idx) => {
+              const isHovered = hoveredId === service.id;
+              
+              return (
+                <motion.a 
+                  href={service.href}
+                  key={service.id}
+                  onMouseEnter={() => setHoveredId(service.id)}
+                  onMouseLeave={() => setHoveredId(null)}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.05, ease: "easeOut" }}
+                  className={`group relative block bg-background p-12 lg:p-16 overflow-hidden min-h-[500px] border-b border-r border-foreground/5 ${idx % 3 === 0 ? 'border-l' : ''} transition-colors duration-700 hover:bg-foreground/[0.01]`}
+                >
+                    {/* Unified Hover Background */}
                     <motion.div 
-                      animate={{ color: isHovered ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0.2)" }}
-                      className="flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.5em]"
-                    >
-                      <motion.span 
+                      initial={false}
+                      animate={{ 
+                        opacity: isHovered ? 1 : 0,
+                        scale: isHovered ? 1.05 : 0.95
+                      }}
+                      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                      className={`absolute inset-0 bg-gradient-to-br ${service.color} blur-[40px] z-0 pointer-events-none will-change-[opacity,transform] transform-gpu`}
+                    />
+  
+                  <div className="relative z-10 flex flex-col h-full justify-between">
+                    <div>
+                      <div className="flex items-center justify-between mb-20">
+                        <span className="text-[10px] font-black text-foreground/10 tracking-[0.5em]">0{service.id}</span>
+                        <motion.div 
+                          animate={{ 
+                            scale: isHovered ? 1.15 : 1,
+                            rotate: isHovered ? 5 : 0,
+                            backgroundColor: isHovered ? "hsl(var(--primary))" : "transparent",
+                            color: isHovered ? "hsl(var(--primary-foreground))" : "hsl(var(--foreground))",
+                            borderColor: isHovered ? "hsl(var(--primary))" : "rgba(var(--foreground), 0.05)"
+                          }}
+                          transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                          className="w-12 h-12 border border-foreground/10 rounded-full flex items-center justify-center will-change-[transform,background-color] transform-gpu"
+                        >
+                          <service.icon className="w-5 h-5 stroke-[1.5px]" />
+                        </motion.div>
+                      </div>
+                      
+                      <motion.h4 
                         animate={{ x: isHovered ? 8 : 0 }}
                         transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                        className="will-change-transform transform-gpu"
+                        className="text-4xl md:text-5xl font-bold text-foreground mb-8 tracking-tighter will-change-transform transform-gpu"
                       >
-                        {t.explore}
-                      </motion.span>
+                        {service.title}
+                      </motion.h4>
+                      
+                      <motion.p 
+                        animate={{ color: isHovered ? "hsl(var(--foreground) / 0.6)" : "hsl(var(--foreground) / 0.3)" }}
+                        className="mb-12 text-[13px] leading-loose max-w-[85%]"
+                      >
+                        {service.desc}
+                      </motion.p>
+                      
+                      <div className="flex gap-4 flex-wrap mb-10">
+                        {service.tags.map(tag => (
+                          <motion.span 
+                            key={tag} 
+                            animate={{ color: isHovered ? "hsl(var(--foreground) / 0.5)" : "hsl(var(--foreground) / 0.2)" }}
+                            className="text-[9px] font-black uppercase tracking-[0.3em]"
+                          >
+                            {tag}
+                          </motion.span>
+                        ))}
+                      </div>
+                    </div>
+  
                       <motion.div 
-                        animate={{ backgroundColor: isHovered ? "rgba(255, 255, 255, 0.2)" : "rgba(255, 255, 255, 0.05)" }}
-                        transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                        className="h-[1px] flex-grow will-change-[background-color]" 
-                      />
-                    </motion.div>
-                </div>
-              </motion.a>
-            );
-          })}
+                        animate={{ color: isHovered ? "hsl(var(--foreground))" : "hsl(var(--foreground) / 0.2)" }}
+                        className="flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.5em]"
+                      >
+                        <motion.span 
+                          animate={{ x: isHovered ? 8 : 0 }}
+                          transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                          className="will-change-transform transform-gpu"
+                        >
+                          {t.explore}
+                        </motion.span>
+                        <motion.div 
+                          animate={{ backgroundColor: isHovered ? "hsl(var(--foreground) / 0.2)" : "hsl(var(--foreground) / 0.05)" }}
+                          transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                          className="h-[1px] flex-grow will-change-[background-color]" 
+                        />
+                      </motion.div>
+                  </div>
+                </motion.a>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </SectionWrapper>
-  );
+      </SectionWrapper>
+    );
 };
 
 export default Services;
