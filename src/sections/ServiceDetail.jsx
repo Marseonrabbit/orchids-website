@@ -285,11 +285,11 @@ const ServiceDetail = ({ lang, setLang }) => {
   const Icon = service.icon;
 
   return (
-    <div className="relative w-full min-h-screen text-foreground bg-background selection:bg-darkPurple selection:text-white font-poppins transition-colors duration-500">
+    <div className="relative w-full min-h-screen text-white bg-dark selection:bg-primary selection:text-black font-poppins">
       <Navbar lang={lang} setLang={setLang} />
       
       <main className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <Link to="/" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground hover:text-darkPurple transition-colors mb-12">
+        <Link to="/" className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 hover:text-primary transition-colors mb-12">
           <ArrowRight className="w-3 h-3 rotate-180" /> {lang === 'en' ? "Back to Home" : "होम पर वापस"}
         </Link>
 
@@ -298,39 +298,39 @@ const ServiceDetail = ({ lang, setLang }) => {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="w-20 h-20 rounded-3xl bg-darkPurple/10 flex items-center justify-center mb-10 text-darkPurple"
+              className="w-20 h-20 rounded-3xl bg-primary/10 flex items-center justify-center mb-10 text-primary"
             >
               <Icon className="w-10 h-10" />
             </motion.div>
             
-            <h1 className="text-5xl md:text-7xl font-extrabold font-montserrat tracking-tighter mb-8 leading-[0.9] text-foreground">
+            <h1 className="text-5xl md:text-7xl font-extrabold font-montserrat tracking-tighter mb-8 leading-[0.9]">
               {service.title[lang]}
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground font-light mb-12 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-400 font-light mb-12 leading-relaxed">
               {service.desc[lang]}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {service.features.map((feature, idx) => (
                 <div key={idx} className="flex items-center gap-4 group">
-                  <div className="w-6 h-6 rounded-full bg-darkPurple/10 flex items-center justify-center group-hover:bg-darkPurple transition-colors duration-300">
-                    <CheckCircle2 className="w-3 h-3 text-darkPurple group-hover:text-white" />
+                  <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
+                    <CheckCircle2 className="w-3 h-3 text-primary group-hover:text-white" />
                   </div>
-                  <span className="text-sm font-medium tracking-wide text-foreground/80">{feature[lang]}</span>
+                  <span className="text-sm font-medium tracking-wide">{feature[lang]}</span>
                 </div>
               ))}
             </div>
 
-            <a href="#contact" className="inline-flex items-center gap-4 px-10 py-5 bg-darkPurple text-white rounded-full font-bold uppercase text-[10px] tracking-[0.3em] hover:scale-105 transition-all shadow-[0_0_20px_rgba(46,16,101,0.3)]">
+            <a href="#contact" className="inline-flex items-center gap-4 px-10 py-5 bg-primary rounded-full font-bold uppercase text-[10px] tracking-[0.3em] hover:scale-105 transition-all shadow-[0_0_20px_rgba(168,85,247,0.3)]">
               {lang === 'en' ? "Get a Quote" : "कोट प्राप्त करें"} <ArrowRight className="w-4 h-4" />
             </a>
           </div>
 
           <div className="flex-1">
-             <div className="bg-card border border-foreground/5 p-10 md:p-16 rounded-[3rem] backdrop-blur-sm relative overflow-hidden">
-                <div className="absolute -top-24 -right-24 w-64 h-64 bg-darkPurple/10 blur-[100px] rounded-full" />
-                <h3 className="text-2xl font-bold font-montserrat mb-8 text-foreground">{lang === 'en' ? "Service Overview" : "सेवा अवलोकन"}</h3>
-                <div className="space-y-6 text-muted-foreground leading-relaxed font-poppins font-light text-lg">
+             <div className="bg-white/[0.02] border border-white/5 p-10 md:p-16 rounded-[3rem] backdrop-blur-sm relative overflow-hidden">
+                <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 blur-[100px] rounded-full" />
+                <h3 className="text-2xl font-bold font-montserrat mb-8">{lang === 'en' ? "Service Overview" : "सेवा अवलोकन"}</h3>
+                <div className="space-y-6 text-gray-400 leading-relaxed font-poppins font-light text-lg">
                   <p>{service.detailedDesc[lang]}</p>
                   <p>
                     {lang === 'en' 

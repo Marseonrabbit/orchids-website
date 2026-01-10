@@ -51,7 +51,7 @@ const AboutPage = ({ lang, setLang }) => {
   }[lang];
 
   return (
-    <div className="min-h-screen bg-background text-foreground font-poppins transition-colors duration-500">
+    <div className="min-h-screen bg-dark text-white font-poppins">
       <Navbar lang={lang} setLang={setLang} />
       
       <main className="pt-32">
@@ -60,47 +60,47 @@ const AboutPage = ({ lang, setLang }) => {
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-6xl md:text-8xl font-extrabold font-montserrat tracking-tighter mb-6 text-foreground"
+              className="text-6xl md:text-8xl font-extrabold font-montserrat tracking-tighter mb-6"
             >
               {t.title}
             </motion.h1>
-            <p className="text-darkPurple font-bold uppercase tracking-[0.4em] text-xs">
+            <p className="text-primary font-bold uppercase tracking-[0.4em] text-xs">
               {t.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
-            <div className="bg-card border border-foreground/5 p-12 rounded-[3rem]">
-              <Target className="w-10 h-10 text-darkPurple mb-8" />
-              <h3 className="text-3xl font-bold font-montserrat mb-6 text-foreground">{t.mission}</h3>
-              <p className="text-muted-foreground text-lg leading-relaxed font-light">{t.missionText}</p>
+            <div className="bg-white/[0.02] border border-white/5 p-12 rounded-[3rem]">
+              <Target className="w-10 h-10 text-primary mb-8" />
+              <h3 className="text-3xl font-bold font-montserrat mb-6">{t.mission}</h3>
+              <p className="text-gray-400 text-lg leading-relaxed font-light">{t.missionText}</p>
             </div>
-            <div className="bg-card border border-foreground/5 p-12 rounded-[3rem]">
-              <Eye className="w-10 h-10 text-darkPurple mb-8" />
-              <h3 className="text-3xl font-bold font-montserrat mb-6 text-foreground">{t.vision}</h3>
-              <p className="text-muted-foreground text-lg leading-relaxed font-light">{t.visionText}</p>
+            <div className="bg-white/[0.02] border border-white/5 p-12 rounded-[3rem]">
+              <Eye className="w-10 h-10 text-primary mb-8" />
+              <h3 className="text-3xl font-bold font-montserrat mb-6">{t.vision}</h3>
+              <p className="text-gray-400 text-lg leading-relaxed font-light">{t.visionText}</p>
             </div>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-32 text-center">
             {t.stats.map((stat, i) => (
               <div key={i}>
-                <div className="text-5xl font-extrabold font-montserrat mb-2 text-darkPurple">{stat.value}</div>
-                <div className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{stat.label}</div>
+                <div className="text-5xl font-extrabold font-montserrat mb-2 text-primary">{stat.value}</div>
+                <div className="text-[10px] font-bold uppercase tracking-widest text-gray-500">{stat.label}</div>
               </div>
             ))}
           </div>
 
           <div>
-            <h2 className="text-4xl md:text-6xl font-extrabold font-montserrat tracking-tighter mb-16 text-center text-foreground">{t.teamTitle}</h2>
+            <h2 className="text-4xl md:text-6xl font-extrabold font-montserrat tracking-tighter mb-16 text-center">{t.teamTitle}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {t.team.map((member, i) => (
                 <div key={i} className="group">
-                  <div className="aspect-[4/5] bg-foreground/5 rounded-[2rem] mb-6 overflow-hidden relative">
-                    <div className="absolute inset-0 bg-darkPurple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="aspect-[4/5] bg-white/5 rounded-[2rem] mb-6 overflow-hidden relative">
+                    <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
-                  <h4 className="text-xl font-bold font-montserrat mb-1 text-foreground">{member.name}</h4>
-                  <p className="text-darkPurple text-[10px] font-bold uppercase tracking-widest">{member.role}</p>
+                  <h4 className="text-xl font-bold font-montserrat mb-1">{member.name}</h4>
+                  <p className="text-primary text-[10px] font-bold uppercase tracking-widest">{member.role}</p>
                 </div>
               ))}
             </div>
@@ -110,7 +110,6 @@ const AboutPage = ({ lang, setLang }) => {
 
       <Footer lang={lang} />
     </div>
-
   );
 };
 
