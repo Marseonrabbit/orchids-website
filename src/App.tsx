@@ -61,14 +61,14 @@ const Home = ({ lang, setLang }) => (
                  : 'हम प्रीमियम डिजिटल अनुभव तैयार करते हैं जो रणनीतिक विपणन उत्कृष्टता के साथ उच्च-स्तरीय 3D विज़ुअल्स को जोड़ते हैं।'}
             </p>
 
-            <div className="mt-12 flex flex-col sm:flex-row gap-6 items-center">
-              <a href="#services" className="px-10 py-4 bg-primary text-primary-foreground rounded-full font-bold uppercase text-[10px] tracking-[0.2em] shadow-[0_0_30px_rgba(46,16,101,0.3)] hover:bg-darkPurple hover:text-white transition-all duration-300 text-center min-w-[200px] sm:min-w-0">
+            <div className="mt-12 flex flex-col sm:flex-row gap-6">
+              <a href="#services" className="px-10 py-4 bg-primary text-primary-foreground rounded-full font-bold uppercase text-[10px] tracking-[0.2em] shadow-[0_0_30px_rgba(46,16,101,0.3)] hover:bg-darkPurple hover:text-white transition-all duration-300">
                 {lang === 'en' ? 'Explore Services' : 'सेवाएं देखें'}
               </a>
-              <a href="#about" className="px-10 py-4 border border-foreground/10 rounded-full font-bold uppercase text-[10px] tracking-[0.2em] hover:border-primary hover:bg-primary/10 transition-all duration-300 text-center min-w-[200px] sm:min-w-0">
+              <a href="#about" className="px-10 py-4 border border-foreground/10 rounded-full font-bold uppercase text-[10px] tracking-[0.2em] hover:border-primary hover:bg-primary/10 transition-all duration-300">
                 {lang === 'en' ? 'Our Story' : 'हमारी कहानी'}
               </a>
-            </div>
+              </div>
             </div>
           </section>
 
@@ -96,7 +96,6 @@ const App = () => {
             <Route path="/blog" element={<BlogPage lang={lang} setLang={setLang} />} />
             
             {/* Packages */}
-            <Route path="/packages/:id" element={<PackageDetail lang={lang} setLang={setLang} />} />
             <Route path="/seo-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
             <Route path="/ppc-package" element={<PackageDetail lang={lang} setLang={setLang} />} />
             <Route path="/smm-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
