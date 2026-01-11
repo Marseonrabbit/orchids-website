@@ -1,23 +1,10 @@
 import SectionWrapper from '../components/SectionWrapper';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Code2, Search, BarChart3, Share2, PenTool, ShoppingBag, 
-  Layout, Package, Zap, Settings, Globe, LineChart, 
-  MapPin, Building2, Server, TrendingUp, Layers, Rocket, ShieldCheck
-} from 'lucide-react';
-
-const MotionLink = motion(Link);
+import { Code2, Search, BarChart3, Share2, PenTool, ShoppingBag } from 'lucide-react';
 
 const Services = ({ lang }) => {
   const [hoveredId, setHoveredId] = useState(null);
-  const [activeCategory, setActiveCategory] = useState('All');
-
-  const categories = {
-    en: ["All", "CMS & WordPress", "SEO & Growth", "Infrastructure", "Premium Packages"],
-    hi: ["सभी", "सीएमएस और वर्डप्रेस", "एसईओ और विकास", "इन्फ्रास्ट्रक्चर", "प्रीमियम पैकेज"]
-  };
 
   const t = {
     en: {
@@ -29,242 +16,56 @@ const Services = ({ lang }) => {
         {
           id: 1,
           icon: Code2,
-          category: "CMS & WordPress",
-          title: "WordPress Development",
-          desc: "Expert custom WordPress solutions tailored for scalability, security, and high performance.",
-          tags: ["Custom CMS", "PHP", "Architecture"],
-          href: "/wordpress-development",
-          color: "from-blue-600/10 to-indigo-600/10"
+          title: "Web Systems",
+          desc: "Architecting immersive digital experiences with high-performance frameworks and optimized interfaces.",
+          tags: ["Next.js", "React", "Node.js"],
+          href: "/website-development-services",
+          color: "from-blue-500/10 to-purple-500/10"
         },
         {
           id: 2,
-          icon: ShoppingBag,
-          category: "CMS & WordPress",
-          title: "WooCommerce Development",
-          desc: "Full-scale eCommerce platforms built on WooCommerce for seamless shopping experiences.",
-          tags: ["E-commerce", "Payments", "Inventory"],
-          href: "/woocommerce-development",
-          color: "from-purple-600/10 to-pink-600/10"
+          icon: Search,
+          title: "Search Intelligence",
+          desc: "Harnessing algorithmic precision to elevate your brand's authority and organic reach.",
+          tags: ["Data Audit", "Semantics", "Authority"],
+          href: "/seo-services",
+          color: "from-emerald-500/10 to-teal-500/10"
         },
         {
           id: 3,
-          icon: Layout,
-          category: "CMS & WordPress",
-          title: "WordPress Theme Development",
-          desc: "Unique, pixel-perfect custom themes built from the ground up for your specific brand identity.",
-          tags: ["UX/UI", "Responsive", "Lightweight"],
-          href: "/wordpress-theme-development",
-          color: "from-emerald-600/10 to-teal-600/10"
+          icon: BarChart3,
+          title: "Performance Ads",
+          desc: "Precision-targeted paid media campaigns engineered for exponential conversion and ROI.",
+          tags: ["Quantum Bidding", "Retargeting", "Analytics"],
+          href: "/ppc-management-services",
+          color: "from-orange-500/10 to-rose-500/10"
         },
         {
           id: 4,
-          icon: Layers,
-          category: "CMS & WordPress",
-          title: "WordPress Migration",
-          desc: "Zero-downtime migration services moving your site to optimized environments with data integrity.",
-          tags: ["Safe Move", "Database", "Hosting"],
-          href: "/wordpress-migration",
-          color: "from-orange-600/10 to-rose-600/10"
+          icon: Share2,
+          title: "Social Synthesis",
+          desc: "Creating resonant brand narratives that thrive across the evolving social landscape.",
+          tags: ["Brand Voice", "Viral Loops", "Engagement"],
+          href: "/social-media-marketing",
+          color: "from-pink-500/10 to-violet-500/10"
         },
         {
           id: 5,
-          icon: Code2,
-          category: "CMS & WordPress",
-          title: "WordPress Plugin Development",
-          desc: "Custom-built plugins to extend functionality and solve complex business requirements.",
-          tags: ["Backend", "API", "Extension"],
-          href: "/wordpress-plugin-development",
-          color: "from-blue-400/10 to-cyan-400/10"
+          icon: PenTool,
+          title: "Narrative Design",
+          desc: "Strategic content that bridges the gap between technical complexity and human connection.",
+          tags: ["Storytelling", "SEO Copy", "Strategy"],
+          href: "/content-writing-services",
+          color: "from-amber-500/10 to-orange-500/10"
         },
         {
           id: 6,
-          icon: Layout,
-          category: "CMS & WordPress",
-          title: "WordPress Theme Integration",
-          desc: "Professional integration of premium themes with custom modifications and optimizations.",
-          tags: ["Configuration", "Setup", "Customization"],
-          href: "/wordpress-theme-integration",
-          color: "from-violet-600/10 to-purple-600/10"
-        },
-        {
-          id: 7,
-          icon: Zap,
-          category: "Infrastructure",
-          title: "Page Speed Optimization",
-          desc: "Drastically reduce load times and improve Core Web Vitals for better ranking and UX.",
-          tags: ["Caching", "CDN", "Optimization"],
-          href: "/page-speed-optimization",
-          color: "from-yellow-400/10 to-orange-400/10"
-        },
-        {
-          id: 8,
-          icon: Settings,
-          category: "Infrastructure",
-          title: "Website Maintenance",
-          desc: "Continuous health checks, updates, and security patches to keep your site peak performing.",
-          tags: ["Security", "Updates", "Uptime"],
-          href: "/website-maintenance",
-          color: "from-gray-600/10 to-slate-600/10"
-        },
-        {
-          id: 9,
-          icon: ShieldCheck,
-          category: "SEO & Growth",
-          title: "SEO Audit Services",
-          desc: "Comprehensive technical and content analysis to uncover hidden growth opportunities.",
-          tags: ["Analysis", "Reporting", "Strategy"],
-          href: "/seo-audit-services",
-          color: "from-red-600/10 to-orange-600/10"
-        },
-        {
-          id: 10,
-          icon: MapPin,
-          category: "SEO & Growth",
-          title: "Local SEO Services",
-          desc: "Dominate local search results and drive foot traffic to your physical business locations.",
-          tags: ["GMB", "Citations", "Reviews"],
-          href: "/local-seo-services",
-          color: "from-green-600/10 to-emerald-600/10"
-        },
-        {
-          id: 11,
-          icon: Building2,
-          category: "SEO & Growth",
-          title: "Enterprise SEO Services",
-          desc: "Scalable organic growth strategies for large corporations and high-volume websites.",
-          tags: ["Scale", "Complex Data", "Global"],
-          href: "/enterprise-seo-services",
-          color: "from-blue-800/10 to-indigo-800/10"
-        },
-        {
-          id: 12,
           icon: ShoppingBag,
-          category: "SEO & Growth",
-          title: "eCommerce SEO Services",
-          desc: "Product-focused search optimization to maximize visibility in shopping queries.",
-          tags: ["Product Pages", "Schema", "CRO"],
-          href: "/ecommerce-seo-services",
-          color: "from-pink-500/10 to-rose-500/10"
-        },
-          {
-            id: 13,
-            icon: TrendingUp,
-            category: "SEO & Growth",
-            title: "Social Media Optimization (SMO)",
-            desc: "Strategic organic social growth focused on engagement and viral potential.",
-            tags: ["Organic", "Engagement", "Profiles"],
-            href: "/social-media-optimization",
-            color: "from-cyan-500/10 to-blue-500/10"
-          },
-          {
-            id: 22,
-            icon: Share2,
-            category: "SEO & Growth",
-            title: "Social Media Marketing (SMM)",
-            desc: "ROI-focused paid social campaigns and comprehensive brand management across platforms.",
-            tags: ["Paid Social", "Meta Ads", "Brand Awareness"],
-            href: "/social-media-marketing",
-            color: "from-blue-600/10 to-purple-600/10"
-          },
-          {
-            id: 23,
-            icon: BarChart3,
-            category: "SEO & Growth",
-            title: "PPC Management Services",
-            desc: "Expertly managed Pay-Per-Click campaigns designed to maximize conversion and minimize cost.",
-            tags: ["Google Ads", "Bing Ads", "Conversion"],
-            href: "/ppc-management-services",
-            color: "from-orange-500/10 to-red-500/10"
-          },
-          {
-            id: 24,
-            icon: PenTool,
-            category: "SEO & Growth",
-            title: "Content Writing Services",
-            desc: "Compelling, SEO-optimized content that resonates with your audience and builds brand authority.",
-            tags: ["Copywriting", "Blogs", "Sales Copy"],
-            href: "/content-writing-services",
-            color: "from-emerald-500/10 to-green-500/10"
-          },
-          {
-            id: 14,
-            icon: Server,
-          category: "Infrastructure",
-          title: "Business Hosting",
-          desc: "Managed, high-availability hosting solutions tailored for mission-critical business apps.",
-          tags: ["Cloud", "Security", "Scale"],
-          href: "/business-hosting",
-          color: "from-slate-700/10 to-zinc-700/10"
-        },
-        {
-          id: 15,
-          icon: Package,
-          category: "Premium Packages",
-          title: "SEO Packages",
-          desc: "Tiered organic growth plans designed for every stage of your business journey.",
-          tags: ["Basic", "Pro", "Elite"],
-          href: "/seo-packages",
-          color: "from-amber-500/10 to-yellow-500/10"
-        },
-        {
-          id: 16,
-          icon: Package,
-          category: "Premium Packages",
-          title: "PPC Packages",
-          desc: "ROI-driven paid advertising bundles for Google, Meta, and LinkedIn.",
-          tags: ["Ad Spend", "Management", "ROAS"],
-          href: "/ppc-package",
-          color: "from-blue-500/10 to-indigo-500/10"
-        },
-        {
-          id: 17,
-          icon: Package,
-          category: "Premium Packages",
-          title: "SMM Packages",
-          desc: "Complete social media management tiers including content and community management.",
-          tags: ["Content", "Posting", "Community"],
-          href: "/smm-packages",
-          color: "from-purple-500/10 to-pink-500/10"
-        },
-        {
-          id: 18,
-          icon: Package,
-          category: "Premium Packages",
-          title: "SMO Packages",
-          desc: "Dedicated organic social optimization plans for consistent brand growth.",
-          tags: ["Growth", "Optimization", "Audit"],
-          href: "/smo-package",
-          color: "from-teal-500/10 to-emerald-500/10"
-        },
-        {
-          id: 19,
-          icon: Package,
-          category: "Premium Packages",
-          title: "Digital Marketing Packages",
-          desc: "All-in-one digital growth bundles combining SEO, PPC, and Social.",
-          tags: ["Full Stack", "Strategy", "Impact"],
-          href: "/digital-marketing-packages",
-          color: "from-indigo-600/10 to-violet-600/10"
-        },
-        {
-          id: 20,
-          icon: Package,
-          category: "Premium Packages",
-          title: "Website Designing Packages",
-          desc: "Comprehensive design and development bundles for modern web presence.",
-          tags: ["UI/UX", "Development", "Support"],
-          href: "/website-designing-packages",
-          color: "from-rose-600/10 to-orange-600/10"
-        },
-        {
-          id: 21,
-          icon: Rocket,
-          category: "Infrastructure",
-          title: "Performance Infrastructure",
-          desc: "Architecting cloud-native infrastructures for high-traffic digital platforms.",
-          tags: ["Cloud", "DevOps", "Reliability"],
-          href: "/performance-infrastructure",
-          color: "from-cyan-600/10 to-blue-600/10"
+          title: "Infinite Commerce",
+          desc: "Fluid, frictionless shopping experiences that redefine the boundaries of digital retail.",
+          tags: ["Headless", "UX Flow", "Scale"],
+          href: "/e-commerce-development",
+          color: "from-indigo-500/10 to-blue-500/10"
         }
       ]
     },
@@ -277,254 +78,64 @@ const Services = ({ lang }) => {
         {
           id: 1,
           icon: Code2,
-          category: "CMS & WordPress",
-          title: "वर्डप्रेस विकास",
-          desc: "स्केलेबिलिटी, सुरक्षा और उच्च प्रदर्शन के लिए तैयार विशेषज्ञ कस्टम वर्डप्रेस समाधान।",
-          tags: ["कस्टम सीएमएस", "पीएचपी", "आर्किटेक्चर"],
-          href: "/wordpress-development",
-          color: "from-blue-600/10 to-indigo-600/10"
+          title: "वेब सिस्टम",
+          desc: "उच्च-प्रदर्शन फ्रेमवर्क और अनुकूलित इंटरफेस के साथ इमर्सिव डिजिटल अनुभव तैयार करना।",
+          tags: ["नेक्स्ट.जेएस", "रिएक्ट", "नोड.जेएस"],
+          href: "/website-development-services",
+          color: "from-blue-500/10 to-purple-500/10"
         },
         {
           id: 2,
-          icon: ShoppingBag,
-          category: "CMS & WordPress",
-          title: "वूकामर्स विकास",
-          desc: "सहज खरीदारी अनुभवों के लिए वूकामर्स पर निर्मित पूर्ण-स्तरीय ई-कॉमर्स प्लेटफॉर्म।",
-          tags: ["ई-कॉमर्स", "भुगतान", "इन्वेंट्री"],
-          href: "/woocommerce-development",
-          color: "from-purple-600/10 to-pink-600/10"
+          icon: Search,
+          title: "खोज बुद्धिमत्ता",
+          desc: "आपके ब्रांड के अधिकार और ऑर्गेनिक पहुंच को बढ़ाने के लिए एल्गोरिथम सटीकता का उपयोग करना।",
+          tags: ["डेटा ऑडिट", "सिमेंटिक्स", "अथॉरिटी"],
+          href: "/seo-services",
+          color: "from-emerald-500/10 to-teal-500/10"
         },
         {
           id: 3,
-          icon: Layout,
-          category: "CMS & WordPress",
-          title: "वर्डप्रेस थीम विकास",
-          desc: "आपकी विशिष्ट ब्रांड पहचान के लिए शुरू से निर्मित अद्वितीय, पिक्सेल-परफेक्ट कस्टम थीम।",
-          tags: ["यूएक्स/यूआई", "उत्तरदायी", "हल्का"],
-          href: "/wordpress-theme-development",
-          color: "from-emerald-600/10 to-teal-600/10"
+          icon: BarChart3,
+          title: "प्रदर्शन विज्ञापन",
+          desc: "घातीय रूपांतरण और आरओआई के लिए इंजीनियर सटीक-लक्षित भुगतान मीडिया अभियान।",
+          tags: ["क्वांटम बिडिंग", "रीटारगेटिंग", "एनालिटिक्स"],
+          href: "/ppc-management-services",
+          color: "from-orange-500/10 to-rose-500/10"
         },
         {
           id: 4,
-          icon: Layers,
-          category: "CMS & WordPress",
-          title: "वर्डप्रेस माइग्रेशन",
-          desc: "डेटा अखंडता के साथ अनुकूलित वातावरण में आपकी साइट को स्थानांतरित करने वाली शून्य-डाउनटाइम सेवाएं।",
-          tags: ["सुरक्षित कदम", "डेटाबेस", "होस्टिंग"],
-          href: "/wordpress-migration",
-          color: "from-orange-600/10 to-rose-600/10"
+          icon: Share2,
+          title: "सामाजिक संश्लेषण",
+          desc: "विकसित होते सामाजिक परिदृश्य में फलने-फूलने वाली ब्रांड कथाएं बनाना।",
+          tags: ["ब्रांड वॉयस", "वायरल लूप्स", "एंगेजमेंट"],
+          href: "/social-media-marketing",
+          color: "from-pink-500/10 to-violet-500/10"
         },
         {
           id: 5,
-          icon: Code2,
-          category: "CMS & WordPress",
-          title: "वर्डप्रेस प्लगइन विकास",
-          desc: "कार्यक्षमता बढ़ाने और जटिल व्यावसायिक आवश्यकताओं को हल करने के लिए कस्टम-निर्मित प्लगइन्स।",
-          tags: ["बैकएंड", "एपीआई", "एक्सटेंशन"],
-          href: "/wordpress-plugin-development",
-          color: "from-blue-400/10 to-cyan-400/10"
+          icon: PenTool,
+          title: "कथा डिजाइन",
+          desc: "रणनीतिक सामग्री जो तकनीकी जटिलता और मानवीय संबंध के बीच की खाई को पाटती है।",
+          tags: ["कहानी सुनाना", "एसईओ कॉपी", "रणनीति"],
+          href: "/content-writing-services",
+          color: "from-amber-500/10 to-orange-500/10"
         },
         {
           id: 6,
-          icon: Layout,
-          category: "CMS & WordPress",
-          title: "वर्डप्रेस थीम एकीकरण",
-          desc: "कस्टम संशोधनों और अनुकूलन के साथ प्रीमियम थीम का पेशेवर एकीकरण।",
-          tags: ["कॉन्फ़िगरेशन", "सेटअप", "कस्टमाइजेशन"],
-          href: "/wordpress-theme-integration",
-          color: "from-violet-600/10 to-purple-600/10"
-        },
-        {
-          id: 7,
-          icon: Zap,
-          category: "Infrastructure",
-          title: "पेज स्पीड ऑप्टिमाइजेशन",
-          desc: "लोड समय को कम करें और बेहतर रैंकिंग और यूएक्स के लिए कोर वेब विटल्स में सुधार करें।",
-          tags: ["कैशिंग", "सीडीएन", "अनुकूलन"],
-          href: "/page-speed-optimization",
-          color: "from-yellow-400/10 to-orange-400/10"
-        },
-        {
-          id: 8,
-          icon: Settings,
-          category: "Infrastructure",
-          title: "वेबसाइट रखरखाव",
-          desc: "आपकी साइट को चरम प्रदर्शन पर रखने के लिए निरंतर स्वास्थ्य जांच, अपडेट और सुरक्षा पैच।",
-          tags: ["सुरक्षा", "अपडेट", "अपटाइम"],
-          href: "/website-maintenance",
-          color: "from-gray-600/10 to-slate-600/10"
-        },
-        {
-          id: 9,
-          icon: ShieldCheck,
-          category: "SEO & Growth",
-          title: "एसईओ ऑडिट सेवाएं",
-          desc: "छिपे हुए विकास के अवसरों को उजागर करने के लिए व्यापक तकनीकी और सामग्री विश्लेषण।",
-          tags: ["विश्लेषण", "रिपोर्टिंग", "रणनीति"],
-          href: "/seo-audit-services",
-          color: "from-red-600/10 to-orange-600/10"
-        },
-        {
-          id: 10,
-          icon: MapPin,
-          category: "SEO & Growth",
-          title: "स्थानीय एसईओ सेवाएं",
-          desc: "स्थानीय खोज परिणामों पर हावी हों और अपने भौतिक व्यावसायिक स्थानों पर फुट ट्रैफिक बढ़ाएं।",
-          tags: ["जीएमबी", "प्रशंसा पत्र", "समीक्षा"],
-          href: "/local-seo-services",
-          color: "from-green-600/10 to-emerald-600/10"
-        },
-        {
-          id: 11,
-          icon: Building2,
-          category: "SEO & Growth",
-          title: "एंटरप्राइज एसईओ सेवाएं",
-          desc: "बड़े निगमों और उच्च-मात्रा वाली वेबसाइटों के लिए स्केलेबल ऑर्गेनिक विकास रणनीतियां।",
-          tags: ["पैमाना", "जटिल डेटा", "वैश्विक"],
-          href: "/enterprise-seo-services",
-          color: "from-blue-800/10 to-indigo-800/10"
-        },
-        {
-          id: 12,
           icon: ShoppingBag,
-          category: "SEO & Growth",
-          title: "ई-कॉमर्स एसईओ सेवाएं",
-          desc: "खरीदारी प्रश्नों में दृश्यता को अधिकतम करने के लिए उत्पाद-केंद्रित खोज अनुकूलन।",
-          tags: ["उत्पाद पृष्ठ", "स्कीमा", "सीआरओ"],
-          href: "/ecommerce-seo-services",
-          color: "from-pink-500/10 to-rose-500/10"
-        },
-          {
-            id: 13,
-            icon: TrendingUp,
-            category: "SEO & Growth",
-            title: "सोशल मीडिया ऑप्टिमाइजेशन (SMO)",
-            desc: "जुड़ाव और वायरल क्षमता पर केंद्रित रणनीतिक ऑर्गेनिक सोशल विकास।",
-            tags: ["ऑर्गेनिक", "जुड़ाव", "प्रोफाइल"],
-            href: "/social-media-optimization",
-            color: "from-cyan-500/10 to-blue-500/10"
-          },
-          {
-            id: 22,
-            icon: Share2,
-            category: "SEO & Growth",
-            title: "सोशल मीडिया मार्केटिंग (SMM)",
-            desc: "प्लेटफ़ॉर्म पर आरओआई-केंद्रित सशुल्क सामाजिक अभियान और व्यापक ब्रांड प्रबंधन।",
-            tags: ["सशुल्क सामाजिक", "मेटा विज्ञापन", "ब्रांड जागरूकता"],
-            href: "/social-media-marketing",
-            color: "from-blue-600/10 to-purple-600/10"
-          },
-          {
-            id: 23,
-            icon: BarChart3,
-            category: "SEO & Growth",
-            title: "PPC प्रबंधन सेवाएं",
-            desc: "रूपांतरण को अधिकतम करने और लागत को कम करने के लिए डिज़ाइन किए गए विशेषज्ञ रूप से प्रबंधित पे-पर-क्लिक अभियान।",
-            tags: ["गूगल विज्ञापन", "बिंग विज्ञापन", "रूपांतरण"],
-            href: "/ppc-management-services",
-            color: "from-orange-500/10 to-red-500/10"
-          },
-          {
-            id: 24,
-            icon: PenTool,
-            category: "SEO & Growth",
-            title: "सामग्री लेखन सेवाएं",
-            desc: "सम्मोहक, एसईओ-अनुकूलित सामग्री जो आपके दर्शकों के साथ प्रतिध्वनित होती है और ब्रांड अधिकार बनाती है।",
-            tags: ["कॉपीराइटिंग", "ब्लॉग", "बिक्री प्रति"],
-            href: "/content-writing-services",
-            color: "from-emerald-500/10 to-green-500/10"
-          },
-          {
-            id: 14,
-            icon: Server,
-          category: "Infrastructure",
-          title: "बिजनेस होस्टिंग",
-          desc: "मिशन-महत्वपूर्ण व्यावसायिक ऐप्स के लिए तैयार प्रबंधित, उच्च-उपलब्धता होस्टिंग समाधान।",
-          tags: ["क्लाउड", "सुरक्षा", "पैमाना"],
-          href: "/business-hosting",
-          color: "from-slate-700/10 to-zinc-700/10"
-        },
-        {
-          id: 15,
-          icon: Package,
-          category: "Premium Packages",
-          title: "एसईओ पैकेज",
-          desc: "आपकी व्यावसायिक यात्रा के हर चरण के लिए डिज़ाइन किए गए स्तरीय ऑर्गेनिक विकास योजनाएं।",
-          tags: ["बेसिक", "प्रो", "एलीट"],
-          href: "/seo-packages",
-          color: "from-amber-500/10 to-yellow-500/10"
-        },
-        {
-          id: 16,
-          icon: Package,
-          category: "Premium Packages",
-          title: "पीपीसी पैकेज",
-          desc: "गूगल, मेटा और लिंक्डइन के लिए आरओआई-संचालित भुगतान विज्ञापन बंडल।",
-          tags: ["विज्ञापन खर्च", "प्रबंधन", "आरओएएस"],
-          href: "/ppc-package",
-          color: "from-blue-500/10 to-indigo-500/10"
-        },
-        {
-          id: 17,
-          icon: Package,
-          category: "Premium Packages",
-          title: "एसएमएम पैकेज",
-          desc: "सामग्री और सामुदायिक प्रबंधन सहित पूर्ण सोशल मीडिया प्रबंधन स्तर।",
-          tags: ["सामग्री", "पोस्टिंग", "समुदाय"],
-          href: "/smm-packages",
-          color: "from-purple-500/10 to-pink-500/10"
-        },
-        {
-          id: 18,
-          icon: Package,
-          category: "Premium Packages",
-          title: "एसएमओ पैकेज",
-          desc: "लगातार ब्रांड विकास के लिए समर्पित ऑर्गेनिक सोशल ऑप्टिमाइजेशन योजनाएं।",
-          tags: ["विकास", "अनुकूलन", "ऑडिट"],
-          href: "/smo-package",
-          color: "from-teal-500/10 to-emerald-500/10"
-        },
-        {
-          id: 19,
-          icon: Package,
-          category: "Premium Packages",
-          title: "डिजिटल मार्केटिंग पैकेज",
-          desc: "एसईओ, पीपीसी और सोशल को मिलाकर ऑल-इन-वन डिजिटल विकास बंडल।",
-          tags: ["पूर्ण स्टैक", "रणनीति", "प्रभाव"],
-          href: "/digital-marketing-packages",
-          color: "from-indigo-600/10 to-violet-600/10"
-        },
-        {
-          id: 20,
-          icon: Package,
-          category: "Premium Packages",
-          title: "वेबसाइट डिजाइनिंग पैकेज",
-          desc: "आधुनिक वेब उपस्थिति के लिए व्यापक डिजाइन और विकास बंडल।",
-          tags: ["यूआई/यूएक्स", "विकास", "सहायता"],
-          href: "/website-designing-packages",
-          color: "from-rose-600/10 to-orange-600/10"
-        },
-        {
-          id: 21,
-          icon: Rocket,
-          category: "Infrastructure",
-          title: "प्रदर्शन बुनियादी ढांचा",
-          desc: "उच्च-ट्रैफ़िक डिजिटल प्लेटफार्मों के लिए क्लाउड-नेटिव इन्फ्रास्ट्रक्चर का निर्माण।",
-          tags: ["क्लाउड", "डेवऑप्स", "विश्वसनीयता"],
-          href: "/performance-infrastructure",
-          color: "from-cyan-600/10 to-blue-600/10"
+          title: "अनंत वाणिज्य",
+          desc: "तरल, घर्षण रहित खरीदारी के अनुभव जो डिजिटल खुदरा की सीमाओं को फिर से परिभाषित करते हैं।",
+          tags: ["हेडलेस", "यूएक्स फ्लो", "स्केल"],
+          href: "/e-commerce-development",
+          color: "from-indigo-500/10 to-blue-500/10"
         }
       ]
     }
   }[lang];
 
-  const filteredServices = t.services.filter(s => 
-    activeCategory === 'All' || activeCategory === 'सभी' || s.category === activeCategory || 
-    (lang === 'hi' && categories.hi[categories.en.indexOf(s.category)] === activeCategory)
-  );
-
   return (
     <SectionWrapper id="services" className="bg-background py-40 relative overflow-hidden">
+      {/* Subdued Background Accents for performance */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30">
         <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-primary/[0.01] rounded-full blur-[100px] will-change-transform" />
         <div className="absolute bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-darkPurple/[0.01] rounded-full blur-[100px] will-change-transform" />
@@ -555,30 +166,13 @@ const Services = ({ lang }) => {
           </div>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap gap-4 mb-20">
-          {categories[lang].map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-widest transition-all duration-300 border ${
-                activeCategory === cat 
-                ? 'bg-primary text-primary-foreground border-primary shadow-[0_0_20px_rgba(46,16,101,0.2)]' 
-                : 'bg-foreground/5 text-muted-foreground border-border/10 hover:border-primary/50'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-l border-darkPurple/10">
-          {filteredServices.map((service, idx) => {
-            const isHovered = hoveredId === service.id;
-            
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+            {t.services.map((service, idx) => {
+              const isHovered = hoveredId === service.id;
+              
               return (
-                <MotionLink 
-                  to={service.href}
+                <motion.a 
+                  href={service.href}
                   key={service.id}
                   onMouseEnter={() => setHoveredId(service.id)}
                   onMouseLeave={() => setHoveredId(null)}
@@ -586,8 +180,9 @@ const Services = ({ lang }) => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: idx * 0.05, ease: "easeOut" }}
-                  className={`group relative block bg-background p-12 lg:p-16 overflow-hidden min-h-[450px] border-r border-b border-darkPurple/10 transition-colors duration-700 hover:bg-foreground/[0.01]`}
+                  className={`group relative block bg-background p-12 lg:p-16 overflow-hidden min-h-[500px] border border-darkPurple/10 transition-colors duration-700 hover:bg-foreground/[0.01]`}
                 >
+                  {/* Unified Hover Background */}
                   <motion.div 
                     initial={false}
                     animate={{ 
@@ -595,13 +190,13 @@ const Services = ({ lang }) => {
                       scale: isHovered ? 1.05 : 0.95
                     }}
                     transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                    className={`absolute inset-0 bg-gradient-to-br ${service.color} blur-[40px] z-0 pointer-events-none transform-gpu`}
+                    className={`absolute inset-0 bg-gradient-to-br ${service.color} blur-[40px] z-0 pointer-events-none will-change-[opacity,transform] transform-gpu`}
                   />
 
                 <div className="relative z-10 flex flex-col h-full justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-20">
-                      <span className="text-[10px] font-black text-muted-foreground/30 tracking-[0.5em]">{idx < 9 ? `0${idx + 1}` : idx + 1}</span>
+                      <span className="text-[10px] font-black text-muted-foreground/30 tracking-[0.5em]">0{service.id}</span>
                       <motion.div 
                         animate={{ 
                           scale: isHovered ? 1.15 : 1,
@@ -611,7 +206,7 @@ const Services = ({ lang }) => {
                           borderColor: isHovered ? "hsl(var(--primary))" : "hsl(var(--border) / 0.1)"
                         }}
                         transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                        className="w-12 h-12 border rounded-full flex items-center justify-center transform-gpu"
+                        className="w-12 h-12 border rounded-full flex items-center justify-center will-change-[transform,background-color] transform-gpu"
                       >
                         <service.icon className="w-5 h-5 stroke-[1.5px]" />
                       </motion.div>
@@ -620,14 +215,14 @@ const Services = ({ lang }) => {
                     <motion.h4 
                       animate={{ x: isHovered ? 8 : 0 }}
                       transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                      className="text-3xl md:text-4xl font-bold text-foreground mb-8 tracking-tighter transform-gpu"
+                      className="text-4xl md:text-5xl font-bold text-foreground mb-8 tracking-tighter will-change-transform transform-gpu"
                     >
                       {service.title}
                     </motion.h4>
                     
                     <motion.p 
                       animate={{ color: isHovered ? "hsl(var(--foreground) / 0.8)" : "hsl(var(--muted-foreground))" }}
-                      className="mb-12 text-[12px] leading-loose max-w-[90%]"
+                      className="mb-12 text-[13px] leading-loose max-w-[85%]"
                     >
                       {service.desc}
                     </motion.p>
@@ -645,27 +240,27 @@ const Services = ({ lang }) => {
                     </div>
                   </div>
 
-                  <motion.div 
-                    animate={{ color: isHovered ? "hsl(var(--primary))" : "hsl(var(--muted-foreground))" }}
-                    className="flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.5em] mt-auto"
-                  >
-                    <motion.span 
-                      animate={{ x: isHovered ? 8 : 0 }}
-                      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                      className="transform-gpu"
-                    >
-                      {t.explore}
-                    </motion.span>
                     <motion.div 
-                      animate={{ backgroundColor: isHovered ? "hsl(var(--primary) / 0.2)" : "hsl(var(--border) / 0.1)" }}
-                      transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                      className="h-[1px] flex-grow" 
-                    />
-                  </motion.div>
+                      animate={{ color: isHovered ? "hsl(var(--primary))" : "hsl(var(--muted-foreground))" }}
+                      className="flex items-center gap-6 text-[10px] font-black uppercase tracking-[0.5em]"
+                    >
+                      <motion.span 
+                        animate={{ x: isHovered ? 8 : 0 }}
+                        transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                        className="will-change-transform transform-gpu"
+                      >
+                        {t.explore}
+                      </motion.span>
+                      <motion.div 
+                        animate={{ backgroundColor: isHovered ? "hsl(var(--primary) / 0.2)" : "hsl(var(--border) / 0.1)" }}
+                        transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                        className="h-[1px] flex-grow will-change-[background-color]" 
+                      />
+                    </motion.div>
                 </div>
-                </MotionLink>
-              );
-            })}
+              </motion.a>
+            );
+          })}
         </div>
       </div>
     </SectionWrapper>

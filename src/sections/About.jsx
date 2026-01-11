@@ -8,17 +8,17 @@ const About = ({ lang }) => {
       title: "Connecting Ideals to",
       subtitle: "Uniquely Crafted Experiences",
       p1: "Skylumine is a premium digital production studio that brings your ideas to life through visually captivating designs and interactive experiences.",
-        p2: "We specialize in comprehensive digital solutions, offering high-end B2B and B2C web development, advanced SEO strategies, and performance-driven social marketing. Our expertise ensures a seamless online presence tailored to the future of digital interaction.",
-        cta: "Learn More About Our Journey"
-      },
-      hi: {
-        tag: "हम कौन हैं",
-        title: "आदर्शों को जोड़ना",
-        subtitle: "विशिष्ट रूप से तैयार अनुभव",
-        p1: "Skylumine एक प्रीमियम डिजिटल प्रोडक्शन स्टूडियो है जो आपके विचारों को दृश्यात्मक रूप से आकर्षक डिजाइन और इंटरैक्टिव अनुभवों के माध्यम से जीवंत करता है।",
-        p2: "हम व्यापक डिजिटल समाधानों में विशेषज्ञता रखते हैं, जो उच्च-स्तरीय B2B और B2C वेब विकास, उन्नत SEO रणनीतियों और प्रदर्शन-संचालित सोशल मार्केटिंग की पेशकश करते हैं। हमारी विशेषज्ञता डिजिटल इंटरैक्शन के भविष्य के लिए तैयार एक सहज ऑनलाइन उपस्थिति सुनिश्चित करती है।",
-        cta: "हमारी यात्रा के बारे में और जानें"
-      }
+      p2: "We specialize in comprehensive digital solutions, offering high-end web development, advanced SEO strategies, and performance-driven social marketing. Our expertise ensures a seamless online presence tailored to the future of digital interaction.",
+      cta: "Learn More About Our Journey"
+    },
+    hi: {
+      tag: "हम कौन हैं",
+      title: "आदर्शों को जोड़ना",
+      subtitle: "विशिष्ट रूप से तैयार अनुभव",
+      p1: "Skylumine एक प्रीमियम डिजिटल प्रोडक्शन स्टूडियो है जो आपके विचारों को दृश्यात्मक रूप से आकर्षक डिजाइन और इंटरैक्टिव अनुभवों के माध्यम से जीवंत करता है।",
+      p2: "हम व्यापक डिजिटल समाधानों में विशेषज्ञता रखते हैं, जो उच्च-स्तरीय वेब विकास, उन्नत SEO रणनीतियों और प्रदर्शन-संचालित सोशल मार्केटिंग की पेशकश करते हैं। हमारी विशेषज्ञता डिजिटल इंटरैक्शन के भविष्य के लिए तैयार एक सहज ऑनलाइन उपस्थिति सुनिश्चित करती है।",
+      cta: "हमारी यात्रा के बारे में और जानें"
+    }
   }[lang];
 
   return (
