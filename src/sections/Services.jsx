@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-    Code2, Search, BarChart3, Share2, PenTool, ShoppingBag, 
-    Layout, Package, Zap, Settings, Globe, 
-    MapPin, Building2, Server, TrendingUp, Layers, Rocket, ShieldCheck
-  } from 'lucide-react';
+  Code2, Search, BarChart3, Share2, PenTool, ShoppingBag, 
+  Layout, Package, Zap, Settings, Globe, LineChart, 
+  MapPin, Building2, Server, TrendingUp, Layers, Rocket, ShieldCheck
+} from 'lucide-react';
 
 const MotionLink = motion(Link);
 
@@ -16,7 +16,7 @@ const Services = ({ lang }) => {
 
   const categories = {
     en: ["All", "Web Development", "CMS & WordPress", "SEO & Growth", "Design & Content", "Infrastructure", "Premium Packages"],
-    hi: ["सभी", "वेब विकास", "सीएमएस और वर्डप्रेस", "एसईओ और विकास", "डिजाइन और सामग्री", "इन्फ्रास्ट्रक्चर", "प्रीमियम पैकेज"]
+    hi: ["सभी", "वेब डेवलपमेंट", "सीएमएस और वर्डप्रेस", "एसईओ और विकास", "डिजाइन और कंटेंट", "इन्फ्रास्ट्रक्चर", "प्रीमियम पैकेज"]
   };
 
   const t = {
@@ -88,6 +88,36 @@ const Services = ({ lang }) => {
         },
         {
           id: 7,
+          icon: Code2,
+          category: "CMS & WordPress",
+          title: "Magento Development",
+          desc: "Enterprise eCommerce solutions with Magento, optimized for high-volume transactions and complexity.",
+          tags: ["Enterprise", "B2B", "Scalability"],
+          href: "/magento-development",
+          color: "from-orange-500/10 to-red-500/10"
+        },
+        {
+          id: 8,
+          icon: Globe,
+          category: "CMS & WordPress",
+          title: "Joomla & Drupal",
+          desc: "Robust CMS development using Joomla and Drupal for content-heavy enterprise websites.",
+          tags: ["Joomla", "Drupal", "Enterprise CMS"],
+          href: "/joomla-drupal-development",
+          color: "from-blue-500/10 to-sky-500/10"
+        },
+        {
+          id: 9,
+          icon: Code2,
+          category: "Web Development",
+          title: "Custom App Development",
+          desc: "High-performance applications built with Java, .Net, and modern Angular/React frameworks.",
+          tags: ["Java", ".Net", "Angular"],
+          href: "/custom-application-development",
+          color: "from-indigo-600/10 to-blue-600/10"
+        },
+        {
+          id: 10,
           icon: Zap,
           category: "Infrastructure",
           title: "Page Speed Optimization",
@@ -97,7 +127,7 @@ const Services = ({ lang }) => {
           color: "from-yellow-400/10 to-orange-400/10"
         },
         {
-          id: 8,
+          id: 11,
           icon: Settings,
           category: "Infrastructure",
           title: "Website Maintenance",
@@ -107,7 +137,7 @@ const Services = ({ lang }) => {
           color: "from-gray-600/10 to-slate-600/10"
         },
         {
-          id: 9,
+          id: 12,
           icon: ShieldCheck,
           category: "SEO & Growth",
           title: "SEO Audit Services",
@@ -117,7 +147,7 @@ const Services = ({ lang }) => {
           color: "from-red-600/10 to-orange-600/10"
         },
         {
-          id: 10,
+          id: 13,
           icon: MapPin,
           category: "SEO & Growth",
           title: "Local SEO Services",
@@ -127,7 +157,7 @@ const Services = ({ lang }) => {
           color: "from-green-600/10 to-emerald-600/10"
         },
         {
-          id: 11,
+          id: 14,
           icon: Building2,
           category: "SEO & Growth",
           title: "Enterprise SEO Services",
@@ -137,7 +167,7 @@ const Services = ({ lang }) => {
           color: "from-blue-800/10 to-indigo-800/10"
         },
         {
-          id: 12,
+          id: 15,
           icon: ShoppingBag,
           category: "SEO & Growth",
           title: "eCommerce SEO Services",
@@ -147,7 +177,7 @@ const Services = ({ lang }) => {
           color: "from-pink-500/10 to-rose-500/10"
         },
         {
-          id: 13,
+          id: 16,
           icon: TrendingUp,
           category: "SEO & Growth",
           title: "Social Media Optimization (SMO)",
@@ -157,7 +187,37 @@ const Services = ({ lang }) => {
           color: "from-cyan-500/10 to-blue-500/10"
         },
         {
-          id: 14,
+          id: 17,
+          icon: ShieldCheck,
+          category: "SEO & Growth",
+          title: "Reputation Management",
+          desc: "Monitor and improve your online brand perception and customer trust.",
+          tags: ["ORM", "Crisis Management", "Reviews"],
+          href: "/reputation-management",
+          color: "from-amber-600/10 to-yellow-600/10"
+        },
+        {
+          id: 18,
+          icon: PenTool,
+          category: "Design & Content",
+          title: "Branding & Identity",
+          desc: "Complete visual identity design including logos, typography, and brand guidelines.",
+          tags: ["Logo Design", "Branding", "UI/UX"],
+          href: "/branding-identity",
+          color: "from-purple-600/10 to-violet-600/10"
+        },
+        {
+          id: 19,
+          icon: PenTool,
+          category: "Design & Content",
+          title: "Content Writing & Strategy",
+          desc: "High-quality, SEO-driven content creation for blogs, websites, and marketing campaigns.",
+          tags: ["Copywriting", "SEO Content", "Strategy"],
+          href: "/content-writing-services",
+          color: "from-orange-600/10 to-amber-600/10"
+        },
+        {
+          id: 20,
           icon: Server,
           category: "Infrastructure",
           title: "Business Hosting",
@@ -167,7 +227,17 @@ const Services = ({ lang }) => {
           color: "from-slate-700/10 to-zinc-700/10"
         },
         {
-          id: 15,
+          id: 21,
+          icon: Globe,
+          category: "Infrastructure",
+          title: "Domain Services",
+          desc: "Domain registration, management, and strategic portfolio consultation.",
+          tags: ["Registration", "DNS", "Security"],
+          href: "/domain-services",
+          color: "from-teal-600/10 to-emerald-600/10"
+        },
+        {
+          id: 22,
           icon: Package,
           category: "Premium Packages",
           title: "SEO Packages",
@@ -177,7 +247,7 @@ const Services = ({ lang }) => {
           color: "from-amber-500/10 to-yellow-500/10"
         },
         {
-          id: 16,
+          id: 23,
           icon: Package,
           category: "Premium Packages",
           title: "PPC Packages",
@@ -187,7 +257,7 @@ const Services = ({ lang }) => {
           color: "from-blue-500/10 to-indigo-500/10"
         },
         {
-          id: 17,
+          id: 24,
           icon: Package,
           category: "Premium Packages",
           title: "SMM Packages",
@@ -197,7 +267,7 @@ const Services = ({ lang }) => {
           color: "from-purple-500/10 to-pink-500/10"
         },
         {
-          id: 18,
+          id: 25,
           icon: Package,
           category: "Premium Packages",
           title: "SMO Packages",
@@ -207,7 +277,7 @@ const Services = ({ lang }) => {
           color: "from-teal-500/10 to-emerald-500/10"
         },
         {
-          id: 19,
+          id: 26,
           icon: Package,
           category: "Premium Packages",
           title: "Digital Marketing Packages",
@@ -217,98 +287,28 @@ const Services = ({ lang }) => {
           color: "from-indigo-600/10 to-violet-600/10"
         },
         {
-          id: 20,
+          id: 27,
           icon: Package,
           category: "Premium Packages",
           title: "Website Designing Packages",
           desc: "Comprehensive design and development bundles for modern web presence.",
           tags: ["UI/UX", "Development", "Support"],
-            href: "/website-designing-packages",
-            color: "from-rose-600/10 to-orange-600/10"
-          },
-          {
-            id: 21,
-            icon: Rocket,
-            category: "Infrastructure",
-            title: "Performance Infrastructure",
-            desc: "Architecting cloud-native infrastructures for high-traffic digital platforms.",
-            tags: ["Cloud", "DevOps", "Reliability"],
-            href: "/performance-infrastructure",
-            color: "from-cyan-600/10 to-blue-600/10"
-          },
-          {
-            id: 22,
-            icon: Code2,
-            category: "CMS & WordPress",
-            title: "Magento Development",
-            desc: "Custom Magento eCommerce solutions for enterprise-level retail and commerce.",
-            tags: ["Enterprise", "B2B", "Commerce"],
-            href: "/magento-development",
-            color: "from-orange-600/10 to-red-600/10"
-          },
-          {
-            id: 23,
-            icon: Layout,
-            category: "CMS & WordPress",
-            title: "Joomla & Drupal",
-            desc: "Bespoke development on robust CMS platforms for complex content needs.",
-            tags: ["CMS", "Open Source", "Scalable"],
-            href: "/joomla-drupal-development",
-            color: "from-blue-500/10 to-indigo-500/10"
-          },
-          {
-            id: 24,
-            icon: Code2,
-            category: "Web Development",
-            title: "Custom App Development",
-            desc: "Enterprise-grade applications built with Java, .Net, and modern frameworks.",
-            tags: ["Java", ".Net", "Enterprise"],
-            href: "/custom-app-development",
-            color: "from-emerald-500/10 to-teal-500/10"
-          },
-          {
-            id: 25,
-            icon: PenTool,
-            category: "Design & Content",
-            title: "Content Writing & Strategy",
-            desc: "SEO-optimized content that tells your story and drives organic engagement.",
-            tags: ["Blogging", "Strategy", "Copy"],
-            href: "/content-writing-services",
-            color: "from-amber-600/10 to-orange-600/10"
-          },
-          {
-            id: 26,
-            icon: Layers,
-            category: "Design & Content",
-            title: "Branding & Logo Design",
-            desc: "Creating memorable visual identities that resonate with your target audience.",
-            tags: ["Identity", "Visuals", "Design"],
-            href: "/branding-and-identity",
-            color: "from-rose-600/10 to-pink-600/10"
-          },
-          {
-            id: 27,
-            icon: Globe,
-            category: "Infrastructure",
-            title: "Domain Services",
-            desc: "Global domain registration, management, and secure DNS solutions.",
-            tags: ["Domains", "DNS", "Security"],
-            href: "/domain-registration-services",
-            color: "from-blue-400/10 to-cyan-400/10"
-          },
-          {
-            id: 28,
-            icon: ShieldCheck,
-            category: "SEO & Growth",
-            title: "Reputation Management",
-            desc: "Protecting and enhancing your online presence through active review management.",
-            tags: ["Reviews", "GMB", "Trust"],
-            href: "/reputation-management-services",
-            color: "from-green-500/10 to-emerald-500/10"
-          }
-        ]
-      },
-      hi: {
+          href: "/website-designing-packages",
+          color: "from-rose-600/10 to-orange-600/10"
+        },
+        {
+          id: 28,
+          icon: Rocket,
+          category: "Infrastructure",
+          title: "Performance Infrastructure",
+          desc: "Architecting cloud-native infrastructures for high-traffic digital platforms.",
+          tags: ["Cloud", "DevOps", "Reliability"],
+          href: "/performance-infrastructure",
+          color: "from-cyan-600/10 to-blue-600/10"
+        }
+      ]
+    },
+    hi: {
       tag: "तकनीकी कलात्मकता",
       title: "डिजिटल पारिस्थितिकी तंत्र",
       subtitle: "प्रभाव के लिए निर्मित",
@@ -376,6 +376,36 @@ const Services = ({ lang }) => {
         },
         {
           id: 7,
+          icon: Code2,
+          category: "CMS & WordPress",
+          title: "मैजेंटो विकास",
+          desc: "मैजेंटो के साथ एंटरप्राइज ईकॉमर्स समाधान, उच्च-मात्रा लेनदेन और जटिलता के लिए अनुकूलित।",
+          tags: ["एंटरप्राइज", "B2B", "स्केलेबिलिटी"],
+          href: "/magento-development",
+          color: "from-orange-500/10 to-red-500/10"
+        },
+        {
+          id: 8,
+          icon: Globe,
+          category: "CMS & WordPress",
+          title: "जूमला और ड्रुपल",
+          desc: "कंटेंट-भारी एंटरप्राइज वेबसाइटों के लिए जूमला और ड्रुपल का उपयोग करके मजबूत सीएमएस विकास।",
+          tags: ["जूमला", "ड्रुपल", "एंटरप्राइज सीएमएस"],
+          href: "/joomla-drupal-development",
+          color: "from-blue-500/10 to-sky-500/10"
+        },
+        {
+          id: 9,
+          icon: Code2,
+          category: "Web Development",
+          title: "कस्टम ऐप विकास",
+          desc: "जावा, .नेट और आधुनिक एंगुलर/रिएक्ट फ्रेमवर्क के साथ निर्मित उच्च-प्रदर्शन अनुप्रयोग।",
+          tags: ["जावा", ".नेट", "एंगुलर"],
+          href: "/custom-application-development",
+          color: "from-indigo-600/10 to-blue-600/10"
+        },
+        {
+          id: 10,
           icon: Zap,
           category: "Infrastructure",
           title: "पेज स्पीड ऑप्टिमाइजेशन",
@@ -385,7 +415,7 @@ const Services = ({ lang }) => {
           color: "from-yellow-400/10 to-orange-400/10"
         },
         {
-          id: 8,
+          id: 11,
           icon: Settings,
           category: "Infrastructure",
           title: "वेबसाइट रखरखाव",
@@ -395,7 +425,7 @@ const Services = ({ lang }) => {
           color: "from-gray-600/10 to-slate-600/10"
         },
         {
-          id: 9,
+          id: 12,
           icon: ShieldCheck,
           category: "SEO & Growth",
           title: "एसईओ ऑडिट सेवाएं",
@@ -405,7 +435,7 @@ const Services = ({ lang }) => {
           color: "from-red-600/10 to-orange-600/10"
         },
         {
-          id: 10,
+          id: 13,
           icon: MapPin,
           category: "SEO & Growth",
           title: "स्थानीय एसईओ सेवाएं",
@@ -415,7 +445,7 @@ const Services = ({ lang }) => {
           color: "from-green-600/10 to-emerald-600/10"
         },
         {
-          id: 11,
+          id: 14,
           icon: Building2,
           category: "SEO & Growth",
           title: "एंटरप्राइज एसईओ सेवाएं",
@@ -425,7 +455,7 @@ const Services = ({ lang }) => {
           color: "from-blue-800/10 to-indigo-800/10"
         },
         {
-          id: 12,
+          id: 15,
           icon: ShoppingBag,
           category: "SEO & Growth",
           title: "ई-कॉमर्स एसईओ सेवाएं",
@@ -435,7 +465,7 @@ const Services = ({ lang }) => {
           color: "from-pink-500/10 to-rose-500/10"
         },
         {
-          id: 13,
+          id: 16,
           icon: TrendingUp,
           category: "SEO & Growth",
           title: "सोशल मीडिया ऑप्टिमाइजेशन (SMO)",
@@ -445,7 +475,37 @@ const Services = ({ lang }) => {
           color: "from-cyan-500/10 to-blue-500/10"
         },
         {
-          id: 14,
+          id: 17,
+          icon: ShieldCheck,
+          category: "SEO & Growth",
+          title: "प्रतिष्ठा प्रबंधन",
+          desc: "अपनी ऑनलाइन ब्रांड धारणा और ग्राहक विश्वास की निगरानी और सुधार करें।",
+          tags: ["ओआरएम", "संकट प्रबंधन", "समीक्षा"],
+          href: "/reputation-management",
+          color: "from-amber-600/10 to-yellow-600/10"
+        },
+        {
+          id: 18,
+          icon: PenTool,
+          category: "Design & Content",
+          title: "ब्रांडिंग और पहचान",
+          desc: "लोगो, टाइपोग्राफी और ब्रांड दिशानिर्देशों सहित पूर्ण दृश्य पहचान डिजाइन।",
+          tags: ["लोगो डिजाइन", "ब्रांडिंग", "UI/UX"],
+          href: "/branding-identity",
+          color: "from-purple-600/10 to-violet-600/10"
+        },
+        {
+          id: 19,
+          icon: PenTool,
+          category: "Design & Content",
+          title: "कंटेंट राइटिंग और रणनीति",
+          desc: "ब्लॉग, वेबसाइट और मार्केटिंग अभियानों के लिए उच्च गुणवत्ता वाली, एसईओ-संचालित कंटेंट निर्माण।",
+          tags: ["कॉपीराइटिंग", "SEO कंटेंट", "रणनीति"],
+          href: "/content-writing-services",
+          color: "from-orange-600/10 to-amber-600/10"
+        },
+        {
+          id: 20,
           icon: Server,
           category: "Infrastructure",
           title: "बिजनेस होस्टिंग",
@@ -455,7 +515,17 @@ const Services = ({ lang }) => {
           color: "from-slate-700/10 to-zinc-700/10"
         },
         {
-          id: 15,
+          id: 21,
+          icon: Globe,
+          category: "Infrastructure",
+          title: "डोमेन सेवाएं",
+          desc: "डोमेन पंजीकरण, प्रबंधन और रणनीतिक पोर्टफोलियो परामर्श।",
+          tags: ["पंजीकरण", "DNS", "सुरक्षा"],
+          href: "/domain-services",
+          color: "from-teal-600/10 to-emerald-600/10"
+        },
+        {
+          id: 22,
           icon: Package,
           category: "Premium Packages",
           title: "एसईओ पैकेज",
@@ -465,7 +535,7 @@ const Services = ({ lang }) => {
           color: "from-amber-500/10 to-yellow-500/10"
         },
         {
-          id: 16,
+          id: 23,
           icon: Package,
           category: "Premium Packages",
           title: "पीपीसी पैकेज",
@@ -475,7 +545,7 @@ const Services = ({ lang }) => {
           color: "from-blue-500/10 to-indigo-500/10"
         },
         {
-          id: 17,
+          id: 24,
           icon: Package,
           category: "Premium Packages",
           title: "एसएमएम पैकेज",
@@ -485,7 +555,7 @@ const Services = ({ lang }) => {
           color: "from-purple-500/10 to-pink-500/10"
         },
         {
-          id: 18,
+          id: 25,
           icon: Package,
           category: "Premium Packages",
           title: "एसएमओ पैकेज",
@@ -495,7 +565,7 @@ const Services = ({ lang }) => {
           color: "from-teal-500/10 to-emerald-500/10"
         },
         {
-          id: 19,
+          id: 26,
           icon: Package,
           category: "Premium Packages",
           title: "डिजिटल मार्केटिंग पैकेज",
@@ -505,98 +575,28 @@ const Services = ({ lang }) => {
           color: "from-indigo-600/10 to-violet-600/10"
         },
         {
-          id: 20,
+          id: 27,
           icon: Package,
           category: "Premium Packages",
           title: "वेबसाइट डिजाइनिंग पैकेज",
           desc: "आधुनिक वेब उपस्थिति के लिए व्यापक डिजाइन और विकास बंडल।",
           tags: ["यूआई/यूएक्स", "विकास", "सहायता"],
-            href: "/website-designing-packages",
-            color: "from-rose-600/10 to-orange-600/10"
-          },
-          {
-            id: 21,
-            icon: Rocket,
-            category: "Infrastructure",
-            title: "प्रदर्शन बुनियादी ढांचा",
-            desc: "उच्च-ट्रैफ़िक डिजिटल प्लेटफार्मों के लिए क्लाउड-नेटिव इन्फ्रास्ट्रक्चर का निर्माण।",
-            tags: ["क्लाउड", "डेवऑप्स", "विश्वसनीयता"],
-            href: "/performance-infrastructure",
-            color: "from-cyan-600/10 to-blue-600/10"
-          },
-          {
-            id: 22,
-            icon: Code2,
-            category: "CMS & WordPress",
-            title: "मैजेंटो विकास",
-            desc: "एंटरप्राइज-स्तर के रिटेल और कॉमर्स के लिए कस्टम मैजेंटो ई-कॉमर्स समाधान।",
-            tags: ["एंटरप्राइज", "B2B", "कॉमर्स"],
-            href: "/magento-development",
-            color: "from-orange-600/10 to-red-600/10"
-          },
-          {
-            id: 23,
-            icon: Layout,
-            category: "CMS & WordPress",
-            title: "जूमला और ड्रुपल",
-            desc: "जटिल सामग्री आवश्यकताओं के लिए मजबूत सीएमएस प्लेटफार्मों पर बेस्पोक विकास।",
-            tags: ["सीएमएस", "ओपन सोर्स", "स्केलेबल"],
-            href: "/joomla-drupal-development",
-            color: "from-blue-500/10 to-indigo-500/10"
-          },
-          {
-            id: 24,
-            icon: Code2,
-            category: "Web Development",
-            title: "कस्टम ऐप विकास",
-            desc: "जावा, .नेट और आधुनिक फ्रेमवर्क के साथ निर्मित एंटरप्राइज-ग्रेड एप्लिकेशन।",
-            tags: ["जावा", ".नेट", "एंटरप्राइज"],
-            href: "/custom-app-development",
-            color: "from-emerald-500/10 to-teal-500/10"
-          },
-          {
-            id: 25,
-            icon: PenTool,
-            category: "Design & Content",
-            title: "कंटेंट लेखन और रणनीति",
-            desc: "एसईओ-अनुकूलित सामग्री जो आपकी कहानी कहती है और ऑर्गेनिक जुड़ाव बढ़ाती है।",
-            tags: ["ब्लॉगिंग", "रणनीति", "कॉपी"],
-            href: "/content-writing-services",
-            color: "from-amber-600/10 to-orange-600/10"
-          },
-          {
-            id: 26,
-            icon: Layers,
-            category: "Design & Content",
-            title: "ब्रांडिंग और लोगो डिजाइन",
-            desc: "यादगार दृश्य पहचान बनाना जो आपके लक्षित दर्शकों के साथ गूंजती है।",
-            tags: ["पहचान", "दृश्य", "डिजाइन"],
-            href: "/branding-and-identity",
-            color: "from-rose-600/10 to-pink-600/10"
-          },
-          {
-            id: 27,
-            icon: Globe,
-            category: "Infrastructure",
-            title: "डोमेन सेवाएं",
-            desc: "वैश्विक डोमेन पंजीकरण, प्रबंधन और सुरक्षित डीएनएस समाधान।",
-            tags: ["डोमेन", "डीएनएस", "सुरक्षा"],
-            href: "/domain-registration-services",
-            color: "from-blue-400/10 to-cyan-400/10"
-          },
-          {
-            id: 28,
-            icon: ShieldCheck,
-            category: "SEO & Growth",
-            title: "प्रतिष्ठा प्रबंधन",
-            desc: "सक्रिय समीक्षा प्रबंधन के माध्यम से आपकी ऑनलाइन उपस्थिति की रक्षा करना।",
-            tags: ["समीक्षा", "जीएमबी", "विश्वास"],
-            href: "/reputation-management-services",
-            color: "from-green-500/10 to-emerald-500/10"
-          }
-        ]
-      }
-    }[lang];
+          href: "/website-designing-packages",
+          color: "from-rose-600/10 to-orange-600/10"
+        },
+        {
+          id: 28,
+          icon: Rocket,
+          category: "Infrastructure",
+          title: "प्रदर्शन बुनियादी ढांचा",
+          desc: "उच्च-ट्रैफ़िक डिजिटल प्लेटफार्मों के लिए क्लाउड-नेटिव इन्फ्रास्ट्रक्चर का निर्माण।",
+          tags: ["क्लाउड", "डेवऑप्स", "विश्वसनीयता"],
+          href: "/performance-infrastructure",
+          color: "from-cyan-600/10 to-blue-600/10"
+        }
+      ]
+    }
+  }[lang];
 
   const filteredServices = t.services.filter(s => 
     activeCategory === 'All' || activeCategory === 'सभी' || s.category === activeCategory || 

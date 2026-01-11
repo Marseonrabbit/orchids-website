@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import SectionWrapper from '../components/SectionWrapper';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { CheckCircle2, ArrowRight, Code2, Search, BarChart3, Share2, PenTool, ShoppingBag, Zap, ShieldCheck, Gauge, Globe, Layout, Layers } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Code2, Search, BarChart3, Share2, PenTool, ShoppingBag, Zap, ShieldCheck, Gauge, Globe } from 'lucide-react';
 
 const serviceData = {
   'web-design-company': {
@@ -347,22 +347,112 @@ const serviceData = {
       hi: "जब ऑफ-द-शेल्फ प्लगइन्स पर्याप्त नहीं होते हैं, तो हम कस्टम समाधान बनाते हैं जो आपकी विशिष्ट व्यावसायिक चुनौतियों को दक्षता और सुरक्षा के साथ हल करते हैं।"
     }
   },
-  'wordpress-theme-integration': {
-    icon: Layout,
-    title: { en: "WordPress Theme Integration", hi: "वर्डप्रेस थीम एकीकरण" },
-    desc: { en: "Expertly integrate and optimize premium themes for your business goals.", hi: "अपने व्यावसायिक लक्ष्यों के लिए प्रीमियम थीम को विशेषज्ञ रूप से एकीकृत और अनुकूलित करें।" },
-    features: [
-      { en: "Premium Setup", hi: "प्रीमियम सेटअप" },
-      { en: "Speed Optimization", hi: "गति अनुकूलन" },
-      { en: "Visual Customization", hi: "दृश्य अनुकूलन" },
-      { en: "Demo Content Import", hi: "डेमो सामग्री आयात" }
-    ],
-    detailedDesc: {
-      en: "Bought a theme and don't know where to start? We handle the complex setup, customization, and optimization of premium themes to make them truly yours.",
-      hi: "थीम खरीदी है और नहीं जानते कि कहां से शुरू करें? हम प्रीमियम थीम के जटिल सेटअप, अनुकूलन और अनुकूलन को संभालते हैं ताकि वे वास्तव में आपके हो सकें।"
-    }
-  },
-  'performance-infrastructure': {
+    'wordpress-theme-integration': {
+      icon: Layout,
+      title: { en: "WordPress Theme Integration", hi: "वर्डप्रेस थीम एकीकरण" },
+      desc: { en: "Expertly integrate and optimize premium themes for your business goals.", hi: "अपने व्यावसायिक लक्ष्यों के लिए प्रीमियम थीम को विशेषज्ञ रूप से एकीकृत और अनुकूलित करें।" },
+      features: [
+        { en: "Premium Setup", hi: "प्रीमियम सेटअप" },
+        { en: "Speed Optimization", hi: "गति अनुकूलन" },
+        { en: "Visual Customization", hi: "दृश्य अनुकूलन" },
+        { en: "Demo Content Import", hi: "डेमो सामग्री आयात" }
+      ],
+      detailedDesc: {
+        en: "Bought a theme and don't know where to start? We handle the complex setup, customization, and optimization of premium themes to make them truly yours.",
+        hi: "थीम खरीदी है और नहीं जानते कि कहां से शुरू करें? हम प्रीमियम थीम के जटिल सेटअप, अनुकूलन और अनुकूलन को संभालते हैं ताकि वे वास्तव में आपके हो सकें।"
+      }
+    },
+    'magento-development': {
+      icon: Code2,
+      title: { en: "Magento Development", hi: "मैजेंटो विकास" },
+      desc: { en: "Enterprise eCommerce solutions with Magento, optimized for high-volume transactions.", hi: "मैजेंटो के साथ एंटरप्राइज ईकॉमर्स समाधान, उच्च-मात्रा लेनदेन के लिए अनुकूलित।" },
+      features: [
+        { en: "Enterprise B2B", hi: "एंटरप्राइज B2B" },
+        { en: "Scalable Architecture", hi: "स्केलेबल आर्किटेक्चर" },
+        { en: "Secure Transactions", hi: "सुरक्षित लेनदेन" },
+        { en: "Custom Extensions", hi: "कस्टम एक्सटेंशन" }
+      ],
+      detailedDesc: {
+        en: "We provide full-scale Magento development for enterprises looking for robust, scalable eCommerce solutions. Our expertise ensures your platform can handle complex business logic and high traffic.",
+        hi: "हम मजबूत, स्केलेबल ईकॉमर्स समाधानों की तलाश करने वाले उद्यमों के लिए पूर्ण-स्तरीय मैजेंटो विकास प्रदान करते हैं। हमारी विशेषज्ञता यह सुनिश्चित करती है कि आपका प्लेटफॉर्म जटिल व्यावसायिक तर्क और उच्च ट्रैफ़िक को संभाल सके।"
+      }
+    },
+    'joomla-drupal-development': {
+      icon: Globe,
+      title: { en: "Joomla & Drupal", hi: "जूमला और ड्रुपल" },
+      desc: { en: "Robust CMS development for content-heavy enterprise websites.", hi: "कंटेंट-भारी एंटरप्राइज वेबसाइटों के लिए मजबूत सीएमएस विकास।" },
+      features: [
+        { en: "Multi-User Management", hi: "मल्टी-यूजर प्रबंधन" },
+        { en: "Custom Modules", hi: "कस्टम मॉड्यूल" },
+        { en: "Enterprise Security", hi: "एंटरप्राइज सुरक्षा" },
+        { en: "Complex Workflows", hi: "जटिल वर्कफ़्लो" }
+      ],
+      detailedDesc: {
+        en: "Joomla and Drupal are excellent choices for enterprise content management. We specialize in building secure, high-performance sites using these robust CMS platforms.",
+        hi: "जूमला और ड्रुपल एंटरप्राइज कंटेंट मैनेजमेंट के लिए बेहतरीन विकल्प हैं। हम इन मजबूत सीएमएस प्लेटफार्मों का उपयोग करके सुरक्षित, उच्च-प्रदर्शन साइट बनाने में विशेषज्ञ हैं।"
+      }
+    },
+    'custom-application-development': {
+      icon: Code2,
+      title: { en: "Custom App Development", hi: "कस्टम ऐप विकास" },
+      desc: { en: "High-performance applications built with Java, .Net, and modern frameworks.", hi: "जावा, .नेट और आधुनिक फ्रेमवर्क के साथ निर्मित उच्च-प्रदर्शन अनुप्रयोग।" },
+      features: [
+        { en: "Java & .Net Expertise", hi: "जावा और .नेट विशेषज्ञता" },
+        { en: "Angular/React Frontend", hi: "एंगुलर/रिएक्ट फ्रंटएंड" },
+        { en: "Microservices", hi: "माइक्रोसर्विसेज" },
+        { en: "Cloud Integration", hi: "क्लाउड एकीकरण" }
+      ],
+      detailedDesc: {
+        en: "Our custom application development team builds enterprise-grade software tailored to your specific needs. We use robust backend technologies like Java and .Net to ensure reliability and performance.",
+        hi: "हमारी कस्टम एप्लिकेशन विकास टीम आपकी विशिष्ट आवश्यकताओं के अनुरूप एंटरप्राइज-ग्रेड सॉफ्टवेयर बनाती है। हम विश्वसनीयता और प्रदर्शन सुनिश्चित करने के लिए जावा और .नेट जैसी मजबूत बैकएंड तकनीकों का उपयोग करते हैं।"
+      }
+    },
+    'reputation-management': {
+      icon: ShieldCheck,
+      title: { en: "Reputation Management", hi: "प्रतिष्ठा प्रबंधन" },
+      desc: { en: "Monitor and improve your online brand perception and customer trust.", hi: "अपनी ऑनलाइन ब्रांड धारणा और ग्राहक विश्वास की निगरानी और सुधार करें।" },
+      features: [
+        { en: "ORM Strategy", hi: "ORM रणनीति" },
+        { en: "Crisis Management", hi: "संकट प्रबंधन" },
+        { en: "Review Monitoring", hi: "समीक्षा निगरानी" },
+        { en: "Trust Building", hi: "विश्वास निर्माण" }
+      ],
+      detailedDesc: {
+        en: "Your online reputation is everything. We help you monitor what people are saying about your brand and proactively manage your digital image to build and maintain customer trust.",
+        hi: "आपकी ऑनलाइन प्रतिष्ठा ही सब कुछ है। हम लोगों को आपके ब्रांड के बारे में क्या कह रहे हैं, इसकी निगरानी करने में मदद करते हैं और ग्राहकों के विश्वास को बनाने और बनाए रखने के लिए सक्रिय रूप से आपकी डिजिटल छवि का प्रबंधन करते हैं।"
+      }
+    },
+    'branding-identity': {
+      icon: PenTool,
+      title: { en: "Branding & Identity", hi: "ब्रांडिंग और पहचान" },
+      desc: { en: "Complete visual identity design including logos and brand guidelines.", hi: "लोगो और ब्रांड दिशानिर्देशों सहित पूर्ण दृश्य पहचान डिजाइन।" },
+      features: [
+        { en: "Logo Design", hi: "लोगो डिजाइन" },
+        { en: "Brand Strategy", hi: "ब्रांड रणनीति" },
+        { en: "UI/UX Consistency", hi: "UI/UX निरंतरता" },
+        { en: "Corporate Identity", hi: "कॉर्पोरेट पहचान" }
+      ],
+      detailedDesc: {
+        en: "We create cohesive brand identities that resonate with your target audience. From logo design to comprehensive brand guidelines, we ensure your visual presence is strong and consistent.",
+        hi: "हम सुसंगत ब्रांड पहचान बनाते हैं जो आपके लक्षित दर्शकों के साथ मेल खाती है। लोगो डिजाइन से लेकर व्यापक ब्रांड दिशानिर्देशों तक, हम सुनिश्चित करते हैं कि आपकी दृश्य उपस्थिति मजबूत और सुसंगत हो।"
+      }
+    },
+    'domain-services': {
+      icon: Globe,
+      title: { en: "Domain Services", hi: "डोमेन सेवाएं" },
+      desc: { en: "Domain registration, management, and strategic portfolio consultation.", hi: "डोमेन पंजीकरण, प्रबंधन और रणनीतिक पोर्टफोलियो परामर्श।" },
+      features: [
+        { en: "Global Registration", hi: "वैश्विक पंजीकरण" },
+        { en: "DNS Management", hi: "DNS प्रबंधन" },
+        { en: "Strategic Advice", hi: "रणनीतिक सलाह" },
+        { en: "Secure Transfers", hi: "सुरक्षित स्थानांतरण" }
+      ],
+      detailedDesc: {
+        en: "Managing your domain portfolio is critical for digital success. We provide comprehensive domain services, from registration to strategic portfolio management and DNS security.",
+        hi: "डिजिटल सफलता के लिए अपने डोमेन पोर्टफोलियो को प्रबंधित करना महत्वपूर्ण है। हम पंजीकरण से लेकर रणनीतिक पोर्टफोलियो प्रबंधन और डीएनएस सुरक्षा तक व्यापक डोमेन सेवाएं प्रदान करते हैं।"
+      }
+    },
+    'performance-infrastructure': {
     icon: Gauge,
     title: { en: "Performance Infrastructure", hi: "प्रदर्शन बुनियादी ढांचा" },
     desc: { en: "High-availability cloud architecture for mission-critical digital platforms.", hi: "मिशन-महत्वपूर्ण डिजिटल प्लेटफार्मों के लिए उच्च-उपलब्धता क्लाउड आर्किटेक्चर।" },
@@ -375,96 +465,6 @@ const serviceData = {
     detailedDesc: {
       en: "We architect resilient, scalable infrastructures using AWS, Google Cloud, and Vercel. Our focus is on 99.9% uptime and lightning-fast global delivery.",
       hi: "हम AWS, Google Cloud और Vercel का उपयोग करके लचीले, स्केलेबल बुनियादी ढांचे का निर्माण करते हैं। हमारा ध्यान 99.9% अपटाइम और बिजली की तेजी से वैश्विक वितरण पर है।"
-    }
-  },
-  'magento-development': {
-    icon: Code2,
-    title: { en: "Magento Development", hi: "मैजेंटो विकास" },
-    desc: { en: "Enterprise-level e-commerce solutions built on Magento.", hi: "मैजेंटो पर निर्मित एंटरप्राइज-स्तर के ई-कॉमर्स समाधान।" },
-    features: [
-      { en: "Custom Magento Themes", hi: "कस्टम मैजेंटो थीम" },
-      { en: "B2B & B2C Solutions", hi: "B2B और B2C समाधान" },
-      { en: "Magento Migration", hi: "मैजेंटो माइग्रेशन" },
-      { en: "Performance Tuning", hi: "प्रदर्शन ट्यूनिंग" }
-    ],
-    detailedDesc: {
-      en: "Magento is the gold standard for enterprise commerce. We deliver high-performance Magento stores with complex integrations, custom features, and scalable architecture.",
-      hi: "मैजेंटो एंटरप्राइज कॉमर्स के लिए स्वर्ण मानक है। हम जटिल एकीकरण, कस्टम सुविधाओं और स्केलेबल आर्किटेक्चर के साथ उच्च प्रदर्शन वाले मैजेंटो स्टोर प्रदान करते हैं।"
-    }
-  },
-  'joomla-drupal-development': {
-    icon: Layout,
-    title: { en: "Joomla & Drupal", hi: "जूमला और ड्रुपल" },
-    desc: { en: "Expert development for complex content management needs.", hi: "जटिल सामग्री प्रबंधन आवश्यकताओं के लिए विशेषज्ञ विकास।" },
-    features: [
-      { en: "Custom Module Dev", hi: "कस्टम मॉड्यूल विकास" },
-      { en: "Enterprise CMS", hi: "एंटरप्राइज सीएमएस" },
-      { en: "Security Audits", hi: "सुरक्षा ऑडिट" },
-      { en: "CMS Migration", hi: "सीएमएस माइग्रेशन" }
-    ],
-    detailedDesc: {
-      en: "For websites that require advanced content structures and user permissions, Joomla and Drupal offer unparalleled flexibility. We specialize in building secure, high-traffic portals on these platforms.",
-      hi: "ऐसी वेबसाइटों के लिए जिन्हें उन्नत सामग्री संरचनाओं और उपयोगकर्ता अनुमतियों की आवश्यकता होती है, जूमला और ड्रुपल अद्वितीय लचीलापन प्रदान करते हैं। हम इन प्लेटफार्मों पर सुरक्षित, उच्च-ट्रैफ़िक पोर्टल बनाने में विशेषज्ञ हैं।"
-    }
-  },
-  'custom-app-development': {
-    icon: Code2,
-    title: { en: "Custom App Development", hi: "कस्टम ऐप विकास" },
-    desc: { en: "Bespoke software solutions for unique business challenges.", hi: "अद्वितीय व्यावसायिक चुनौतियों के लिए बेस्पोक सॉफ्टवेयर समाधान।" },
-    features: [
-      { en: "Java & .Net Development", hi: "जावा और .नेट विकास" },
-      { en: "Cloud-Native Apps", hi: "क्लाउड-नेटिव ऐप्स" },
-      { en: "Microservices", hi: "माइक्रोसर्विसेज" },
-      { en: "Enterprise Software", hi: "एंटरप्राइज सॉफ्टवेयर" }
-    ],
-    detailedDesc: {
-      en: "We build custom enterprise applications that streamline operations and drive innovation. Our team uses modern frameworks and robust engineering practices to deliver high-quality software.",
-      hi: "हम कस्टम एंटरप्राइज एप्लिकेशन बनाते हैं जो संचालन को सुव्यवस्थित करते हैं और नवाचार को बढ़ावा देते हैं। हमारी टीम उच्च गुणवत्ता वाले सॉफ्टवेयर देने के लिए आधुनिक फ्रेमवर्क और मजबूत इंजीनियरिंग प्रथाओं का उपयोग करती है।"
-    }
-  },
-  'branding-and-identity': {
-    icon: Layers,
-    title: { en: "Branding & Identity", hi: "ब्रांडिंग और पहचान" },
-    desc: { en: "Creating powerful visual stories for modern brands.", hi: "आधुनिक ब्रांडों के लिए शक्तिशाली दृश्य कहानियां बनाना।" },
-    features: [
-      { en: "Logo Design", hi: "लोगो डिजाइन" },
-      { en: "Brand Guidelines", hi: "ब्रांड दिशानिर्देश" },
-      { en: "Visual Identity", hi: "दृश्य पहचान" },
-      { en: "Stationery Design", hi: "स्टेशनरी डिजाइन" }
-    ],
-    detailedDesc: {
-      en: "A brand is more than just a logo. We create comprehensive visual identity systems that resonate with your audience and build lasting emotional connections.",
-      hi: "एक ब्रांड सिर्फ एक लोगो से कहीं अधिक है। हम व्यापक दृश्य पहचान प्रणाली बनाते हैं जो आपके दर्शकों के साथ गूंजती है और स्थायी भावनात्मक संबंध बनाती है।"
-    }
-  },
-  'domain-registration-services': {
-    icon: Globe,
-    title: { en: "Domain Services", hi: "डोमेन सेवाएं" },
-    desc: { en: "Secure your digital address with our domain management.", hi: "हमारे डोमेन प्रबंधन के साथ अपने डिजिटल पते को सुरक्षित करें।" },
-    features: [
-      { en: "Domain Registration", hi: "डोमेन पंजीकरण" },
-      { en: "DNS Management", hi: "डीएनएस प्रबंधन" },
-      { en: "Privacy Protection", hi: "गोपनीयता सुरक्षा" },
-      { en: "Domain Transfers", hi: "डोमेन ट्रांसफर" }
-    ],
-    detailedDesc: {
-      en: "Your domain is the foundation of your online presence. We offer secure registration, DNS management, and comprehensive portfolio protection to keep your digital assets safe.",
-      hi: "आपका डोमेन आपकी ऑनलाइन उपस्थिति की नींव है। हम आपकी डिजिटल संपत्ति को सुरक्षित रखने के लिए सुरक्षित पंजीकरण, डीएनएस प्रबंधन और व्यापक पोर्टफोलियो सुरक्षा प्रदान करते हैं।"
-    }
-  },
-  'reputation-management-services': {
-    icon: ShieldCheck,
-    title: { en: "Reputation Management", hi: "प्रतिष्ठा प्रबंधन" },
-    desc: { en: "Build trust and credibility with active review management.", hi: "सक्रिय समीक्षा प्रबंधन के साथ विश्वास और विश्वसनीयता बनाएं।" },
-    features: [
-      { en: "Review Monitoring", hi: "समीक्षा निगरानी" },
-      { en: "GMB Optimization", hi: "जीएमबी अनुकूलन" },
-      { en: "Crisis Management", hi: "संकट प्रबंधन" },
-      { en: "Customer Feedback", hi: "ग्राहक प्रतिक्रिया" }
-    ],
-    detailedDesc: {
-      en: "In the digital age, your reputation is your most valuable asset. We help you monitor, manage, and improve your online reviews and ratings across all major platforms.",
-      hi: "डिजिटल युग में, आपकी प्रतिष्ठा आपकी सबसे मूल्यवान संपत्ति है। हम आपको सभी प्रमुख प्लेटफार्मों पर अपनी ऑनलाइन समीक्षाओं और रेटिंगों की निगरानी, प्रबंधन और सुधार करने में मदद करते हैं।"
     }
   }
 };
