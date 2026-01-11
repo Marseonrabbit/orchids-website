@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 import { 
   Code2, Search, BarChart3, Share2, PenTool, ShoppingBag, 
   Layout, Package, Zap, Settings, Globe, LineChart, 
-  MapPin, Building2, Server, TrendingUp, Layers, Rocket, ShieldCheck,
-  Cpu, Cloud, HardDrive, Database, Coffee
+  MapPin, Building2, Server, TrendingUp, Layers, Rocket, ShieldCheck
 } from 'lucide-react';
 
 const MotionLink = motion(Link);
@@ -16,8 +15,8 @@ const Services = ({ lang }) => {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const categories = {
-    en: ["All", "CMS & WordPress", "Custom Development", "SEO & Growth", "Infrastructure", "Premium Packages"],
-    hi: ["सभी", "सीएमएस और वर्डप्रेस", "कस्टम विकास", "एसईओ और विकास", "इन्फ्रास्ट्रक्चर", "प्रीमियम पैकेज"]
+    en: ["All", "CMS & WordPress", "SEO & Growth", "Infrastructure", "Premium Packages"],
+    hi: ["सभी", "सीएमएस और वर्डप्रेस", "एसईओ और विकास", "इन्फ्रास्ट्रक्चर", "प्रीमियम पैकेज"]
   };
 
   const t = {
@@ -236,76 +235,6 @@ const Services = ({ lang }) => {
           tags: ["Cloud", "DevOps", "Reliability"],
           href: "/performance-infrastructure",
           color: "from-cyan-600/10 to-blue-600/10"
-        },
-        {
-          id: 22,
-          icon: Globe,
-          category: "Infrastructure",
-          title: "Domain Registration",
-          desc: "Secure your unique identity with professional domain registration and management services.",
-          tags: ["Identity", "DNS", "Security"],
-          href: "/domain-registration",
-          color: "from-blue-500/10 to-cyan-500/10"
-        },
-        {
-          id: 23,
-          icon: HardDrive,
-          category: "Infrastructure",
-          title: "Dedicated Servers",
-          desc: "High-performance physical hardware dedicated solely to your applications for maximum power.",
-          tags: ["Bare Metal", "Control", "Power"],
-          href: "/dedicated-servers",
-          color: "from-indigo-700/10 to-blue-700/10"
-        },
-        {
-          id: 24,
-          icon: Cloud,
-          category: "Infrastructure",
-          title: "Cloud Solutions",
-          desc: "Scalable cloud architecture and management for modern, flexible business operations.",
-          tags: ["AWS", "Azure", "Scaling"],
-          href: "/cloud-solutions",
-          color: "from-cyan-400/10 to-sky-400/10"
-        },
-        {
-          id: 25,
-          icon: PenTool,
-          category: "SEO & Growth",
-          title: "Content Marketing",
-          desc: "Strategic content creation that attracts, engages, and converts your target audience.",
-          tags: ["Copywriting", "Strategy", "Value"],
-          href: "/content-marketing",
-          color: "from-amber-600/10 to-orange-600/10"
-        },
-        {
-          id: 26,
-          icon: Cpu,
-          category: "Custom Development",
-          title: "PHP Development",
-          desc: "Modern PHP application development using frameworks like Laravel and Symfony.",
-          tags: ["Laravel", "Backend", "Scalable"],
-          href: "/php-development",
-          color: "from-blue-600/10 to-indigo-600/10"
-        },
-        {
-          id: 27,
-          icon: Database,
-          category: "Custom Development",
-          title: ".Net Development",
-          desc: "Enterprise-grade software solutions built with the robust Microsoft .Net framework.",
-          tags: ["C#", "Enterprise", "Robust"],
-          href: "/dotnet-development",
-          color: "from-purple-600/10 to-indigo-600/10"
-        },
-        {
-          id: 28,
-          icon: Coffee,
-          category: "Custom Development",
-          title: "Java Development",
-          desc: "Secure, scalable enterprise applications powered by the Java ecosystem.",
-          tags: ["Spring Boot", "Scale", "Secure"],
-          href: "/java-development",
-          color: "from-orange-700/10 to-red-700/10"
         }
       ]
     },
@@ -430,7 +359,7 @@ const Services = ({ lang }) => {
           icon: ShoppingBag,
           category: "SEO & Growth",
           title: "ई-कॉमर्स एसईओ सेवाएं",
-          desc: "उत्पाद-केंद्रित खोज अनुकूलन।",
+          desc: "खरीदारी प्रश्नों में दृश्यता को अधिकतम करने के लिए उत्पाद-केंद्रित खोज अनुकूलन।",
           tags: ["उत्पाद पृष्ठ", "स्कीमा", "सीआरओ"],
           href: "/ecommerce-seo-services",
           color: "from-pink-500/10 to-rose-500/10"
@@ -450,7 +379,7 @@ const Services = ({ lang }) => {
           icon: Server,
           category: "Infrastructure",
           title: "बिजनेस होस्टिंग",
-          desc: "मिशन-महत्वपूर्ण व्यावसायिक ऐप्स के लिए प्रबंधित, उच्च-उपलब्धता होस्टिंग।",
+          desc: "मिशन-महत्वपूर्ण व्यावसायिक ऐप्स के लिए तैयार प्रबंधित, उच्च-उपलब्धता होस्टिंग समाधान।",
           tags: ["क्लाउड", "सुरक्षा", "पैमाना"],
           href: "/business-hosting",
           color: "from-slate-700/10 to-zinc-700/10"
@@ -460,7 +389,7 @@ const Services = ({ lang }) => {
           icon: Package,
           category: "Premium Packages",
           title: "एसईओ पैकेज",
-          desc: "आपकी व्यावसायिक यात्रा के हर चरण के लिए ऑर्गेनिक विकास योजनाएं।",
+          desc: "आपकी व्यावसायिक यात्रा के हर चरण के लिए डिज़ाइन किए गए स्तरीय ऑर्गेनिक विकास योजनाएं।",
           tags: ["बेसिक", "प्रो", "एलीट"],
           href: "/seo-packages",
           color: "from-amber-500/10 to-yellow-500/10"
@@ -470,7 +399,7 @@ const Services = ({ lang }) => {
           icon: Package,
           category: "Premium Packages",
           title: "पीपीसी पैकेज",
-          desc: "गूगल, मेटा और लिंक्डइन के लिए आरओआई-संचालित विज्ञापन।",
+          desc: "गूगल, मेटा और लिंक्डइन के लिए आरओआई-संचालित भुगतान विज्ञापन बंडल।",
           tags: ["विज्ञापन खर्च", "प्रबंधन", "आरओएएस"],
           href: "/ppc-package",
           color: "from-blue-500/10 to-indigo-500/10"
@@ -480,7 +409,7 @@ const Services = ({ lang }) => {
           icon: Package,
           category: "Premium Packages",
           title: "एसएमएम पैकेज",
-          desc: "सामग्री और सामुदायिक प्रबंधन सहित पूर्ण सोशल मीडिया प्रबंधन।",
+          desc: "सामग्री और सामुदायिक प्रबंधन सहित पूर्ण सोशल मीडिया प्रबंधन स्तर।",
           tags: ["सामग्री", "पोस्टिंग", "समुदाय"],
           href: "/smm-packages",
           color: "from-purple-500/10 to-pink-500/10"
@@ -490,7 +419,7 @@ const Services = ({ lang }) => {
           icon: Package,
           category: "Premium Packages",
           title: "एसएमओ पैकेज",
-          desc: "लगातार ब्रांड विकास के लिए ऑर्गेनिक सोशल ऑप्टिमाइजेशन।",
+          desc: "लगातार ब्रांड विकास के लिए समर्पित ऑर्गेनिक सोशल ऑप्टिमाइजेशन योजनाएं।",
           tags: ["विकास", "अनुकूलन", "ऑडिट"],
           href: "/smo-package",
           color: "from-teal-500/10 to-emerald-500/10"
@@ -500,7 +429,7 @@ const Services = ({ lang }) => {
           icon: Package,
           category: "Premium Packages",
           title: "डिजिटल मार्केटिंग पैकेज",
-          desc: "एसईओ, पीपीसी और सोशल को मिलाकर ऑल-इन-वन डिजिटल विकास।",
+          desc: "एसईओ, पीपीसी और सोशल को मिलाकर ऑल-इन-वन डिजिटल विकास बंडल।",
           tags: ["पूर्ण स्टैक", "रणनीति", "प्रभाव"],
           href: "/digital-marketing-packages",
           color: "from-indigo-600/10 to-violet-600/10"
@@ -510,7 +439,7 @@ const Services = ({ lang }) => {
           icon: Package,
           category: "Premium Packages",
           title: "वेबसाइट डिजाइनिंग पैकेज",
-          desc: "आधुनिक वेब उपस्थिति के लिए व्यापक डिजाइन और विकास।",
+          desc: "आधुनिक वेब उपस्थिति के लिए व्यापक डिजाइन और विकास बंडल।",
           tags: ["यूआई/यूएक्स", "विकास", "सहायता"],
           href: "/website-designing-packages",
           color: "from-rose-600/10 to-orange-600/10"
@@ -520,80 +449,10 @@ const Services = ({ lang }) => {
           icon: Rocket,
           category: "Infrastructure",
           title: "प्रदर्शन बुनियादी ढांचा",
-          desc: "उच्च-ट्रैफ़िक प्लेटफार्मों के लिए क्लाउड-नेटिव बुनियादी ढांचा।",
+          desc: "उच्च-ट्रैफ़िक डिजिटल प्लेटफार्मों के लिए क्लाउड-नेटिव इन्फ्रास्ट्रक्चर का निर्माण।",
           tags: ["क्लाउड", "डेवऑप्स", "विश्वसनीयता"],
           href: "/performance-infrastructure",
           color: "from-cyan-600/10 to-blue-600/10"
-        },
-        {
-          id: 22,
-          icon: Globe,
-          category: "Infrastructure",
-          title: "डोमेन पंजीकरण",
-          desc: "पेशेवर डोमेन पंजीकरण और प्रबंधन सेवाओं के साथ अपनी विशिष्ट पहचान सुरक्षित करें।",
-          tags: ["पहचान", "डीएनएस", "सुरक्षा"],
-          href: "/domain-registration",
-          color: "from-blue-500/10 to-cyan-500/10"
-        },
-        {
-          id: 23,
-          icon: HardDrive,
-          category: "Infrastructure",
-          title: "समर्पित सर्वर",
-          desc: "अधिकतम शक्ति के लिए पूरी तरह से आपके अनुप्रयोगों को समर्पित भौतिक हार्डवेयर।",
-          tags: ["बेयर मेटल", "नियंत्रण", "शक्ति"],
-          href: "/dedicated-servers",
-          color: "from-indigo-700/10 to-blue-700/10"
-        },
-        {
-          id: 24,
-          icon: Cloud,
-          category: "Infrastructure",
-          title: "क्लाउड समाधान",
-          desc: "आधुनिक व्यावसायिक संचालन के लिए स्केलेबल क्लाउड आर्किटेक्चर।",
-          tags: ["एडब्ल्यूएस", "अज़ूर", "स्केलिंग"],
-          href: "/cloud-solutions",
-          color: "from-cyan-400/10 to-sky-400/10"
-        },
-        {
-          id: 25,
-          icon: PenTool,
-          category: "SEO & Growth",
-          title: "सामग्री विपणन",
-          desc: "रणनीतिक सामग्री निर्माण जो आपके लक्षित दर्शकों को आकर्षित और परिवर्तित करता है।",
-          tags: ["कॉपीराइटिंग", "रणनीति", "मूल्य"],
-          href: "/content-marketing",
-          color: "from-amber-600/10 to-orange-600/10"
-        },
-        {
-          id: 26,
-          icon: Cpu,
-          category: "Custom Development",
-          title: "पीएचपी विकास",
-          desc: "लारावेल और सिम्फनी जैसे फ्रेमवर्क का उपयोग करके आधुनिक पीएचपी अनुप्रयोग विकास।",
-          tags: ["लारावेल", "बैकएंड", "स्केलेबल"],
-          href: "/php-development",
-          color: "from-blue-600/10 to-indigo-600/10"
-        },
-        {
-          id: 27,
-          icon: Database,
-          category: "Custom Development",
-          title: ".Net विकास",
-          desc: "माइक्रोसॉफ्ट .Net फ्रेमवर्क के साथ निर्मित एंटरप्राइज-ग्रेड सॉफ्टवेयर समाधान।",
-          tags: ["C#", "एंटरप्राइज", "मजबूत"],
-          href: "/dotnet-development",
-          color: "from-purple-600/10 to-indigo-600/10"
-        },
-        {
-          id: 28,
-          icon: Coffee,
-          category: "Custom Development",
-          title: "जावा विकास",
-          desc: "जावा पारिस्थितिकी तंत्र द्वारा संचालित सुरक्षित, स्केलेबल एंटरप्राइज अनुप्रयोग।",
-          tags: ["स्प्रिंग बूट", "पैमाना", "सुरक्षित"],
-          href: "/java-development",
-          color: "from-orange-700/10 to-red-700/10"
         }
       ]
     }
@@ -667,7 +526,7 @@ const Services = ({ lang }) => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: idx * 0.05, ease: "easeOut" }}
-                  className={`group relative block bg-background p-12 lg:p-16 overflow-hidden min-h-[450px] border-r border-b border-darkPurple/10 transition-colors duration-700 hover:bg-foreground/[0.01]`}
+                  className="group relative block bg-background p-12 lg:p-16 overflow-hidden min-h-[450px] border-r border-b border-darkPurple/10 transition-colors duration-700 hover:bg-foreground/[0.01]"
                 >
                   <motion.div 
                     initial={false}
@@ -744,9 +603,9 @@ const Services = ({ lang }) => {
                     />
                   </motion.div>
                 </div>
-                </MotionLink>
-              );
-            })}
+              </MotionLink>
+            );
+          })}
         </div>
       </div>
     </SectionWrapper>

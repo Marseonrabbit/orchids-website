@@ -17,7 +17,6 @@ import AboutPage from './sections/AboutPage';
 import CareerPage from './sections/CareerPage';
 import BlogPage from './sections/BlogPage';
 import PackageDetail from './sections/PackageDetail';
-import PortfolioPage from './sections/PortfolioPage';
 
 const queryClient = new QueryClient();
 
@@ -95,7 +94,6 @@ const App = () => {
             <Route path="/about" element={<AboutPage lang={lang} setLang={setLang} />} />
             <Route path="/career" element={<CareerPage lang={lang} setLang={setLang} />} />
             <Route path="/blog" element={<BlogPage lang={lang} setLang={setLang} />} />
-            <Route path="/portfolio" element={<PortfolioPage lang={lang} setLang={setLang} />} />
             
             {/* Packages */}
             <Route path="/packages/:id" element={<PackageDetail lang={lang} setLang={setLang} />} />
