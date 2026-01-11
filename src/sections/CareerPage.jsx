@@ -4,25 +4,41 @@ import Footer from '../components/Footer';
 import SectionWrapper from '../components/SectionWrapper';
 import { Briefcase, MapPin, Clock, ArrowUpRight } from 'lucide-react';
 
-const CareerPage = () => {
+const CareerPage = ({ lang, setLang }) => {
   const t = {
-    title: "Join Our Team",
-    subtitle: "Build the Future with Us",
-    openings: "Current Openings",
-    apply: "Apply Now",
-    benefitsTitle: "Why Work With Us?",
-    benefits: ["Flexible Hours", "Remote Work", "Health Insurance", "Paid Time Off", "Skill Development", "Team Outings"],
-    jobs: [
-      { title: "Senior Web Developer", type: "Full-Time", location: "Jaipur / Remote" },
-      { title: "SEO Specialist", type: "Full-Time", location: "Jaipur" },
-      { title: "UI/UX Designer", type: "Contract", location: "Remote" },
-      { title: "Content Strategist", type: "Full-Time", location: "Jaipur" }
-    ]
-  };
+    en: {
+      title: "Join Our Team",
+      subtitle: "Build the Future with Us",
+      openings: "Current Openings",
+      apply: "Apply Now",
+      benefitsTitle: "Why Work With Us?",
+      benefits: ["Flexible Hours", "Remote Work", "Health Insurance", "Paid Time Off", "Skill Development", "Team Outings"],
+      jobs: [
+        { title: "Senior Web Developer", type: "Full-Time", location: "Jaipur / Remote" },
+        { title: "SEO Specialist", type: "Full-Time", location: "Jaipur" },
+        { title: "UI/UX Designer", type: "Contract", location: "Remote" },
+        { title: "Content Strategist", type: "Full-Time", location: "Jaipur" }
+      ]
+    },
+    hi: {
+      title: "हमारी टीम में शामिल हों",
+      subtitle: "हमारे साथ भविष्य का निर्माण करें",
+      openings: "वर्तमान नियुक्तियां",
+      apply: "अभी आवेदन करें",
+      benefitsTitle: "हमारे साथ काम क्यों करें?",
+      benefits: ["लचीला समय", "रिमोट वर्क", "स्वास्थ्य बीमा", "सवैतनिक अवकाश", "कौशल विकास", "टीम आउटिंग"],
+      jobs: [
+        { title: "सीनियर वेब डेवलपर", type: "पूर्णकालिक", location: "जयपुर / रिमोट" },
+        { title: "एसईओ विशेषज्ञ", type: "पूर्णकालिक", location: "जयपुर" },
+        { title: "यूआई/यूएक्स डिजाइनर", type: "अनुबंध", location: "रिमोट" },
+        { title: "कंटेंट रणनीतिकार", type: "पूर्णकालिक", location: "जयपुर" }
+      ]
+    }
+  }[lang];
 
   return (
     <div className="min-h-screen bg-background text-foreground font-poppins selection:bg-primary selection:text-primary-foreground">
-      <Navbar />
+      <Navbar lang={lang} setLang={setLang} />
       
       <main className="pt-32">
         <SectionWrapper>
@@ -78,7 +94,7 @@ const CareerPage = () => {
         </SectionWrapper>
       </main>
 
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 };

@@ -1,16 +1,28 @@
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Twitter } from 'lucide-react';
 
-const Footer = () => {
+const Footer = ({ lang }) => {
   const t = {
-    about: "Skylumine is a future-forward digital production studio specializing in premium web experiences and strategic digital marketing.",
-    links: "Quick Links",
-    services: "Our Services",
-    contact: "Contact Info",
-    newsletter: "Subscribe to our Newsletter",
-    placeholder: "Your email address",
-    subscribe: "Subscribe",
-    rights: "All rights reserved.",
-  };
+    en: {
+      about: "Skylumine is a future-forward digital production studio specializing in premium web experiences and strategic digital marketing.",
+      links: "Quick Links",
+      services: "Our Services",
+      contact: "Contact Info",
+      newsletter: "Subscribe to our Newsletter",
+      placeholder: "Your email address",
+      subscribe: "Subscribe",
+      rights: "All rights reserved.",
+    },
+    hi: {
+      about: "Skylumine एक भविष्य-उन्मुख डिजिटल प्रोडक्शन स्टूडियो है जो प्रीमियम वेब अनुभव और रणनीतिक डिजिटल मार्केटिंग में विशेषज्ञता रखता है।",
+      links: "त्वरित लिंक",
+      services: "हमारी सेवाएं",
+      contact: "संपर्क जानकारी",
+      newsletter: "हमारे न्यूज़लेटर की सदस्यता लें",
+      placeholder: "आपका ईमेल पता",
+      subscribe: "सदस्यता लें",
+      rights: "सर्वाधिकार सुरक्षित।",
+    }
+  }[lang];
 
   return (
     <footer className="bg-background text-foreground pt-24 pb-12 px-6 md:px-12 border-t border-border/5">

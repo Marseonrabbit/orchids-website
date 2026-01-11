@@ -1,12 +1,20 @@
 import { motion } from 'framer-motion';
 
-const Stats = () => {
-  const t = [
-    { value: "5000+", label: "Happy Clients" },
-    { value: "7500+", label: "Projects Completed" },
-    { value: "10+", label: "Years Excellence" },
-    { value: "24/7", label: "Client Support" }
-  ];
+const Stats = ({ lang }) => {
+  const t = {
+    en: [
+      { value: "5000+", label: "Happy Clients" },
+      { value: "7500+", label: "Projects Completed" },
+      { value: "10+", label: "Years Excellence" },
+      { value: "24/7", label: "Client Support" }
+    ],
+    hi: [
+      { value: "5000+", label: "खुश ग्राहक" },
+      { value: "7500+", label: "पूर्ण परियोजनाएं" },
+      { value: "10+", label: "वर्षों की उत्कृष्टता" },
+      { value: "24/7", label: "ग्राहक सहायता" }
+    ]
+  }[lang];
 
   return (
     <div className="py-24 bg-background border-y border-border/5 relative overflow-hidden">

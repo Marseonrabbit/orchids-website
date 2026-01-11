@@ -4,32 +4,55 @@ import Footer from '../components/Footer';
 import SectionWrapper from '../components/SectionWrapper';
 import { Target, Eye, Users, Award, TrendingUp } from 'lucide-react';
 
-const AboutPage = () => {
+const AboutPage = ({ lang, setLang }) => {
   const t = {
-    title: "Our Story",
-    subtitle: "Crafting Digital Futures",
-    mission: "Mission",
-    vision: "Vision",
-    missionText: "To empower businesses with innovative digital solutions that drive growth and create meaningful connections.",
-    visionText: "To be the global leader in future-forward digital production, setting new standards for creativity and tech.",
-    stats: [
-      { value: "5000+", label: "Clients" },
-      { value: "7500+", label: "Projects" },
-      { value: "150+", label: "Experts" },
-      { value: "10+", label: "Years" }
-    ],
-    teamTitle: "Our Leadership",
-    team: [
-      { name: "Siddharth Jain", role: "CEO & Founder" },
-      { name: "Priya Sharma", role: "Creative Director" },
-      { name: "Rahul Verma", role: "Technical Head" },
-      { name: "Ananya Iyer", role: "Marketing Strategist" }
-    ]
-  };
+    en: {
+      title: "Our Story",
+      subtitle: "Crafting Digital Futures",
+      mission: "Mission",
+      vision: "Vision",
+      missionText: "To empower businesses with innovative digital solutions that drive growth and create meaningful connections.",
+      visionText: "To be the global leader in future-forward digital production, setting new standards for creativity and tech.",
+      stats: [
+        { value: "5000+", label: "Clients" },
+        { value: "7500+", label: "Projects" },
+        { value: "150+", label: "Experts" },
+        { value: "10+", label: "Years" }
+      ],
+      teamTitle: "Our Leadership",
+      team: [
+        { name: "Siddharth Jain", role: "CEO & Founder" },
+        { name: "Priya Sharma", role: "Creative Director" },
+        { name: "Rahul Verma", role: "Technical Head" },
+        { name: "Ananya Iyer", role: "Marketing Strategist" }
+      ]
+    },
+    hi: {
+      title: "हमारी कहानी",
+      subtitle: "डिजिटल भविष्य का निर्माण",
+      mission: "लक्ष्य",
+      vision: "दृष्टिकोण",
+      missionText: "नवाचारी डिजिटल समाधानों के साथ व्यवसायों को सशक्त बनाना जो विकास को गति देते हैं और सार्थक संबंध बनाते हैं।",
+      visionText: "भविष्योन्मुख डिजिटल उत्पादन में वैश्विक नेता बनना, रचनात्मकता और तकनीक के लिए नए मानक स्थापित करना।",
+      stats: [
+        { value: "5000+", label: "ग्राहक" },
+        { value: "7500+", label: "परियोजनाएं" },
+        { value: "150+", label: "विशेषज्ञ" },
+        { value: "10+", label: "वर्ष" }
+      ],
+      teamTitle: "हमारा नेतृत्व",
+      team: [
+        { name: "सिद्धार्थ जैन", role: "सीईओ और संस्थापक" },
+        { name: "प्रिया शर्मा", role: "रचनात्मक निदेशक" },
+        { name: "राहुल वर्मा", role: "तकनीकी प्रमुख" },
+        { name: "अनन्या अय्यर", role: "मार्केटिंग रणनीतिकार" }
+      ]
+    }
+  }[lang];
 
   return (
     <div className="min-h-screen bg-background text-foreground font-poppins selection:bg-primary selection:text-primary-foreground">
-      <Navbar />
+      <Navbar lang={lang} setLang={setLang} />
       
       <main className="pt-32">
         <SectionWrapper>
@@ -85,7 +108,7 @@ const AboutPage = () => {
         </SectionWrapper>
       </main>
 
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 };

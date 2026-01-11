@@ -7,67 +7,131 @@ const Services = ({ lang }) => {
   const [hoveredId, setHoveredId] = useState(null);
 
   const t = {
-    tag: "Technological Artistry",
-    title: "Digital Ecosystems",
-    subtitle: "Crafted for Impact",
-    explore: "Discover the Flow",
-    services: [
-      {
-        id: 1,
-        icon: Code2,
-        title: "Web Systems",
-        desc: "Architecting immersive digital experiences with high-performance frameworks and optimized interfaces.",
-        tags: ["Next.js", "React", "Node.js"],
-        href: "/website-development-services",
-        color: "from-blue-500/10 to-purple-500/10"
-      },
-      {
-        id: 2,
-        icon: Search,
-        title: "Search Intelligence",
-        desc: "Harnessing algorithmic precision to elevate your brand's authority and organic reach.",
-        tags: ["Data Audit", "Semantics", "Authority"],
-        href: "/seo-services",
-        color: "from-emerald-500/10 to-teal-500/10"
-      },
-      {
-        id: 3,
-        icon: BarChart3,
-        title: "Performance Ads",
-        desc: "Precision-targeted paid media campaigns engineered for exponential conversion and ROI.",
-        tags: ["Quantum Bidding", "Retargeting", "Analytics"],
-        href: "/ppc-management-services",
-        color: "from-orange-500/10 to-rose-500/10"
-      },
-      {
-        id: 4,
-        icon: Share2,
-        title: "Social Synthesis",
-        desc: "Creating resonant brand narratives that thrive across the evolving social landscape.",
-        tags: ["Brand Voice", "Viral Loops", "Engagement"],
-        href: "/social-media-marketing",
-        color: "from-pink-500/10 to-violet-500/10"
-      },
-      {
-        id: 5,
-        icon: PenTool,
-        title: "Narrative Design",
-        desc: "Strategic content that bridges the gap between technical complexity and human connection.",
-        tags: ["Storytelling", "SEO Copy", "Strategy"],
-        href: "/content-writing-services",
-        color: "from-amber-500/10 to-orange-500/10"
-      },
-      {
-        id: 6,
-        icon: ShoppingBag,
-        title: "Infinite Commerce",
-        desc: "Fluid, frictionless shopping experiences that redefine the boundaries of digital retail.",
-        tags: ["Headless", "UX Flow", "Scale"],
-        href: "/e-commerce-development",
-        color: "from-indigo-500/10 to-blue-500/10"
-      }
-    ]
-  };
+    en: {
+      tag: "Technological Artistry",
+      title: "Digital Ecosystems",
+      subtitle: "Crafted for Impact",
+      explore: "Discover the Flow",
+      services: [
+        {
+          id: 1,
+          icon: Code2,
+          title: "Web Systems",
+          desc: "Architecting immersive digital experiences with high-performance frameworks and optimized interfaces.",
+          tags: ["Next.js", "React", "Node.js"],
+          href: "/website-development-services",
+          color: "from-blue-500/10 to-purple-500/10"
+        },
+        {
+          id: 2,
+          icon: Search,
+          title: "Search Intelligence",
+          desc: "Harnessing algorithmic precision to elevate your brand's authority and organic reach.",
+          tags: ["Data Audit", "Semantics", "Authority"],
+          href: "/seo-services",
+          color: "from-emerald-500/10 to-teal-500/10"
+        },
+        {
+          id: 3,
+          icon: BarChart3,
+          title: "Performance Ads",
+          desc: "Precision-targeted paid media campaigns engineered for exponential conversion and ROI.",
+          tags: ["Quantum Bidding", "Retargeting", "Analytics"],
+          href: "/ppc-management-services",
+          color: "from-orange-500/10 to-rose-500/10"
+        },
+        {
+          id: 4,
+          icon: Share2,
+          title: "Social Synthesis",
+          desc: "Creating resonant brand narratives that thrive across the evolving social landscape.",
+          tags: ["Brand Voice", "Viral Loops", "Engagement"],
+          href: "/social-media-marketing",
+          color: "from-pink-500/10 to-violet-500/10"
+        },
+        {
+          id: 5,
+          icon: PenTool,
+          title: "Narrative Design",
+          desc: "Strategic content that bridges the gap between technical complexity and human connection.",
+          tags: ["Storytelling", "SEO Copy", "Strategy"],
+          href: "/content-writing-services",
+          color: "from-amber-500/10 to-orange-500/10"
+        },
+        {
+          id: 6,
+          icon: ShoppingBag,
+          title: "Infinite Commerce",
+          desc: "Fluid, frictionless shopping experiences that redefine the boundaries of digital retail.",
+          tags: ["Headless", "UX Flow", "Scale"],
+          href: "/e-commerce-development",
+          color: "from-indigo-500/10 to-blue-500/10"
+        }
+      ]
+    },
+    hi: {
+      tag: "तकनीकी कलात्मकता",
+      title: "डिजिटल पारिस्थितिकी तंत्र",
+      subtitle: "प्रभाव के लिए निर्मित",
+      explore: "प्रवाह की खोज करें",
+      services: [
+        {
+          id: 1,
+          icon: Code2,
+          title: "वेब सिस्टम",
+          desc: "उच्च-प्रदर्शन फ्रेमवर्क और अनुकूलित इंटरफेस के साथ इमर्सिव डिजिटल अनुभव तैयार करना।",
+          tags: ["नेक्स्ट.जेएस", "रिएक्ट", "नोड.जेएस"],
+          href: "/website-development-services",
+          color: "from-blue-500/10 to-purple-500/10"
+        },
+        {
+          id: 2,
+          icon: Search,
+          title: "खोज बुद्धिमत्ता",
+          desc: "आपके ब्रांड के अधिकार और ऑर्गेनिक पहुंच को बढ़ाने के लिए एल्गोरिथम सटीकता का उपयोग करना।",
+          tags: ["डेटा ऑडिट", "सिमेंटिक्स", "अथॉरिटी"],
+          href: "/seo-services",
+          color: "from-emerald-500/10 to-teal-500/10"
+        },
+        {
+          id: 3,
+          icon: BarChart3,
+          title: "प्रदर्शन विज्ञापन",
+          desc: "घातीय रूपांतरण और आरओआई के लिए इंजीनियर सटीक-लक्षित भुगतान मीडिया अभियान।",
+          tags: ["क्वांटम बिडिंग", "रीटारगेटिंग", "एनालिटिक्स"],
+          href: "/ppc-management-services",
+          color: "from-orange-500/10 to-rose-500/10"
+        },
+        {
+          id: 4,
+          icon: Share2,
+          title: "सामाजिक संश्लेषण",
+          desc: "विकसित होते सामाजिक परिदृश्य में फलने-फूलने वाली ब्रांड कथाएं बनाना।",
+          tags: ["ब्रांड वॉयस", "वायरल लूप्स", "एंगेजमेंट"],
+          href: "/social-media-marketing",
+          color: "from-pink-500/10 to-violet-500/10"
+        },
+        {
+          id: 5,
+          icon: PenTool,
+          title: "कथा डिजाइन",
+          desc: "रणनीतिक सामग्री जो तकनीकी जटिलता और मानवीय संबंध के बीच की खाई को पाटती है।",
+          tags: ["कहानी सुनाना", "एसईओ कॉपी", "रणनीति"],
+          href: "/content-writing-services",
+          color: "from-amber-500/10 to-orange-500/10"
+        },
+        {
+          id: 6,
+          icon: ShoppingBag,
+          title: "अनंत वाणिज्य",
+          desc: "तरल, घर्षण रहित खरीदारी के अनुभव जो डिजिटल खुदरा की सीमाओं को फिर से परिभाषित करते हैं।",
+          tags: ["हेडलेस", "यूएक्स फ्लो", "स्केल"],
+          href: "/e-commerce-development",
+          color: "from-indigo-500/10 to-blue-500/10"
+        }
+      ]
+    }
+  }[lang];
 
   return (
     <SectionWrapper id="services" className="bg-background py-40 relative overflow-hidden">
@@ -102,22 +166,22 @@ const Services = ({ lang }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-darkPurple/10">
-          {t.services.map((service, idx) => {
-            const isHovered = hoveredId === service.id;
-            
-            return (
-              <motion.a 
-                href={service.href}
-                key={service.id}
-                onMouseEnter={() => setHoveredId(service.id)}
-                onMouseLeave={() => setHoveredId(null)}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.05, ease: "easeOut" }}
-                className={`group relative block bg-background p-12 lg:p-16 overflow-hidden min-h-[500px] border-b border-r border-darkPurple/10 ${idx % 3 === 0 ? 'border-l' : ''} transition-colors duration-700 hover:bg-foreground/[0.01]`}
-              >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+            {t.services.map((service, idx) => {
+              const isHovered = hoveredId === service.id;
+              
+              return (
+                <motion.a 
+                  href={service.href}
+                  key={service.id}
+                  onMouseEnter={() => setHoveredId(service.id)}
+                  onMouseLeave={() => setHoveredId(null)}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: idx * 0.05, ease: "easeOut" }}
+                  className={`group relative block bg-background p-12 lg:p-16 overflow-hidden min-h-[500px] border border-darkPurple/10 transition-colors duration-700 hover:bg-foreground/[0.01]`}
+                >
                   {/* Unified Hover Background */}
                   <motion.div 
                     initial={false}
