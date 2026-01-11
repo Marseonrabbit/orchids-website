@@ -44,7 +44,7 @@ const Navbar = ({ lang, setLang }) => {
                 <img 
                     src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/7ab42e8b-56b1-4c66-a956-f3cf6448c6c8/Picsart_26-01-09_10-46-39-372-resized-1768022457001.webp?width=8000&height=8000&resize=contain" 
                     alt="Skylumine Logo" 
-                        className="h-14 md:h-18 lg:h-24 w-auto object-contain mix-blend-screen dark:mix-blend-normal scale-[1.8]"
+                        className="h-14 md:h-18 lg:h-24 w-auto object-contain mix-blend-multiply dark:mix-blend-normal scale-[1.8]"
                   />
             </a>
         </div>

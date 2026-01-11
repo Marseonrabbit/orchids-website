@@ -43,17 +43,17 @@ const Home = ({ lang, setLang }) => (
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="text-[10px] md:text-xs font-bold uppercase tracking-[0.5em] text-primary mb-8 font-montserrat"
-            >
-              {lang === 'en' ? 'Future-Forward Digital Studio' : 'भविष्य-उन्मुख डिजिटल स्टूडियो'}
-            </motion.div>
-            
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-center tracking-tighter leading-[0.9] mix-blend-difference font-montserrat">
-              {lang === 'en' ? 'BEYOND' : 'परे'}<br /> 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground via-primary to-foreground">
-                {lang === 'en' ? 'VISIONS' : 'दृष्टिकोण'}
-              </span>
-            </h1>
+                className="text-[10px] md:text-xs font-bold uppercase tracking-[0.5em] text-foreground mb-8 font-montserrat"
+              >
+                {lang === 'en' ? 'Future-Forward Digital Studio' : 'भविष्य-उन्मुख डिजिटल स्टूडियो'}
+              </motion.div>
+              
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-extrabold text-center tracking-tighter leading-[0.9] font-montserrat">
+                {lang === 'en' ? 'BEYOND' : 'परे'}<br /> 
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground via-primary to-foreground">
+                  {lang === 'en' ? 'VISIONS' : 'दृष्टिकोण'}
+                </span>
+              </h1>
             
             <p className="mt-12 text-sm md:text-base text-muted-foreground max-w-lg text-center leading-relaxed font-light font-poppins px-4">
                {lang === 'en' 
@@ -87,7 +87,7 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster theme="dark" position="bottom-right" />
+        <Toaster position="bottom-right" />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home lang={lang} setLang={setLang} />} />

@@ -11,8 +11,8 @@ export default {
 				dark: '#000000',
 				darkPurple: '#2E1065',
 				primary: {
-					DEFAULT: '#FFFFFF',
-					foreground: '#000000'
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))'
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
