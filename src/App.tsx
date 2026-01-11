@@ -17,6 +17,7 @@ import AboutPage from './sections/AboutPage';
 import CareerPage from './sections/CareerPage';
 import BlogPage from './sections/BlogPage';
 import PackageDetail from './sections/PackageDetail';
+import GetQuotePage from './sections/GetQuotePage';
 
 const queryClient = new QueryClient();
 
@@ -96,6 +97,7 @@ const App = () => {
             <Route path="/blog" element={<BlogPage lang={lang} setLang={setLang} />} />
             
             {/* Packages */}
+            <Route path="/packages/:id" element={<PackageDetail lang={lang} setLang={setLang} />} />
             <Route path="/seo-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
             <Route path="/ppc-package" element={<PackageDetail lang={lang} setLang={setLang} />} />
             <Route path="/smm-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
@@ -104,9 +106,10 @@ const App = () => {
             <Route path="/website-designing-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
             <Route path="/business-hosting" element={<PackageDetail lang={lang} setLang={setLang} />} />
 
-            {/* Services */}
-            <Route path="/:id" element={<ServiceDetail lang={lang} setLang={setLang} />} />
-          </Routes>
+              {/* Services */}
+              <Route path="/get-quote" element={<GetQuotePage lang={lang} setLang={setLang} />} />
+              <Route path="/:id" element={<ServiceDetail lang={lang} setLang={setLang} />} />
+            </Routes>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
