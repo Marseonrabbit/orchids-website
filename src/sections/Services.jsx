@@ -134,7 +134,7 @@ const Services = ({ lang }) => {
   }[lang];
 
   return (
-    <SectionWrapper id="services" className="bg-background py-24 md:py-32 relative overflow-hidden">
+    <SectionWrapper id="services" className="bg-background py-40 relative overflow-hidden">
       {/* Subdued Background Accents for performance */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30">
         <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-primary/[0.01] rounded-full blur-[100px] will-change-transform" />
@@ -142,7 +142,7 @@ const Services = ({ lang }) => {
       </div>
 
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 relative z-10">
-        <div className="mb-24 md:mb-32 flex flex-col lg:flex-row lg:items-end justify-between gap-16">
+        <div className="mb-40 flex flex-col lg:flex-row lg:items-end justify-between gap-16">
           <div className="max-w-5xl">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}

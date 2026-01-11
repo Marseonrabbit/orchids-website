@@ -35,9 +35,9 @@ const About = ({ lang }) => {
           </motion.div>
               <h2 className="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-8 font-montserrat tracking-tighter">
                 {t.title} <br/>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground via-primary to-foreground/20 italic font-playfair font-normal">
-                    {t.subtitle}
-                  </span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground via-primary to-muted-foreground italic font-playfair font-normal">
+                  {t.subtitle}
+                </span>
               </h2>
 
           </div>
