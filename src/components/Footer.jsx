@@ -29,11 +29,11 @@ const Footer = ({ lang }) => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 items-start">
             <div className="flex flex-col gap-6">
               <div className="flex items-center">
-                <img 
-                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/7ab42e8b-56b1-4c66-a956-f3cf6448c6c8/Picsart_26-01-09_10-46-39-372-resized-1768022457001.webp?width=8000&height=8000&resize=contain" 
-                  alt="Skylumine Logo" 
-                  className="h-16 md:h-20 w-auto object-contain mix-blend-screen dark:mix-blend-normal"
-                />
+                  <img 
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/7ab42e8b-56b1-4c66-a956-f3cf6448c6c8/Picsart_26-01-09_10-46-39-372-resized-1768022457001.webp?width=8000&height=8000&resize=contain" 
+                    alt="Skylumine Logo" 
+                    className="h-16 md:h-20 w-auto object-contain mix-blend-multiply dark:mix-blend-normal"
+                  />
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed max-w-xs font-poppins mt-2">
               {t.about}
