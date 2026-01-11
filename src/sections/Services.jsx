@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Code2, Search, BarChart3, Share2, PenTool, ShoppingBag } from 'lucide-react';
 
-const Services = () => {
+const Services = ({ lang }) => {
   const [hoveredId, setHoveredId] = useState(null);
 
   const t = {
@@ -102,7 +102,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-border/5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-t border-darkPurple/10">
           {t.services.map((service, idx) => {
             const isHovered = hoveredId === service.id;
             
@@ -116,7 +116,7 @@ const Services = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.05, ease: "easeOut" }}
-                className={`group relative block bg-background p-12 lg:p-16 overflow-hidden min-h-[500px] border-b border-r border-border/5 ${idx % 3 === 0 ? 'border-l' : ''} transition-colors duration-700 hover:bg-foreground/[0.01]`}
+                className={`group relative block bg-background p-12 lg:p-16 overflow-hidden min-h-[500px] border-b border-r border-darkPurple/10 ${idx % 3 === 0 ? 'border-l' : ''} transition-colors duration-700 hover:bg-foreground/[0.01]`}
               >
                   {/* Unified Hover Background */}
                   <motion.div 

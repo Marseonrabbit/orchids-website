@@ -6,6 +6,9 @@ const Footer = () => {
     links: "Quick Links",
     services: "Our Services",
     contact: "Contact Info",
+    newsletter: "Subscribe to our Newsletter",
+    placeholder: "Your email address",
+    subscribe: "Subscribe",
     rights: "All rights reserved.",
   };
 
@@ -53,19 +56,31 @@ const Footer = () => {
         </div>
 
         <div>
-          <h4 className="text-sm font-bold uppercase tracking-[0.2em] mb-8 font-montserrat">{t.contact}</h4>
-          <div className="flex flex-col gap-4 text-sm text-muted-foreground font-poppins">
-            <div className="flex items-center gap-3">
-              <Mail className="w-4 h-4 text-primary" />
-              <span>hello@skylumine.com</span>
+          <h4 className="text-sm font-bold uppercase tracking-[0.2em] mb-8 font-montserrat">{t.newsletter}</h4>
+          <div className="flex flex-col gap-4">
+            <div className="relative">
+              <input 
+                type="email" 
+                placeholder={t.placeholder}
+                className="w-full bg-foreground/5 border border-border/10 rounded-full px-6 py-3 text-sm focus:outline-none focus:border-primary transition-colors font-poppins"
+              />
+              <button className="absolute right-1.5 top-1.5 px-6 py-1.5 bg-primary text-primary-foreground rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-darkPurple hover:text-white transition-all">
+                {t.subscribe}
+              </button>
             </div>
-            <div className="flex items-center gap-3">
-              <Phone className="w-4 h-4 text-primary" />
-              <span>+91 98765 43210</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MapPin className="w-4 h-4 text-primary" />
-              <span>Jaipur, Rajasthan, India</span>
+            <div className="flex flex-col gap-4 mt-4 text-sm text-muted-foreground font-poppins">
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-primary" />
+                <span>hello@skylumine.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-primary" />
+                <span>+91 98765 43210</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span>Jaipur, Rajasthan, India</span>
+              </div>
             </div>
           </div>
         </div>
