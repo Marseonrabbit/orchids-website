@@ -40,11 +40,11 @@ const Navbar = ({ lang, setLang }) => {
         className={`fixed top-0 left-0 w-full z-50 px-6 md:px-12 py-4 flex justify-between items-center transition-all duration-500 ${scrolled ? 'bg-background/80 backdrop-blur-xl border-b border-border/5 py-3' : 'bg-transparent'}`}
       >
         <div className="flex items-center gap-2">
-            <a href="/" className="block">
+            <a href="/" className="block overflow-hidden">
                 <img 
                     src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/project-uploads/7ab42e8b-56b1-4c66-a956-f3cf6448c6c8/Picsart_26-01-09_10-46-39-372-resized-1768022457001.webp?width=8000&height=8000&resize=contain" 
                     alt="Skylumine Logo" 
-                    className="h-16 md:h-22 lg:h-28 w-auto object-contain brightness-0 dark:brightness-100 dark:invert-0 scale-[2.1] transition-all duration-300"
+                        className="h-14 md:h-18 lg:h-24 w-auto object-contain mix-blend-multiply dark:mix-blend-normal scale-[1.8]"
                   />
             </a>
         </div>

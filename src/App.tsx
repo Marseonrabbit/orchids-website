@@ -43,7 +43,7 @@ const Home = ({ lang, setLang }) => (
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
-                  className="text-[10px] md:text-xs font-bold uppercase tracking-[0.5em] text-black dark:text-white mb-8 font-montserrat"
+                className="text-[10px] md:text-xs font-bold uppercase tracking-[0.5em] text-foreground mb-8 font-montserrat"
               >
                 {lang === 'en' ? 'Future-Forward Digital Studio' : 'भविष्य-उन्मुख डिजिटल स्टूडियो'}
               </motion.div>
