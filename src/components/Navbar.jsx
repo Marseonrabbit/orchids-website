@@ -23,13 +23,15 @@ const Navbar = ({ lang, setLang }) => {
     }
   }, [mobileMenuOpen]);
 
-  const navLinks = [
-    { name: lang === 'en' ? 'About' : 'हमारे बारे में', href: '#about' },
-    { name: lang === 'en' ? 'Services' : 'सेवाएं', href: '#services' },
-    { name: lang === 'en' ? 'Packages' : 'पैकेज', href: '#packages' },
-    { name: lang === 'en' ? 'Blog' : 'ब्लॉग', href: '#blog' },
-    { name: lang === 'en' ? 'Contact' : 'संपर्क', href: '#contact' },
-  ];
+    const navLinks = [
+      { name: lang === 'en' ? 'About' : 'हमारे बारे में', href: '/about' },
+      { name: lang === 'en' ? 'Services' : 'सेवाएं', href: '/#services' },
+      { name: lang === 'en' ? 'Portfolio' : 'पोर्टफोलियो', href: '/portfolio' },
+      { name: lang === 'en' ? 'Packages' : 'पैकेज', href: '/#packages' },
+      { name: lang === 'en' ? 'Blog' : 'ब्लॉग', href: '/blog' },
+      { name: lang === 'en' ? 'Career' : 'करियर', href: '/career' },
+      { name: lang === 'en' ? 'Contact' : 'संपर्क', href: '/#contact' },
+    ];
 
   return (
     <>
@@ -58,10 +60,10 @@ const Navbar = ({ lang, setLang }) => {
           ))}
         </div>
   
-          <div className="flex items-center gap-4 md:gap-6">
-            <a href="#contact" className="hidden sm:block px-8 py-2.5 bg-primary text-primary-foreground rounded-full hover:bg-darkPurple transition-all duration-500 uppercase text-[10px] font-bold tracking-[0.2em] shadow-[0_0_20px_rgba(46,16,101,0.2)]">
-              {lang === 'en' ? "Let's Talk" : 'बात करें'}
-            </a>
+            <div className="flex items-center gap-4 md:gap-6">
+              <a href="/#contact" className="hidden sm:block px-8 py-2.5 bg-primary text-primary-foreground rounded-full hover:bg-darkPurple transition-all duration-500 uppercase text-[10px] font-bold tracking-[0.2em] shadow-[0_0_20px_rgba(46,16,101,0.2)]">
+                {lang === 'en' ? "Let's Talk" : 'बात करें'}
+              </a>
   
           <button 
             onClick={() => setMobileMenuOpen(true)}

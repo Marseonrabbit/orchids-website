@@ -16,6 +16,7 @@ import ServiceDetail from './sections/ServiceDetail';
 import AboutPage from './sections/AboutPage';
 import CareerPage from './sections/CareerPage';
 import BlogPage from './sections/BlogPage';
+import PortfolioPage from './sections/PortfolioPage';
 import PackageDetail from './sections/PackageDetail';
 
 const queryClient = new QueryClient();
@@ -92,10 +93,12 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home lang={lang} setLang={setLang} />} />
             <Route path="/about" element={<AboutPage lang={lang} setLang={setLang} />} />
-            <Route path="/career" element={<CareerPage lang={lang} setLang={setLang} />} />
-            <Route path="/blog" element={<BlogPage lang={lang} setLang={setLang} />} />
-            
-            {/* Packages */}
+              <Route path="/career" element={<CareerPage lang={lang} setLang={setLang} />} />
+              <Route path="/blog" element={<BlogPage lang={lang} setLang={setLang} />} />
+              <Route path="/portfolio" element={<PortfolioPage lang={lang} setLang={setLang} />} />
+              
+              {/* Packages */}
+            <Route path="/packages/:id" element={<PackageDetail lang={lang} setLang={setLang} />} />
             <Route path="/seo-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
             <Route path="/ppc-package" element={<PackageDetail lang={lang} setLang={setLang} />} />
             <Route path="/smm-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />

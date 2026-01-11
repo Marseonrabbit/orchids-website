@@ -271,6 +271,111 @@ const serviceData = {
       en: "SMO is about making your social media presence work harder for you. We optimize your profiles to ensure consistent branding and maximum visibility across all channels.",
       hi: "एसएमओ आपके सोशल मीडिया की उपस्थिति को आपके लिए और अधिक प्रभावी बनाने के बारे में है। हम सभी चैनलों पर सुसंगत ब्रांडिंग और अधिकतम दृश्यता सुनिश्चित करने के लिए आपके प्रोफाइल को अनुकूलित करते हैं।"
     }
+  },
+  'wordpress-development': {
+    icon: Code2,
+    title: { en: "WordPress Development", hi: "वर्डप्रेस विकास" },
+    desc: { en: "Custom WordPress solutions built for speed, security and scale.", hi: "गति, सुरक्षा और पैमाने के लिए निर्मित कस्टम वर्डप्रेस समाधान।" },
+    features: [
+      { en: "Custom CMS Architecture", hi: "कस्टम सीएमएस आर्किटेक्चर" },
+      { en: "Security Hardening", hi: "सुरक्षा सुदृढ़ीकरण" },
+      { en: "Headless WordPress", hi: "हेडलेस वर्डप्रेस" },
+      { en: "Advanced Custom Fields", hi: "उन्नत कस्टम फ़ील्ड" }
+    ],
+    detailedDesc: {
+      en: "We don't just build websites; we build scalable digital assets using WordPress. Our development focus is on clean code, rapid load times, and intuitive administrative experiences.",
+      hi: "हम केवल वेबसाइट नहीं बनाते; हम वर्डप्रेस का उपयोग करके स्केलेबल डिजिटल संपत्ति बनाते हैं। हमारा विकास स्वच्छ कोड, तीव्र लोड समय और सहज प्रशासनिक अनुभवों पर केंद्रित है।"
+    }
+  },
+  'woocommerce-development': {
+    icon: ShoppingBag,
+    title: { en: "WooCommerce Development", hi: "वूकॉमर्स विकास" },
+    desc: { en: "Transform your WordPress site into a high-converting online store.", hi: "अपनी वर्डप्रेस साइट को उच्च-रूपांतरण वाले ऑनलाइन स्टोर में बदलें।" },
+    features: [
+      { en: "Payment Gateway Integration", hi: "पेमेंट गेटवे एकीकरण" },
+      { en: "Custom Product Builders", hi: "कस्टम उत्पाद बिल्डर्स" },
+      { en: "Inventory Management", hi: "इन्वेंट्री प्रबंधन" },
+      { en: "Conversion Optimization", hi: "रूपांतरण अनुकूलन" }
+    ],
+    detailedDesc: {
+      en: "Our WooCommerce experts build robust e-commerce engines that handle high volumes and complex business rules while maintaining a seamless user experience.",
+      hi: "हमारे वूकॉमर्स विशेषज्ञ मजबूत ई-कॉमर्स इंजन बनाते हैं जो निर्बाध उपयोगकर्ता अनुभव को बनाए रखते हुए उच्च वॉल्यूम और जटिल व्यावसायिक नियमों को संभालते हैं।"
+    }
+  },
+  'wordpress-theme-development': {
+    icon: Layout,
+    title: { en: "WordPress Theme Development", hi: "वर्डप्रेस थीम विकास" },
+    desc: { en: "Pixel-perfect, bespoke themes that reflect your brand's unique identity.", hi: "पिक्सेल-परफेक्ट, बेस्पोक थीम जो आपके ब्रांड की विशिष्ट पहचान को दर्शाती हैं।" },
+    features: [
+      { en: "Bespoke UI Design", hi: "बेस्पोक यूआई डिजाइन" },
+      { en: "Responsive Execution", hi: "उत्तरदायी निष्पादन" },
+      { en: "Gutenberg Optimization", hi: "गुटेनबर्ग अनुकूलन" },
+      { en: "SEO-Ready Markup", hi: "एसईओ-रेडी मार्कअप" }
+    ],
+    detailedDesc: {
+      en: "Escape the limitations of pre-made templates. We build custom themes from scratch that are lightweight, fast, and specifically engineered for your brand.",
+      hi: "पहले से बने टेम्पलेट्स की सीमाओं से बचें। हम शुरुआत से कस्टम थीम बनाते हैं जो हल्की, तेज़ और विशेष रूप से आपके ब्रांड के लिए इंजीनियर की गई हैं।"
+    }
+  },
+  'wordpress-migration': {
+    icon: ShieldCheck,
+    title: { en: "WordPress Migration", hi: "वर्डप्रेस माइग्रेशन" },
+    desc: { en: "Safe, seamless transition of your WordPress ecosystem to optimized hosting.", hi: "अनुकूलित होस्टिंग के लिए आपके वर्डप्रेस पारिस्थितिकी तंत्र का सुरक्षित, निर्बाध संक्रमण।" },
+    features: [
+      { en: "Zero Downtime Guarantee", hi: "शून्य डाउनटाइम गारंटी" },
+      { en: "Database Optimization", hi: "डेटाबेस अनुकूलन" },
+      { en: "SSL & Security Setup", hi: "एसएसएल और सुरक्षा सेटअप" },
+      { en: "Link Integrity Check", hi: "लिंक अखंडता जाँच" }
+    ],
+    detailedDesc: {
+      en: "Moving a website can be risky. Our specialists handle the entire migration process, ensuring all data, SEO rankings, and functionalities remain intact during the move.",
+      hi: "वेबसाइट को स्थानांतरित करना जोखिम भरा हो सकता है। हमारे विशेषज्ञ संपूर्ण माइग्रेशन प्रक्रिया को संभालते हैं, यह सुनिश्चित करते हुए कि सभी डेटा, एसईओ रैंकिंग और कार्यक्षमताएं कदम के दौरान बरकरार रहें।"
+    }
+  },
+  'wordpress-plugin-development': {
+    icon: Code2,
+    title: { en: "WordPress Plugin Development", hi: "वर्डप्रेस प्लगइन विकास" },
+    desc: { en: "Extend your site's capabilities with custom-engineered WordPress plugins.", hi: "कस्टम-इंजीनियर वर्डप्रेस प्लगइन्स के साथ अपनी साइट की क्षमताओं का विस्तार करें।" },
+    features: [
+      { en: "Custom API Integration", hi: "कस्टम एपीआई एकीकरण" },
+      { en: "Secure Backend Logic", hi: "सुरक्षित बैकएंड लॉजिक" },
+      { en: "Third-Party Connectors", hi: "तृतीय-पक्ष कनेक्टर" },
+      { en: "Performance Audits", hi: "प्रदर्शन ऑडिट" }
+    ],
+    detailedDesc: {
+      en: "When off-the-shelf plugins aren't enough, we build custom solutions that solve your specific business challenges with efficiency and security.",
+      hi: "जब ऑफ-द-शेल्फ प्लगइन्स पर्याप्त नहीं होते हैं, तो हम कस्टम समाधान बनाते हैं जो आपकी विशिष्ट व्यावसायिक चुनौतियों को दक्षता और सुरक्षा के साथ हल करते हैं।"
+    }
+  },
+  'wordpress-theme-integration': {
+    icon: Layout,
+    title: { en: "WordPress Theme Integration", hi: "वर्डप्रेस थीम एकीकरण" },
+    desc: { en: "Expertly integrate and optimize premium themes for your business goals.", hi: "अपने व्यावसायिक लक्ष्यों के लिए प्रीमियम थीम को विशेषज्ञ रूप से एकीकृत और अनुकूलित करें।" },
+    features: [
+      { en: "Premium Setup", hi: "प्रीमियम सेटअप" },
+      { en: "Speed Optimization", hi: "गति अनुकूलन" },
+      { en: "Visual Customization", hi: "दृश्य अनुकूलन" },
+      { en: "Demo Content Import", hi: "डेमो सामग्री आयात" }
+    ],
+    detailedDesc: {
+      en: "Bought a theme and don't know where to start? We handle the complex setup, customization, and optimization of premium themes to make them truly yours.",
+      hi: "थीम खरीदी है और नहीं जानते कि कहां से शुरू करें? हम प्रीमियम थीम के जटिल सेटअप, अनुकूलन और अनुकूलन को संभालते हैं ताकि वे वास्तव में आपके हो सकें।"
+    }
+  },
+  'performance-infrastructure': {
+    icon: Gauge,
+    title: { en: "Performance Infrastructure", hi: "प्रदर्शन बुनियादी ढांचा" },
+    desc: { en: "High-availability cloud architecture for mission-critical digital platforms.", hi: "मिशन-महत्वपूर्ण डिजिटल प्लेटफार्मों के लिए उच्च-उपलब्धता क्लाउड आर्किटेक्चर।" },
+    features: [
+      { en: "Cloud Migration", hi: "क्लाउड माइग्रेशन" },
+      { en: "Load Balancing", hi: "लोड बैलेंसिंग" },
+      { en: "Edge Computing", hi: "एज कंप्यूटिंग" },
+      { en: "DDoS Protection", hi: "DDoS सुरक्षा" }
+    ],
+    detailedDesc: {
+      en: "We architect resilient, scalable infrastructures using AWS, Google Cloud, and Vercel. Our focus is on 99.9% uptime and lightning-fast global delivery.",
+      hi: "हम AWS, Google Cloud और Vercel का उपयोग करके लचीले, स्केलेबल बुनियादी ढांचे का निर्माण करते हैं। हमारा ध्यान 99.9% अपटाइम और बिजली की तेजी से वैश्विक वितरण पर है।"
+    }
   }
 };
 
