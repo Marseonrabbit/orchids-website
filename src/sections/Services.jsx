@@ -3,9 +3,8 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Code2, Search, BarChart3, Share2, PenTool, ShoppingBag, 
-  Layout, Package, Zap, Settings, Globe, LineChart, 
-  MapPin, Building2, Server, TrendingUp, Layers, Rocket, ShieldCheck
+  Code2, ShoppingBag, Layout, Layers, Zap, Settings, ShieldCheck, 
+  MapPin, Building2, Server, TrendingUp, Package, Rocket
 } from 'lucide-react';
 
 const MotionLink = motion(Link);
@@ -516,27 +515,27 @@ const Services = ({ lang }) => {
           {filteredServices.map((service, idx) => {
             const isHovered = hoveredId === service.id;
             
-              return (
-                <MotionLink 
-                  to={service.href}
-                  key={service.id}
-                  onMouseEnter={() => setHoveredId(service.id)}
-                  onMouseLeave={() => setHoveredId(null)}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: idx * 0.05, ease: "easeOut" }}
-                  className={`group relative block bg-background p-12 lg:p-16 overflow-hidden min-h-[450px] border-r border-b border-darkPurple/10 transition-colors duration-700 hover:bg-foreground/[0.01]`}
-                >
-                  <motion.div 
-                    initial={false}
-                    animate={{ 
-                      opacity: isHovered ? 1 : 0,
-                      scale: isHovered ? 1.05 : 0.95
-                    }}
-                    transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                    className={`absolute inset-0 bg-gradient-to-br ${service.color} blur-[40px] z-0 pointer-events-none transform-gpu`}
-                  />
+            return (
+              <MotionLink 
+                to={service.href}
+                key={service.id}
+                onMouseEnter={() => setHoveredId(service.id)}
+                onMouseLeave={() => setHoveredId(null)}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.05, ease: "easeOut" }}
+                className={`group relative block bg-background p-12 lg:p-16 overflow-hidden min-h-[450px] border-r border-b border-darkPurple/10 transition-colors duration-700 hover:bg-foreground/[0.01]`}
+              >
+                <motion.div 
+                  initial={false}
+                  animate={{ 
+                    opacity: isHovered ? 1 : 0,
+                    scale: isHovered ? 1.05 : 0.95
+                  }}
+                  transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                  className={`absolute inset-0 bg-gradient-to-br ${service.color} blur-[40px] z-0 pointer-events-none transform-gpu`}
+                />
 
                 <div className="relative z-10 flex flex-col h-full justify-between">
                   <div>
@@ -603,9 +602,9 @@ const Services = ({ lang }) => {
                     />
                   </motion.div>
                 </div>
-                </MotionLink>
-              );
-            })}
+              </MotionLink>
+            );
+          })}
         </div>
       </div>
     </SectionWrapper>
