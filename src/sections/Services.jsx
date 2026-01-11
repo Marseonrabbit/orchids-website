@@ -15,8 +15,8 @@ const Services = ({ lang }) => {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const categories = {
-    en: ["All", "CMS & WordPress", "Custom Development", "SEO & Growth", "Infrastructure", "Premium Packages"],
-    hi: ["सभी", "सीएमएस और वर्डप्रेस", "कस्टम विकास", "एसईओ और विकास", "इन्फ्रास्ट्रक्चर", "प्रीमियम पैकेज"]
+    en: ["All", "CMS & WordPress", "SEO & Growth", "Infrastructure", "Premium Packages"],
+    hi: ["सभी", "सीएमएस और वर्डप्रेस", "एसईओ और विकास", "इन्फ्रास्ट्रक्चर", "प्रीमियम पैकेज"]
   };
 
   const t = {
@@ -226,376 +226,236 @@ const Services = ({ lang }) => {
           href: "/website-designing-packages",
           color: "from-rose-600/10 to-orange-600/10"
         },
-          {
-            id: 21,
-            icon: Rocket,
-            category: "Infrastructure",
-            title: "Performance Infrastructure",
-            desc: "Architecting cloud-native infrastructures for high-traffic digital platforms.",
-            tags: ["Cloud", "DevOps", "Reliability"],
-            href: "/performance-infrastructure",
-            color: "from-cyan-600/10 to-blue-600/10"
-          },
-          {
-            id: 22,
-            icon: Code2,
-            category: "Custom Development",
-            title: "PHP Development",
-            desc: "Custom PHP applications built for speed, efficiency, and seamless database integration.",
-            tags: ["Laravel", "Backend", "Scalable"],
-            href: "/php-development",
-            color: "from-indigo-400/10 to-blue-400/10"
-          },
-          {
-            id: 23,
-            icon: Code2,
-            category: "Custom Development",
-            title: ".Net Development",
-            desc: "Enterprise-grade .Net solutions for robust, secure, and scalable business applications.",
-            tags: ["ASP.NET", "C#", "Enterprise"],
-            href: "/dotnet-development",
-            color: "from-purple-400/10 to-indigo-400/10"
-          },
-          {
-            id: 24,
-            icon: Code2,
-            category: "Custom Development",
-            title: "Java Development",
-            desc: "High-performance Java applications for complex enterprise architectures and backend systems.",
-            tags: ["Spring Boot", "Microservices", "Secure"],
-            href: "/java-development",
-            color: "from-red-400/10 to-orange-400/10"
-          },
-          {
-            id: 25,
-            icon: PenTool,
-            category: "SEO & Growth",
-            title: "Content Marketing",
-            desc: "Strategic content creation that drives engagement, builds authority, and improves rankings.",
-            tags: ["Blogs", "Copywriting", "Strategy"],
-            href: "/content-marketing",
-            color: "from-green-400/10 to-teal-400/10"
-          },
-          {
-            id: 26,
-            icon: Globe,
-            category: "Infrastructure",
-            title: "Domain Registration",
-            desc: "Secure and manage your perfect brand name with our global domain registration services.",
-            tags: ["TLDs", "DNS", "Brand"],
-            href: "/domain-registration",
-            color: "from-blue-500/10 to-cyan-500/10"
-          },
-          {
-            id: 27,
-            icon: Server,
-            category: "Infrastructure",
-            title: "Dedicated Servers",
-            desc: "Maximum performance and control with hardware dedicated exclusively to your needs.",
-            tags: ["Control", "Power", "Isolation"],
-            href: "/dedicated-servers",
-            color: "from-slate-800/10 to-gray-800/10"
-          },
-          {
-            id: 28,
-            icon: Rocket,
-            category: "Infrastructure",
-            title: "Cloud Solutions",
-            desc: "Modernize your infrastructure with scalable, resilient, and cost-effective cloud platforms.",
-            tags: ["AWS", "Azure", "GCP"],
-            href: "/cloud-solutions",
-            color: "from-sky-400/10 to-blue-400/10"
-          }
-        ]
-      },
-      hi: {
-        tag: "तकनीकी कलात्मकता",
-        title: "डिजिटल पारिस्थितिकी तंत्र",
-        subtitle: "प्रभाव के लिए निर्मित",
-        explore: "प्रवाह की खोज करें",
-        services: [
-          {
-            id: 1,
-            icon: Code2,
-            category: "CMS & WordPress",
-            title: "वर्डप्रेस विकास",
-            desc: "स्केलेबिलिटी, सुरक्षा और उच्च प्रदर्शन के लिए तैयार विशेषज्ञ कस्टम वर्डप्रेस समाधान।",
-            tags: ["कस्टम सीएमएस", "पीएचपी", "आर्किटेक्चर"],
-            href: "/wordpress-development",
-            color: "from-blue-600/10 to-indigo-600/10"
-          },
-          {
-            id: 2,
-            icon: ShoppingBag,
-            category: "CMS & WordPress",
-            title: "वूकामर्स विकास",
-            desc: "सहज खरीदारी अनुभवों के लिए वूकामर्स पर निर्मित पूर्ण-स्तरीय ई-कॉमर्स प्लेटफॉर्म।",
-            tags: ["ई-कॉमर्स", "भुगतान", "इन्वेंट्री"],
-            href: "/woocommerce-development",
-            color: "from-purple-600/10 to-pink-600/10"
-          },
-          {
-            id: 3,
-            icon: Layout,
-            category: "CMS & WordPress",
-            title: "वर्डप्रेस थीम विकास",
-            desc: "आपकी विशिष्ट ब्रांड पहचान के लिए शुरू से निर्मित अद्वितीय, पिक्सेल-परफेक्ट कस्टम थीम।",
-            tags: ["यूएक्स/यूआई", "उत्तरदायी", "हल्का"],
-            href: "/wordpress-theme-development",
-            color: "from-emerald-600/10 to-teal-600/10"
-          },
-          {
-            id: 4,
-            icon: Layers,
-            category: "CMS & WordPress",
-            title: "वर्डप्रेस माइग्रेशन",
-            desc: "डेटा अखंडता के साथ अनुकूलित वातावरण में आपकी साइट को स्थानांतरित करने वाली शून्य-डाउनटाइम सेवाएं।",
-            tags: ["सुरक्षित कदम", "डेटाबेस", "होस्टिंग"],
-            href: "/wordpress-migration",
-            color: "from-orange-600/10 to-rose-600/10"
-          },
-          {
-            id: 5,
-            icon: Code2,
-            category: "CMS & WordPress",
-            title: "वर्डप्रेस प्लगइन विकास",
-            desc: "कार्यक्षमता बढ़ाने और जटिल व्यावसायिक आवश्यकताओं को हल करने के लिए कस्टम-निर्मित प्लगइन्स।",
-            tags: ["बैकएंड", "एपीआई", "एक्सटेंशन"],
-            href: "/wordpress-plugin-development",
-            color: "from-blue-400/10 to-cyan-400/10"
-          },
-          {
-            id: 6,
-            icon: Layout,
-            category: "CMS & WordPress",
-            title: "वर्डप्रेस थीम एकीकरण",
-            desc: "कस्टम संशोधनों और अनुकूलन के साथ प्रीमियम थीम का पेशेवर एकीकरण।",
-            tags: ["कॉन्फ़िगरेशन", "सेटअप", "कस्टमाइजेशन"],
-            href: "/wordpress-theme-integration",
-            color: "from-violet-600/10 to-purple-600/10"
-          },
-          {
-            id: 7,
-            icon: Zap,
-            category: "Infrastructure",
-            title: "पेज स्पीड ऑप्टिमाइजेशन",
-            desc: "लोड समय को कम करें और बेहतर रैंकिंग और यूएक्स के लिए कोर वेब विटल्स में सुधार करें।",
-            tags: ["कैशिंग", "सीडीएन", "अनुकूलन"],
-            href: "/page-speed-optimization",
-            color: "from-yellow-400/10 to-orange-400/10"
-          },
-          {
-            id: 8,
-            icon: Settings,
-            category: "Infrastructure",
-            title: "वेबसाइट रखरखाव",
-            desc: "आपकी साइट को चरम प्रदर्शन पर रखने के लिए निरंतर स्वास्थ्य जांच, अपडेट और सुरक्षा पैच।",
-            tags: ["सुरक्षा", "अपडेट", "अपटाइम"],
-            href: "/website-maintenance",
-            color: "from-gray-600/10 to-slate-600/10"
-          },
-          {
-            id: 9,
-            icon: ShieldCheck,
-            category: "SEO & Growth",
-            title: "एसईओ ऑडिट सेवाएं",
-            desc: "छिपे हुए विकास के अवसरों को उजागर करने के लिए व्यापक तकनीकी और सामग्री विश्लेषण।",
-            tags: ["विश्लेषण", "रिपोर्टिंग", "रणनीति"],
-            href: "/seo-audit-services",
-            color: "from-red-600/10 to-orange-600/10"
-          },
-          {
-            id: 10,
-            icon: MapPin,
-            category: "SEO & Growth",
-            title: "स्थानीय एसईओ सेवाएं",
-            desc: "स्थानीय खोज परिणामों पर हावी हों और अपने भौतिक व्यावसायिक स्थानों पर फुट ट्रैफिक बढ़ाएं।",
-            tags: ["जीएमबी", "प्रशंसा पत्र", "समीक्षा"],
-            href: "/local-seo-services",
-            color: "from-green-600/10 to-emerald-600/10"
-          },
-          {
-            id: 11,
-            icon: Building2,
-            category: "SEO & Growth",
-            title: "एंटरप्राइज एसईओ सेवाएं",
-            desc: "बड़े निगमों और उच्च-मात्रा वाली वेबसाइटों के लिए स्केलेबल ऑर्गेनिक विकास रणनीतियां।",
-            tags: ["पैमाना", "जटिल डेटा", "वैश्विक"],
-            href: "/enterprise-seo-services",
-            color: "from-blue-800/10 to-indigo-800/10"
-          },
-          {
-            id: 12,
-            icon: ShoppingBag,
-            category: "SEO & Growth",
-            title: "ई-कॉमर्स एसईओ सेवाएं",
-            desc: "खरीदारी प्रश्नों में दृश्यता को अधिकतम करने के लिए उत्पाद-केंद्रित खोज अनुकूलन।",
-            tags: ["उत्पाद पृष्ठ", "स्कीमा", "सीआरओ"],
-            href: "/ecommerce-seo-services",
-            color: "from-pink-500/10 to-rose-500/10"
-          },
-          {
-            id: 13,
-            icon: TrendingUp,
-            category: "SEO & Growth",
-            title: "सोशल मीडिया ऑप्टिमाइजेशन (SMO)",
-            desc: "जुड़ाव और वायरल क्षमता पर केंद्रित रणनीतिक ऑर्गेनिक सोशल विकास।",
-            tags: ["ऑर्गेनिक", "जुड़ाव", "प्रोफाइल"],
-            href: "/social-media-optimization",
-            color: "from-cyan-500/10 to-blue-500/10"
-          },
-          {
-            id: 14,
-            icon: Server,
-            category: "Infrastructure",
-            title: "बिजनेस होस्टिंग",
-            desc: "मिशन-महत्वपूर्ण व्यावसायिक ऐप्स के लिए तैयार प्रबंधित, उच्च-उपलब्धता होस्टिंग समाधान।",
-            tags: ["क्लाउड", "सुरक्षा", "पैमाना"],
-            href: "/business-hosting",
-            color: "from-slate-700/10 to-zinc-700/10"
-          },
-          {
-            id: 15,
-            icon: Package,
-            category: "Premium Packages",
-            title: "एसईओ पैकेज",
-            desc: "आपकी व्यावसायिक यात्रा के हर चरण के लिए डिज़ाइन किए गए स्तरीय ऑर्गेनिक विकास योजनाएं।",
-            tags: ["बेसिक", "प्रो", "एलीट"],
-            href: "/seo-packages",
-            color: "from-amber-500/10 to-yellow-500/10"
-          },
-          {
-            id: 16,
-            icon: Package,
-            category: "Premium Packages",
-            title: "पीपीसी पैकेज",
-            desc: "गूगल, मेटा और लिंक्डइन के लिए आरओआई-संचालित भुगतान विज्ञापन बंडल।",
-            tags: ["विज्ञापन खर्च", "प्रबंधन", "आरओएएस"],
-            href: "/ppc-package",
-            color: "from-blue-500/10 to-indigo-500/10"
-          },
-          {
-            id: 17,
-            icon: Package,
-            category: "Premium Packages",
-            title: "एसएमएम पैकेज",
-            desc: "सामग्री और सामुदायिक प्रबंधन सहित पूर्ण सोशल मीडिया प्रबंधन स्तर।",
-            tags: ["सामग्री", "पोस्टिंग", "समुदाय"],
-            href: "/smm-packages",
-            color: "from-purple-500/10 to-pink-500/10"
-          },
-          {
-            id: 18,
-            icon: Package,
-            category: "Premium Packages",
-            title: "एसएमओ पैकेज",
-            desc: "लगातार ब्रांड विकास के लिए समर्पित ऑर्गेनिक सोशल ऑप्टिमाइजेशन योजनाएं।",
-            tags: ["विकास", "अनुकूलन", "ऑडिट"],
-            href: "/smo-package",
-            color: "from-teal-500/10 to-emerald-500/10"
-          },
-          {
-            id: 19,
-            icon: Package,
-            category: "Premium Packages",
-            title: "डिजिटल मार्केटिंग पैकेज",
-            desc: "एसईओ, पीपीसी और सोशल को मिलाकर ऑल-इन-वन डिजिटल विकास बंडल।",
-            tags: ["पूर्ण स्टैक", "रणनीति", "प्रभाव"],
-            href: "/digital-marketing-packages",
-            color: "from-indigo-600/10 to-violet-600/10"
-          },
-          {
-            id: 20,
-            icon: Package,
-            category: "Premium Packages",
-            title: "वेबसाइट डिजाइनिंग पैकेज",
-            desc: "आधुनिक वेब उपस्थिति के लिए व्यापक डिजाइन और विकास बंडल।",
-            tags: ["यूआई/यूएक्स", "विकास", "सहायता"],
-            href: "/website-designing-packages",
-            color: "from-rose-600/10 to-orange-600/10"
-          },
-          {
-            id: 21,
-            icon: Rocket,
-            category: "Infrastructure",
-            title: "प्रदर्शन बुनियादी ढांचा",
-            desc: "उच्च-ट्रैफ़िक डिजिटल प्लेटफार्मों के लिए क्लाउड-नेटिव इन्फ्रास्ट्रक्चर का निर्माण।",
-            tags: ["क्लाउड", "डेवऑप्स", "विश्वसनीयता"],
-            href: "/performance-infrastructure",
-            color: "from-cyan-600/10 to-blue-600/10"
-          },
-          {
-            id: 22,
-            icon: Code2,
-            category: "Custom Development",
-            title: "PHP विकास",
-            desc: "गति, दक्षता और सहज डेटाबेस एकीकरण के लिए निर्मित कस्टम PHP अनुप्रयोग।",
-            tags: ["लारावेल", "बैकएंड", "स्केलेबल"],
-            href: "/php-development",
-            color: "from-indigo-400/10 to-blue-400/10"
-          },
-          {
-            id: 23,
-            icon: Code2,
-            category: "Custom Development",
-            title: ".Net विकास",
-            desc: "मजबूत, सुरक्षित और स्केलेबल व्यावसायिक अनुप्रयोगों के लिए एंटरप्राइज-ग्रेड .Net समाधान।",
-            tags: ["ASP.NET", "C#", "एंटरप्राइज"],
-            href: "/dotnet-development",
-            color: "from-purple-400/10 to-indigo-400/10"
-          },
-          {
-            id: 24,
-            icon: Code2,
-            category: "Custom Development",
-            title: "जावा विकास",
-            desc: "जटिल एंटरप्राइज आर्किटेक्चर और बैकएंड सिस्टम के लिए उच्च-प्रदर्शन जावा अनुप्रयोग।",
-            tags: ["स्प्रिंग बूट", "माइक्रोसर्विसेज", "सुरक्षित"],
-            href: "/java-development",
-            color: "from-red-400/10 to-orange-400/10"
-          },
-          {
-            id: 25,
-            icon: PenTool,
-            category: "SEO & Growth",
-            title: "सामग्री विपणन",
-            desc: "रणनीतिक सामग्री निर्माण जो जुड़ाव को बढ़ावा देता है, अधिकार बनाता है और रैंकिंग में सुधार करता है।",
-            tags: ["ब्लॉग", "कॉपीराइटिंग", "रणनीति"],
-            href: "/content-marketing",
-            color: "from-green-400/10 to-teal-400/10"
-          },
-          {
-            id: 26,
-            icon: Globe,
-            category: "Infrastructure",
-            title: "डोमेन पंजीकरण",
-            desc: "हमारी वैश्विक डोमेन पंजीकरण सेवाओं के साथ अपने ब्रांड नाम को सुरक्षित और प्रबंधित करें।",
-            tags: ["TLDs", "DNS", "ब्रांड"],
-            href: "/domain-registration",
-            color: "from-blue-500/10 to-cyan-500/10"
-          },
-          {
-            id: 27,
-            icon: Server,
-            category: "Infrastructure",
-            title: "समर्पित सर्वर",
-            desc: "विशेष रूप से आपकी आवश्यकताओं के लिए समर्पित हार्डवेयर के साथ अधिकतम प्रदर्शन और नियंत्रण।",
-            tags: ["नियंत्रण", "शक्ति", "अलगाव"],
-            href: "/dedicated-servers",
-            color: "from-slate-800/10 to-gray-800/10"
-          },
-          {
-            id: 28,
-            icon: Rocket,
-            category: "Infrastructure",
-            title: "क्लाउड समाधान",
-            desc: "स्केलेबल, लचीला और लागत प्रभावी क्लाउड प्लेटफॉर्म के साथ अपने बुनियादी ढांचे को आधुनिक बनाएं।",
-            tags: ["AWS", "Azure", "GCP"],
-            href: "/cloud-solutions",
-            color: "from-sky-400/10 to-blue-400/10"
-          }
-        ]
-      }
+        {
+          id: 21,
+          icon: Rocket,
+          category: "Infrastructure",
+          title: "Performance Infrastructure",
+          desc: "Architecting cloud-native infrastructures for high-traffic digital platforms.",
+          tags: ["Cloud", "DevOps", "Reliability"],
+          href: "/performance-infrastructure",
+          color: "from-cyan-600/10 to-blue-600/10"
+        }
+      ]
+    },
+    hi: {
+      tag: "तकनीकी कलात्मकता",
+      title: "डिजिटल पारिस्थितिकी तंत्र",
+      subtitle: "प्रभाव के लिए निर्मित",
+      explore: "प्रवाह की खोज करें",
+      services: [
+        {
+          id: 1,
+          icon: Code2,
+          category: "CMS & WordPress",
+          title: "वर्डप्रेस विकास",
+          desc: "स्केलेबिलिटी, सुरक्षा और उच्च प्रदर्शन के लिए तैयार विशेषज्ञ कस्टम वर्डप्रेस समाधान।",
+          tags: ["कस्टम सीएमएस", "पीएचपी", "आर्किटेक्चर"],
+          href: "/wordpress-development",
+          color: "from-blue-600/10 to-indigo-600/10"
+        },
+        {
+          id: 2,
+          icon: ShoppingBag,
+          category: "CMS & WordPress",
+          title: "वूकामर्स विकास",
+          desc: "सहज खरीदारी अनुभवों के लिए वूकामर्स पर निर्मित पूर्ण-स्तरीय ई-कॉमर्स प्लेटफॉर्म।",
+          tags: ["ई-कॉमर्स", "भुगतान", "इन्वेंट्री"],
+          href: "/woocommerce-development",
+          color: "from-purple-600/10 to-pink-600/10"
+        },
+        {
+          id: 3,
+          icon: Layout,
+          category: "CMS & WordPress",
+          title: "वर्डप्रेस थीम विकास",
+          desc: "आपकी विशिष्ट ब्रांड पहचान के लिए शुरू से निर्मित अद्वितीय, पिक्सेल-परफेक्ट कस्टम थीम।",
+          tags: ["यूएक्स/यूआई", "उत्तरदायी", "हल्का"],
+          href: "/wordpress-theme-development",
+          color: "from-emerald-600/10 to-teal-600/10"
+        },
+        {
+          id: 4,
+          icon: Layers,
+          category: "CMS & WordPress",
+          title: "वर्डप्रेस माइग्रेशन",
+          desc: "डेटा अखंडता के साथ अनुकूलित वातावरण में आपकी साइट को स्थानांतरित करने वाली शून्य-डाउनटाइम सेवाएं।",
+          tags: ["सुरक्षित कदम", "डेटाबेस", "होस्टिंग"],
+          href: "/wordpress-migration",
+          color: "from-orange-600/10 to-rose-600/10"
+        },
+        {
+          id: 5,
+          icon: Code2,
+          category: "CMS & WordPress",
+          title: "वर्डप्रेस प्लगइन विकास",
+          desc: "कार्यक्षमता बढ़ाने और जटिल व्यावसायिक आवश्यकताओं को हल करने के लिए कस्टम-निर्मित प्लगइन्स।",
+          tags: ["बैकएंड", "एपीआई", "एक्सटेंशन"],
+          href: "/wordpress-plugin-development",
+          color: "from-blue-400/10 to-cyan-400/10"
+        },
+        {
+          id: 6,
+          icon: Layout,
+          category: "CMS & WordPress",
+          title: "वर्डप्रेस थीम एकीकरण",
+          desc: "कस्टम संशोधनों और अनुकूलन के साथ प्रीमियम थीम का पेशेवर एकीकरण।",
+          tags: ["कॉन्फ़िगरेशन", "सेटअप", "कस्टमाइजेशन"],
+          href: "/wordpress-theme-integration",
+          color: "from-violet-600/10 to-purple-600/10"
+        },
+        {
+          id: 7,
+          icon: Zap,
+          category: "Infrastructure",
+          title: "पेज स्पीड ऑप्टिमाइजेशन",
+          desc: "लोड समय को कम करें और बेहतर रैंकिंग और यूएक्स के लिए कोर वेब विटल्स में सुधार करें।",
+          tags: ["कैशिंग", "सीडीएन", "अनुकूलन"],
+          href: "/page-speed-optimization",
+          color: "from-yellow-400/10 to-orange-400/10"
+        },
+        {
+          id: 8,
+          icon: Settings,
+          category: "Infrastructure",
+          title: "वेबसाइट रखरखाव",
+          desc: "आपकी साइट को चरम प्रदर्शन पर रखने के लिए निरंतर स्वास्थ्य जांच, अपडेट और सुरक्षा पैच।",
+          tags: ["सुरक्षा", "अपडेट", "अपटाइम"],
+          href: "/website-maintenance",
+          color: "from-gray-600/10 to-slate-600/10"
+        },
+        {
+          id: 9,
+          icon: ShieldCheck,
+          category: "SEO & Growth",
+          title: "एसईओ ऑडिट सेवाएं",
+          desc: "छिपे हुए विकास के अवसरों को उजागर करने के लिए व्यापक तकनीकी और सामग्री विश्लेषण।",
+          tags: ["विश्लेषण", "रिपोर्टिंग", "रणनीति"],
+          href: "/seo-audit-services",
+          color: "from-red-600/10 to-orange-600/10"
+        },
+        {
+          id: 10,
+          icon: MapPin,
+          category: "SEO & Growth",
+          title: "स्थानीय एसईओ सेवाएं",
+          desc: "स्थानीय खोज परिणामों पर हावी हों और अपने भौतिक व्यावसायिक स्थानों पर फुट ट्रैफिक बढ़ाएं।",
+          tags: ["जीएमबी", "प्रशंसा पत्र", "समीक्षा"],
+          href: "/local-seo-services",
+          color: "from-green-600/10 to-emerald-600/10"
+        },
+        {
+          id: 11,
+          icon: Building2,
+          category: "SEO & Growth",
+          title: "एंटरप्राइज एसईओ सेवाएं",
+          desc: "बड़े निगमों और उच्च-मात्रा वाली वेबसाइटों के लिए स्केलेबल ऑर्गेनिक विकास रणनीतियां।",
+          tags: ["पैमाना", "जटिल डेटा", "वैश्विक"],
+          href: "/enterprise-seo-services",
+          color: "from-blue-800/10 to-indigo-800/10"
+        },
+        {
+          id: 12,
+          icon: ShoppingBag,
+          category: "SEO & Growth",
+          title: "ई-कॉमर्स एसईओ सेवाएं",
+          desc: "खरीदारी प्रश्नों में दृश्यता को अधिकतम करने के लिए उत्पाद-केंद्रित खोज अनुकूलन।",
+          tags: ["उत्पाद पृष्ठ", "स्कीमा", "सीआरओ"],
+          href: "/ecommerce-seo-services",
+          color: "from-pink-500/10 to-rose-500/10"
+        },
+        {
+          id: 13,
+          icon: TrendingUp,
+          category: "SEO & Growth",
+          title: "सोशल मीडिया ऑप्टिमाइजेशन (SMO)",
+          desc: "जुड़ाव और वायरल क्षमता पर केंद्रित रणनीतिक ऑर्गेनिक सोशल विकास।",
+          tags: ["ऑर्गेनिक", "जुड़ाव", "प्रोफाइल"],
+          href: "/social-media-optimization",
+          color: "from-cyan-500/10 to-blue-500/10"
+        },
+        {
+          id: 14,
+          icon: Server,
+          category: "Infrastructure",
+          title: "बिजनेस होस्टिंग",
+          desc: "मिशन-महत्वपूर्ण व्यावसायिक ऐप्स के लिए तैयार प्रबंधित, उच्च-उपलब्धता होस्टिंग समाधान।",
+          tags: ["क्लाउड", "सुरक्षा", "पैमाना"],
+          href: "/business-hosting",
+          color: "from-slate-700/10 to-zinc-700/10"
+        },
+        {
+          id: 15,
+          icon: Package,
+          category: "Premium Packages",
+          title: "एसईओ पैकेज",
+          desc: "आपकी व्यावसायिक यात्रा के हर चरण के लिए डिज़ाइन किए गए स्तरीय ऑर्गेनिक विकास योजनाएं।",
+          tags: ["बेसिक", "प्रो", "एलीट"],
+          href: "/seo-packages",
+          color: "from-amber-500/10 to-yellow-500/10"
+        },
+        {
+          id: 16,
+          icon: Package,
+          category: "Premium Packages",
+          title: "पीपीसी पैकेज",
+          desc: "गूगल, मेटा और लिंक्डइन के लिए आरओआई-संचालित भुगतान विज्ञापन बंडल।",
+          tags: ["विज्ञापन खर्च", "प्रबंधन", "आरओएएस"],
+          href: "/ppc-package",
+          color: "from-blue-500/10 to-indigo-500/10"
+        },
+        {
+          id: 17,
+          icon: Package,
+          category: "Premium Packages",
+          title: "एसएमएम पैकेज",
+          desc: "सामग्री और सामुदायिक प्रबंधन सहित पूर्ण सोशल मीडिया प्रबंधन स्तर।",
+          tags: ["सामग्री", "पोस्टिंग", "समुदाय"],
+          href: "/smm-packages",
+          color: "from-purple-500/10 to-pink-500/10"
+        },
+        {
+          id: 18,
+          icon: Package,
+          category: "Premium Packages",
+          title: "एसएमओ पैकेज",
+          desc: "लगातार ब्रांड विकास के लिए समर्पित ऑर्गेनिक सोशल ऑप्टिमाइजेशन योजनाएं।",
+          tags: ["विकास", "अनुकूलन", "ऑडिट"],
+          href: "/smo-package",
+          color: "from-teal-500/10 to-emerald-500/10"
+        },
+        {
+          id: 19,
+          icon: Package,
+          category: "Premium Packages",
+          title: "डिजिटल मार्केटिंग पैकेज",
+          desc: "एसईओ, पीपीसी और सोशल को मिलाकर ऑल-इन-वन डिजिटल विकास बंडल।",
+          tags: ["पूर्ण स्टैक", "रणनीति", "प्रभाव"],
+          href: "/digital-marketing-packages",
+          color: "from-indigo-600/10 to-violet-600/10"
+        },
+        {
+          id: 20,
+          icon: Package,
+          category: "Premium Packages",
+          title: "वेबसाइट डिजाइनिंग पैकेज",
+          desc: "आधुनिक वेब उपस्थिति के लिए व्यापक डिजाइन और विकास बंडल।",
+          tags: ["यूआई/यूएक्स", "विकास", "सहायता"],
+          href: "/website-designing-packages",
+          color: "from-rose-600/10 to-orange-600/10"
+        },
+        {
+          id: 21,
+          icon: Rocket,
+          category: "Infrastructure",
+          title: "प्रदर्शन बुनियादी ढांचा",
+          desc: "उच्च-ट्रैफ़िक डिजिटल प्लेटफार्मों के लिए क्लाउड-नेटिव इन्फ्रास्ट्रक्चर का निर्माण।",
+          tags: ["क्लाउड", "डेवऑप्स", "विश्वसनीयता"],
+          href: "/performance-infrastructure",
+          color: "from-cyan-600/10 to-blue-600/10"
+        }
+      ]
+    }
   }[lang];
 
   const filteredServices = t.services.filter(s => 
