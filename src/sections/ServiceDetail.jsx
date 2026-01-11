@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import SectionWrapper from '../components/SectionWrapper';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { CheckCircle2, ArrowRight, Code2, Search, BarChart3, Share2, PenTool, ShoppingBag, Zap, ShieldCheck, Gauge, Globe } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Code2, Search, BarChart3, Share2, PenTool, ShoppingBag, Zap, ShieldCheck, Gauge, Globe, Layout, Layers } from 'lucide-react';
 
 const serviceData = {
   'web-design-company': {
@@ -270,6 +270,201 @@ const serviceData = {
     detailedDesc: {
       en: "SMO is about making your social media presence work harder for you. We optimize your profiles to ensure consistent branding and maximum visibility across all channels.",
       hi: "एसएमओ आपके सोशल मीडिया की उपस्थिति को आपके लिए और अधिक प्रभावी बनाने के बारे में है। हम सभी चैनलों पर सुसंगत ब्रांडिंग और अधिकतम दृश्यता सुनिश्चित करने के लिए आपके प्रोफाइल को अनुकूलित करते हैं।"
+    }
+  },
+  'wordpress-development': {
+    icon: Code2,
+    title: { en: "WordPress Development", hi: "वर्डप्रेस विकास" },
+    desc: { en: "Custom WordPress solutions built for speed, security and scale.", hi: "गति, सुरक्षा और पैमाने के लिए निर्मित कस्टम वर्डप्रेस समाधान।" },
+    features: [
+      { en: "Custom CMS Architecture", hi: "कस्टम सीएमएस आर्किटेक्चर" },
+      { en: "Security Hardening", hi: "सुरक्षा सुदृढ़ीकरण" },
+      { en: "Headless WordPress", hi: "हेडलेस वर्डप्रेस" },
+      { en: "Advanced Custom Fields", hi: "उन्नत कस्टम फ़ील्ड" }
+    ],
+    detailedDesc: {
+      en: "We don't just build websites; we build scalable digital assets using WordPress. Our development focus is on clean code, rapid load times, and intuitive administrative experiences.",
+      hi: "हम केवल वेबसाइट नहीं बनाते; हम वर्डप्रेस का उपयोग करके स्केलेबल डिजिटल संपत्ति बनाते हैं। हमारा विकास स्वच्छ कोड, तीव्र लोड समय और सहज प्रशासनिक अनुभवों पर केंद्रित है।"
+    }
+  },
+  'woocommerce-development': {
+    icon: ShoppingBag,
+    title: { en: "WooCommerce Development", hi: "वूकॉमर्स विकास" },
+    desc: { en: "Transform your WordPress site into a high-converting online store.", hi: "अपनी वर्डप्रेस साइट को उच्च-रूपांतरण वाले ऑनलाइन स्टोर में बदलें।" },
+    features: [
+      { en: "Payment Gateway Integration", hi: "पेमेंट गेटवे एकीकरण" },
+      { en: "Custom Product Builders", hi: "कस्टम उत्पाद बिल्डर्स" },
+      { en: "Inventory Management", hi: "इन्वेंट्री प्रबंधन" },
+      { en: "Conversion Optimization", hi: "रूपांतरण अनुकूलन" }
+    ],
+    detailedDesc: {
+      en: "Our WooCommerce experts build robust e-commerce engines that handle high volumes and complex business rules while maintaining a seamless user experience.",
+      hi: "हमारे वूकॉमर्स विशेषज्ञ मजबूत ई-कॉमर्स इंजन बनाते हैं जो निर्बाध उपयोगकर्ता अनुभव को बनाए रखते हुए उच्च वॉल्यूम और जटिल व्यावसायिक नियमों को संभालते हैं।"
+    }
+  },
+  'wordpress-theme-development': {
+    icon: Layout,
+    title: { en: "WordPress Theme Development", hi: "वर्डप्रेस थीम विकास" },
+    desc: { en: "Pixel-perfect, bespoke themes that reflect your brand's unique identity.", hi: "पिक्सेल-परफेक्ट, बेस्पोक थीम जो आपके ब्रांड की विशिष्ट पहचान को दर्शाती हैं।" },
+    features: [
+      { en: "Bespoke UI Design", hi: "बेस्पोक यूआई डिजाइन" },
+      { en: "Responsive Execution", hi: "उत्तरदायी निष्पादन" },
+      { en: "Gutenberg Optimization", hi: "गुटेनबर्ग अनुकूलन" },
+      { en: "SEO-Ready Markup", hi: "एसईओ-रेडी मार्कअप" }
+    ],
+    detailedDesc: {
+      en: "Escape the limitations of pre-made templates. We build custom themes from scratch that are lightweight, fast, and specifically engineered for your brand.",
+      hi: "पहले से बने टेम्पलेट्स की सीमाओं से बचें। हम शुरुआत से कस्टम थीम बनाते हैं जो हल्की, तेज़ और विशेष रूप से आपके ब्रांड के लिए इंजीनियर की गई हैं।"
+    }
+  },
+  'wordpress-migration': {
+    icon: ShieldCheck,
+    title: { en: "WordPress Migration", hi: "वर्डप्रेस माइग्रेशन" },
+    desc: { en: "Safe, seamless transition of your WordPress ecosystem to optimized hosting.", hi: "अनुकूलित होस्टिंग के लिए आपके वर्डप्रेस पारिस्थितिकी तंत्र का सुरक्षित, निर्बाध संक्रमण।" },
+    features: [
+      { en: "Zero Downtime Guarantee", hi: "शून्य डाउनटाइम गारंटी" },
+      { en: "Database Optimization", hi: "डेटाबेस अनुकूलन" },
+      { en: "SSL & Security Setup", hi: "एसएसएल और सुरक्षा सेटअप" },
+      { en: "Link Integrity Check", hi: "लिंक अखंडता जाँच" }
+    ],
+    detailedDesc: {
+      en: "Moving a website can be risky. Our specialists handle the entire migration process, ensuring all data, SEO rankings, and functionalities remain intact during the move.",
+      hi: "वेबसाइट को स्थानांतरित करना जोखिम भरा हो सकता है। हमारे विशेषज्ञ संपूर्ण माइग्रेशन प्रक्रिया को संभालते हैं, यह सुनिश्चित करते हुए कि सभी डेटा, एसईओ रैंकिंग और कार्यक्षमताएं कदम के दौरान बरकरार रहें।"
+    }
+  },
+  'wordpress-plugin-development': {
+    icon: Code2,
+    title: { en: "WordPress Plugin Development", hi: "वर्डप्रेस प्लगइन विकास" },
+    desc: { en: "Extend your site's capabilities with custom-engineered WordPress plugins.", hi: "कस्टम-इंजीनियर वर्डप्रेस प्लगइन्स के साथ अपनी साइट की क्षमताओं का विस्तार करें।" },
+    features: [
+      { en: "Custom API Integration", hi: "कस्टम एपीआई एकीकरण" },
+      { en: "Secure Backend Logic", hi: "सुरक्षित बैकएंड लॉजिक" },
+      { en: "Third-Party Connectors", hi: "तृतीय-पक्ष कनेक्टर" },
+      { en: "Performance Audits", hi: "प्रदर्शन ऑडिट" }
+    ],
+    detailedDesc: {
+      en: "When off-the-shelf plugins aren't enough, we build custom solutions that solve your specific business challenges with efficiency and security.",
+      hi: "जब ऑफ-द-शेल्फ प्लगइन्स पर्याप्त नहीं होते हैं, तो हम कस्टम समाधान बनाते हैं जो आपकी विशिष्ट व्यावसायिक चुनौतियों को दक्षता और सुरक्षा के साथ हल करते हैं।"
+    }
+  },
+  'wordpress-theme-integration': {
+    icon: Layout,
+    title: { en: "WordPress Theme Integration", hi: "वर्डप्रेस थीम एकीकरण" },
+    desc: { en: "Expertly integrate and optimize premium themes for your business goals.", hi: "अपने व्यावसायिक लक्ष्यों के लिए प्रीमियम थीम को विशेषज्ञ रूप से एकीकृत और अनुकूलित करें।" },
+    features: [
+      { en: "Premium Setup", hi: "प्रीमियम सेटअप" },
+      { en: "Speed Optimization", hi: "गति अनुकूलन" },
+      { en: "Visual Customization", hi: "दृश्य अनुकूलन" },
+      { en: "Demo Content Import", hi: "डेमो सामग्री आयात" }
+    ],
+    detailedDesc: {
+      en: "Bought a theme and don't know where to start? We handle the complex setup, customization, and optimization of premium themes to make them truly yours.",
+      hi: "थीम खरीदी है और नहीं जानते कि कहां से शुरू करें? हम प्रीमियम थीम के जटिल सेटअप, अनुकूलन और अनुकूलन को संभालते हैं ताकि वे वास्तव में आपके हो सकें।"
+    }
+  },
+  'performance-infrastructure': {
+    icon: Gauge,
+    title: { en: "Performance Infrastructure", hi: "प्रदर्शन बुनियादी ढांचा" },
+    desc: { en: "High-availability cloud architecture for mission-critical digital platforms.", hi: "मिशन-महत्वपूर्ण डिजिटल प्लेटफार्मों के लिए उच्च-उपलब्धता क्लाउड आर्किटेक्चर।" },
+    features: [
+      { en: "Cloud Migration", hi: "क्लाउड माइग्रेशन" },
+      { en: "Load Balancing", hi: "लोड बैलेंसिंग" },
+      { en: "Edge Computing", hi: "एज कंप्यूटिंग" },
+      { en: "DDoS Protection", hi: "DDoS सुरक्षा" }
+    ],
+    detailedDesc: {
+      en: "We architect resilient, scalable infrastructures using AWS, Google Cloud, and Vercel. Our focus is on 99.9% uptime and lightning-fast global delivery.",
+      hi: "हम AWS, Google Cloud और Vercel का उपयोग करके लचीले, स्केलेबल बुनियादी ढांचे का निर्माण करते हैं। हमारा ध्यान 99.9% अपटाइम और बिजली की तेजी से वैश्विक वितरण पर है।"
+    }
+  },
+  'magento-development': {
+    icon: Code2,
+    title: { en: "Magento Development", hi: "मैजेंटो विकास" },
+    desc: { en: "Enterprise-level e-commerce solutions built on Magento.", hi: "मैजेंटो पर निर्मित एंटरप्राइज-स्तर के ई-कॉमर्स समाधान।" },
+    features: [
+      { en: "Custom Magento Themes", hi: "कस्टम मैजेंटो थीम" },
+      { en: "B2B & B2C Solutions", hi: "B2B और B2C समाधान" },
+      { en: "Magento Migration", hi: "मैजेंटो माइग्रेशन" },
+      { en: "Performance Tuning", hi: "प्रदर्शन ट्यूनिंग" }
+    ],
+    detailedDesc: {
+      en: "Magento is the gold standard for enterprise commerce. We deliver high-performance Magento stores with complex integrations, custom features, and scalable architecture.",
+      hi: "मैजेंटो एंटरप्राइज कॉमर्स के लिए स्वर्ण मानक है। हम जटिल एकीकरण, कस्टम सुविधाओं और स्केलेबल आर्किटेक्चर के साथ उच्च प्रदर्शन वाले मैजेंटो स्टोर प्रदान करते हैं।"
+    }
+  },
+  'joomla-drupal-development': {
+    icon: Layout,
+    title: { en: "Joomla & Drupal", hi: "जूमला और ड्रुपल" },
+    desc: { en: "Expert development for complex content management needs.", hi: "जटिल सामग्री प्रबंधन आवश्यकताओं के लिए विशेषज्ञ विकास।" },
+    features: [
+      { en: "Custom Module Dev", hi: "कस्टम मॉड्यूल विकास" },
+      { en: "Enterprise CMS", hi: "एंटरप्राइज सीएमएस" },
+      { en: "Security Audits", hi: "सुरक्षा ऑडिट" },
+      { en: "CMS Migration", hi: "सीएमएस माइग्रेशन" }
+    ],
+    detailedDesc: {
+      en: "For websites that require advanced content structures and user permissions, Joomla and Drupal offer unparalleled flexibility. We specialize in building secure, high-traffic portals on these platforms.",
+      hi: "ऐसी वेबसाइटों के लिए जिन्हें उन्नत सामग्री संरचनाओं और उपयोगकर्ता अनुमतियों की आवश्यकता होती है, जूमला और ड्रुपल अद्वितीय लचीलापन प्रदान करते हैं। हम इन प्लेटफार्मों पर सुरक्षित, उच्च-ट्रैफ़िक पोर्टल बनाने में विशेषज्ञ हैं।"
+    }
+  },
+  'custom-app-development': {
+    icon: Code2,
+    title: { en: "Custom App Development", hi: "कस्टम ऐप विकास" },
+    desc: { en: "Bespoke software solutions for unique business challenges.", hi: "अद्वितीय व्यावसायिक चुनौतियों के लिए बेस्पोक सॉफ्टवेयर समाधान।" },
+    features: [
+      { en: "Java & .Net Development", hi: "जावा और .नेट विकास" },
+      { en: "Cloud-Native Apps", hi: "क्लाउड-नेटिव ऐप्स" },
+      { en: "Microservices", hi: "माइक्रोसर्विसेज" },
+      { en: "Enterprise Software", hi: "एंटरप्राइज सॉफ्टवेयर" }
+    ],
+    detailedDesc: {
+      en: "We build custom enterprise applications that streamline operations and drive innovation. Our team uses modern frameworks and robust engineering practices to deliver high-quality software.",
+      hi: "हम कस्टम एंटरप्राइज एप्लिकेशन बनाते हैं जो संचालन को सुव्यवस्थित करते हैं और नवाचार को बढ़ावा देते हैं। हमारी टीम उच्च गुणवत्ता वाले सॉफ्टवेयर देने के लिए आधुनिक फ्रेमवर्क और मजबूत इंजीनियरिंग प्रथाओं का उपयोग करती है।"
+    }
+  },
+  'branding-and-identity': {
+    icon: Layers,
+    title: { en: "Branding & Identity", hi: "ब्रांडिंग और पहचान" },
+    desc: { en: "Creating powerful visual stories for modern brands.", hi: "आधुनिक ब्रांडों के लिए शक्तिशाली दृश्य कहानियां बनाना।" },
+    features: [
+      { en: "Logo Design", hi: "लोगो डिजाइन" },
+      { en: "Brand Guidelines", hi: "ब्रांड दिशानिर्देश" },
+      { en: "Visual Identity", hi: "दृश्य पहचान" },
+      { en: "Stationery Design", hi: "स्टेशनरी डिजाइन" }
+    ],
+    detailedDesc: {
+      en: "A brand is more than just a logo. We create comprehensive visual identity systems that resonate with your audience and build lasting emotional connections.",
+      hi: "एक ब्रांड सिर्फ एक लोगो से कहीं अधिक है। हम व्यापक दृश्य पहचान प्रणाली बनाते हैं जो आपके दर्शकों के साथ गूंजती है और स्थायी भावनात्मक संबंध बनाती है।"
+    }
+  },
+  'domain-registration-services': {
+    icon: Globe,
+    title: { en: "Domain Services", hi: "डोमेन सेवाएं" },
+    desc: { en: "Secure your digital address with our domain management.", hi: "हमारे डोमेन प्रबंधन के साथ अपने डिजिटल पते को सुरक्षित करें।" },
+    features: [
+      { en: "Domain Registration", hi: "डोमेन पंजीकरण" },
+      { en: "DNS Management", hi: "डीएनएस प्रबंधन" },
+      { en: "Privacy Protection", hi: "गोपनीयता सुरक्षा" },
+      { en: "Domain Transfers", hi: "डोमेन ट्रांसफर" }
+    ],
+    detailedDesc: {
+      en: "Your domain is the foundation of your online presence. We offer secure registration, DNS management, and comprehensive portfolio protection to keep your digital assets safe.",
+      hi: "आपका डोमेन आपकी ऑनलाइन उपस्थिति की नींव है। हम आपकी डिजिटल संपत्ति को सुरक्षित रखने के लिए सुरक्षित पंजीकरण, डीएनएस प्रबंधन और व्यापक पोर्टफोलियो सुरक्षा प्रदान करते हैं।"
+    }
+  },
+  'reputation-management-services': {
+    icon: ShieldCheck,
+    title: { en: "Reputation Management", hi: "प्रतिष्ठा प्रबंधन" },
+    desc: { en: "Build trust and credibility with active review management.", hi: "सक्रिय समीक्षा प्रबंधन के साथ विश्वास और विश्वसनीयता बनाएं।" },
+    features: [
+      { en: "Review Monitoring", hi: "समीक्षा निगरानी" },
+      { en: "GMB Optimization", hi: "जीएमबी अनुकूलन" },
+      { en: "Crisis Management", hi: "संकट प्रबंधन" },
+      { en: "Customer Feedback", hi: "ग्राहक प्रतिक्रिया" }
+    ],
+    detailedDesc: {
+      en: "In the digital age, your reputation is your most valuable asset. We help you monitor, manage, and improve your online reviews and ratings across all major platforms.",
+      hi: "डिजिटल युग में, आपकी प्रतिष्ठा आपकी सबसे मूल्यवान संपत्ति है। हम आपको सभी प्रमुख प्लेटफार्मों पर अपनी ऑनलाइन समीक्षाओं और रेटिंगों की निगरानी, प्रबंधन और सुधार करने में मदद करते हैं।"
     }
   }
 };

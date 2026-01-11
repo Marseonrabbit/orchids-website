@@ -96,6 +96,7 @@ const App = () => {
             <Route path="/blog" element={<BlogPage lang={lang} setLang={setLang} />} />
             
             {/* Packages */}
+            <Route path="/packages/:id" element={<PackageDetail lang={lang} setLang={setLang} />} />
             <Route path="/seo-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
             <Route path="/ppc-package" element={<PackageDetail lang={lang} setLang={setLang} />} />
             <Route path="/smm-packages" element={<PackageDetail lang={lang} setLang={setLang} />} />
