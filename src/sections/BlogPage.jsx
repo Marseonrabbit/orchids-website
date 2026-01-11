@@ -4,39 +4,24 @@ import Footer from '../components/Footer';
 import SectionWrapper from '../components/SectionWrapper';
 import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
 
-const BlogPage = ({ lang, setLang }) => {
+const BlogPage = () => {
   const t = {
-    en: {
-      title: "Insights & Ideas",
-      subtitle: "Our Latest Thinking",
-      search: "Search articles...",
-      categories: ["All", "Web Design", "SEO", "Marketing", "Tech"],
-      readMore: "Read More",
-      posts: [
-        { title: "The Future of 3D in Web Design", date: "Oct 12, 2025", author: "Priya Sharma", category: "Web Design" },
-        { title: "Mastering Local SEO for Small Businesses", date: "Oct 05, 2025", author: "Siddharth Jain", category: "SEO" },
-        { title: "Why PPC is Critical for Rapid Growth", date: "Sep 28, 2025", author: "Ananya Iyer", category: "Marketing" },
-        { title: "Next.js 15: What You Need to Know", date: "Sep 21, 2025", author: "Rahul Verma", category: "Tech" }
-      ]
-    },
-    hi: {
-      title: "अंतर्दृष्टि और विचार",
-      subtitle: "हमारी नवीनतम सोच",
-      search: "लेख खोजें...",
-      categories: ["सभी", "वेब डिजाइन", "एसईओ", "मार्केटिंग", "टेक"],
-      readMore: "और पढ़ें",
-      posts: [
-        { title: "वेब डिजाइन में 3D का भविष्य", date: "12 अक्टूबर, 2025", author: "प्रिया शर्मा", category: "वेब डिजाइन" },
-        { title: "छोटे व्यवसायों के लिए लोकल एसईओ में महारत", date: "05 अक्टूबर, 2025", author: "सिद्धार्थ जैन", category: "एसईओ" },
-        { title: "तेजी से विकास के लिए पीपीसी क्यों महत्वपूर्ण है", date: "28 सितंबर, 2025", author: "अनन्या अय्यर", category: "मार्केटिंग" },
-        { title: "Next.js 15: आपको क्या जानने की जरूरत है", date: "21 सितंबर, 2025", author: "राहुल वर्मा", category: "टेक" }
-      ]
-    }
-  }[lang];
+    title: "Insights & Ideas",
+    subtitle: "Our Latest Thinking",
+    search: "Search articles...",
+    categories: ["All", "Web Design", "SEO", "Marketing", "Tech"],
+    readMore: "Read More",
+    posts: [
+      { title: "The Future of 3D in Web Design", date: "Oct 12, 2025", author: "Priya Sharma", category: "Web Design" },
+      { title: "Mastering Local SEO for Small Businesses", date: "Oct 05, 2025", author: "Siddharth Jain", category: "SEO" },
+      { title: "Why PPC is Critical for Rapid Growth", date: "Sep 28, 2025", author: "Ananya Iyer", category: "Marketing" },
+      { title: "Next.js 15: What You Need to Know", date: "Sep 21, 2025", author: "Rahul Verma", category: "Tech" }
+    ]
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground font-poppins selection:bg-primary selection:text-primary-foreground">
-      <Navbar lang={lang} setLang={setLang} />
+      <Navbar />
       
       <main className="pt-32">
         <SectionWrapper>
@@ -99,7 +84,7 @@ const BlogPage = ({ lang, setLang }) => {
         </SectionWrapper>
       </main>
 
-      <Footer lang={lang} />
+      <Footer />
     </div>
   );
 };
