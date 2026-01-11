@@ -9,66 +9,32 @@ const packageData = {
   'seo-packages': {
     title: { en: "SEO Packages", hi: "एसईओ पैकेज" },
     tiers: [
-      { name: "Starter", price: "$299/mo", features: ["10 Keywords", "On-Page SEO", "Weekly Reports", "Local SEO Audit"] },
-      { name: "Professional", price: "$599/mo", features: ["30 Keywords", "Backlink Building", "Competitor Analysis", "Bi-Weekly Reports", "Content Strategy"] },
-      { name: "Enterprise", price: "$999+/mo", features: ["Custom Keywords", "Enterprise Strategy", "Dedicated Manager", "Daily Reports", "Full Technical Audit"] }
+      { name: "Starter", price: "$299/mo", features: ["10 Keywords", "On-Page SEO", "Weekly Reports"] },
+      { name: "Professional", price: "$599/mo", features: ["30 Keywords", "Backlink Building", "Competitor Analysis", "Bi-Weekly Reports"] },
+      { name: "Enterprise", price: "$999+/mo", features: ["Custom Keywords", "Enterprise Strategy", "Dedicated Manager", "Daily Reports"] }
     ]
   },
   'ppc-package': {
     title: { en: "PPC Packages", hi: "पीपीसी पैकेज" },
     tiers: [
-      { name: "Basic", price: "$499/mo", features: ["Google Ads", "2 Campaigns", "Monthly Reports", "Keyword Research"] },
-      { name: "Advanced", price: "$999/mo", features: ["Google & FB Ads", "5 Campaigns", "A/B Testing", "Weekly Reports", "Landing Page Audit"] },
-      { name: "Custom", price: "Custom", features: ["Omni-channel", "Unlimited Campaigns", "Full Management", "Daily Reports", "Conversion Tracking"] }
+      { name: "Basic", price: "$499/mo", features: ["Google Ads", "2 Campaigns", "Monthly Reports"] },
+      { name: "Advanced", price: "$999/mo", features: ["Google & FB Ads", "5 Campaigns", "A/B Testing", "Weekly Reports"] },
+      { name: "Custom", price: "Custom", features: ["Omni-channel", "Unlimited Campaigns", "Full Management", "Daily Reports"] }
     ]
   },
   'smm-packages': {
     title: { en: "SMM Packages", hi: "एसएमएम पैकेज" },
     tiers: [
-      { name: "Lite", price: "$199/mo", features: ["2 Platforms", "8 Posts/mo", "Basic Engagement", "Monthly Schedule"] },
-      { name: "Standard", price: "$399/mo", features: ["4 Platforms", "15 Posts/mo", "Ad Management", "Community Growth", "Content Creation"] },
-      { name: "Premium", price: "$799/mo", features: ["All Platforms", "Daily Posts", "Influencer Outreach", "24/7 Support", "Viral Strategy"] }
-    ]
-  },
-  'smo-package': {
-    title: { en: "SMO Packages", hi: "एसएमओ पैकेज" },
-    tiers: [
-      { name: "Basic SMO", price: "$149/mo", features: ["Profile Optimization", "3 Platforms", "Basic Graphics", "Monthly Insights"] },
-      { name: "Growth SMO", price: "$299/mo", features: ["Advanced Profile Audit", "5 Platforms", "Viral Hook Design", "Weekly Engagement"] },
-      { name: "Elite SMO", price: "$499/mo", features: ["Reputation Management", "Custom Social Strategy", "Influencer Integration", "Daily Optimization"] }
-    ]
-  },
-  'digital-marketing-packages': {
-    title: { en: "Digital Marketing Packages", hi: "डिजिटल मार्केटिंग पैकेज" },
-    tiers: [
-      { name: "Silver", price: "$799/mo", features: ["SEO (10 Keywords)", "SMM (2 Platforms)", "Basic PPC", "Monthly Report"] },
-      { name: "Gold", price: "$1499/mo", features: ["SEO (30 Keywords)", "SMM (5 Platforms)", "Advanced PPC", "Bi-Weekly Strategy"] },
-      { name: "Platinum", price: "$2499/mo", features: ["Full Scale SEO", "Omni-channel SMM", "High ROAS PPC", "Daily Performance Check"] }
-    ]
-  },
-  'website-designing-packages': {
-    title: { en: "Website Designing Packages", hi: "वेबसाइट डिजाइनिंग पैकेज" },
-    tiers: [
-      { name: "Corporate", price: "$999", features: ["5-8 Pages", "Custom UI/UX", "Mobile Responsive", "Contact Form", "Basic SEO"] },
-      { name: "eCommerce", price: "$1999", features: ["Unlimited Products", "Payment Gateway", "Inventory System", "Advanced Search", "Speed Optimized"] },
-      { name: "Custom App", price: "Quote", features: ["Full-Stack Dev", "Custom Features", "API Integration", "Scalable Architecture", "Premium Support"] }
-    ]
-  },
-  'business-hosting': {
-    title: { en: "Business Hosting", hi: "बिजनेस होस्टिंग" },
-    tiers: [
-      { name: "Shared Business", price: "$19/mo", features: ["10GB SSD", "Free SSL", "Daily Backups", "24/7 Support"] },
-      { name: "Managed WordPress", price: "$49/mo", features: ["Cloud Infrastructure", "Auto-Updates", "Staging Environment", "Malware Cleanup"] },
-      { name: "Dedicated Cluster", price: "$199/mo", features: ["Load Balancing", "Enterprise Security", "Unlimited Bandwidth", "99.99% Uptime SLA"] }
+      { name: "Lite", price: "$199/mo", features: ["2 Platforms", "8 Posts/mo", "Basic Engagement"] },
+      { name: "Standard", price: "$399/mo", features: ["4 Platforms", "15 Posts/mo", "Ad Management", "Community Growth"] },
+      { name: "Premium", price: "$799/mo", features: ["All Platforms", "Daily Posts", "Influencer Outreach", "24/7 Support"] }
     ]
   }
 };
 
 const PackageDetail = ({ lang, setLang }) => {
   const { id } = useParams();
-  const location = window.location.pathname;
-  const pathId = location.split('/').pop() || 'seo-packages';
-  const pkg = packageData[id] || packageData[pathId] || packageData['seo-packages'];
+  const pkg = packageData[id] || packageData['seo-packages'];
 
   return (
     <div className="min-h-screen bg-background text-foreground font-poppins selection:bg-primary selection:text-primary-foreground">
